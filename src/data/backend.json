@@ -1,0 +1,215 @@
+{
+  "status": "verified",
+  "coverage": 95,
+  "filesReviewed": 3,
+  "functionsReviewed": 26,
+  "confidence": "High",
+  "verificationDate": "June 19, 2026",
+  "reviewer": "Security & Architecture Auditor",
+  "lastCommit": "a03453c1 (verified)",
+  "files": [
+    {
+      "name": "main.go",
+      "path": "backend/cmd/server/main.go",
+      "description": "Parsed Go file containing 3 functions.",
+      "functions": [
+        {
+          "name": "main",
+          "line": 34,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/cmd/server/main.go#L34",
+          "sig": "func main() {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "runStartupDiagnostics",
+          "line": 277,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/cmd/server/main.go#L277",
+          "sig": "func runStartupDiagnostics(cfg *config.Config) {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "startTelemetryHeartbeat",
+          "line": 314,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/cmd/server/main.go#L314",
+          "sig": "func startTelemetryHeartbeat(ctx context.Context, jobScheduler *jobs.Scheduler, dbStore store.Store) {",
+          "notes": "Active function in Go backend module."
+        }
+      ]
+    },
+    {
+      "name": "config.go",
+      "path": "backend/internal/config/config.go",
+      "description": "Parsed Go file containing 1 functions.",
+      "functions": [
+        {
+          "name": "Load",
+          "line": 23,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/config/config.go#L23",
+          "sig": "func Load() *Config {",
+          "notes": "Active function in Go backend module."
+        }
+      ]
+    },
+    {
+      "name": "engine.go",
+      "path": "backend/internal/configdata/engine.go",
+      "description": "Parsed Go file containing 22 functions.",
+      "functions": [
+        {
+          "name": "NewEngine",
+          "line": 27,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L27",
+          "sig": "func NewEngine(configPath string) (*Engine, error) {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "validateAndIndex",
+          "line": 126,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L126",
+          "sig": "func (e *Engine) validateAndIndex() error {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "GetSpotBySlug",
+          "line": 223,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L223",
+          "sig": "func (e *Engine) GetSpotBySlug(slug string) (*models.Spot, bool) {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "GetSpotByID",
+          "line": 230,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L230",
+          "sig": "func (e *Engine) GetSpotByID(id string) (*models.Spot, bool) {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "GetAllSpots",
+          "line": 237,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L237",
+          "sig": "func (e *Engine) GetAllSpots() []models.Spot {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "GetAllRegions",
+          "line": 243,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L243",
+          "sig": "func (e *Engine) GetAllRegions() []models.Region {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "hydrateRegistry",
+          "line": 249,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L249",
+          "sig": "func hydrateRegistry(config *models.WaveConfig) {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "EngineCompatibilityResolver",
+          "line": 326,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L326",
+          "sig": "func EngineCompatibilityResolver(id string) string {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "GetProfileByID",
+          "line": 337,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L337",
+          "sig": "func (e *Engine) GetProfileByID(id string) (*models.EngineProfile, bool) {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "dnaCompatibilityResolver",
+          "line": 351,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L351",
+          "sig": "func dnaCompatibilityResolver(id string) string {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "GetDNAProfile",
+          "line": 368,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L368",
+          "sig": "func (e *Engine) GetDNAProfile(id string) (*models.SpotDNA, bool) {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "AddSpot",
+          "line": 382,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L382",
+          "sig": "func (e *Engine) AddSpot(spot models.Spot) error {",
+          "notes": "AddSpot dynamically registers a new spot"
+        },
+        {
+          "name": "UpdateSpot",
+          "line": 425,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L425",
+          "sig": "func (e *Engine) UpdateSpot(id string, updatedSpot models.Spot) error {",
+          "notes": "UpdateSpot modifies an existing spot"
+        },
+        {
+          "name": "DeleteSpot",
+          "line": 511,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L511",
+          "sig": "func (e *Engine) DeleteSpot(id string) error {",
+          "notes": "DeleteSpot removes a spot from the registry"
+        },
+        {
+          "name": "Save",
+          "line": 547,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L547",
+          "sig": "func (e *Engine) Save() error {",
+          "notes": "Save persists the current configuration to disk safely"
+        },
+        {
+          "name": "GetStatus",
+          "line": 625,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L625",
+          "sig": "func (e *Engine) GetStatus() map[string]interface{} {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "Reload",
+          "line": 639,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L639",
+          "sig": "func (e *Engine) Reload() error {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "mergeCountries",
+          "line": 665,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L665",
+          "sig": "func mergeCountries(base, override []models.Country) []models.Country {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "mergeRegions",
+          "line": 680,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L680",
+          "sig": "func mergeRegions(base, override []models.Region) []models.Region {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "mergeProfiles",
+          "line": 695,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L695",
+          "sig": "func mergeProfiles(base, override []models.EngineProfile) []models.EngineProfile {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "mergeDNAs",
+          "line": 710,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L710",
+          "sig": "func mergeDNAs(base, override []models.SpotDNA) []models.SpotDNA {",
+          "notes": "Active function in Go backend module."
+        },
+        {
+          "name": "deduplicateSpots",
+          "line": 725,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L725",
+          "sig": "func deduplicateSpots(spots []models.Spot) []models.Spot {",
+          "notes": "Active function in Go backend module."
+        }
+      ]
+    }
+  ]
+}

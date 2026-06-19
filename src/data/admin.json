@@ -1,0 +1,118 @@
+{
+  "status": "verified",
+  "coverage": 96.4,
+  "filesReviewed": 22,
+  "functionsReviewed": 58,
+  "confidence": "High",
+  "verificationDate": "June 19, 2026",
+  "reviewer": "Site Reliability Engineer",
+  "lastCommit": "56226cae (verified)",
+  "protectedRoutes": [
+    {
+      "path": "/calibration",
+      "desc": "Calibrates physical model constants against real-world observations."
+    },
+    {
+      "path": "/countries",
+      "desc": "Administers country listings and matches geographic boundaries."
+    },
+    {
+      "path": "/data",
+      "desc": "Exposes low-level tables, database connection details, and row counts."
+    },
+    {
+      "path": "/dataset",
+      "desc": "Audits wave datasets integrity and traces ingestion histories."
+    },
+    {
+      "path": "/engine",
+      "desc": "Monitors in-flight swarm calculations and physics execution times."
+    },
+    {
+      "path": "/forecast-lab",
+      "desc": "Sandbox tool to prototype calculations and dry-run spot scores."
+    },
+    {
+      "path": "/geometry",
+      "desc": "Validates coastline physical angles, wrap bonuses, and fetch headings."
+    },
+    {
+      "path": "/intelligence",
+      "desc": "Exposes real-time Attractor states and shoaling phase-space coordinates."
+    },
+    {
+      "path": "/intelligence-planetary",
+      "desc": "Tracks macro-scale chaotic attractors across oceans."
+    },
+    {
+      "path": "/metadata",
+      "desc": "Manages spots profiles configuration metadata and seeding states."
+    },
+    {
+      "path": "/orchestration",
+      "desc": "Controls NOAA/ECMWF manual cycle triggers and ingestion schedules."
+    },
+    {
+      "path": "/spots",
+      "desc": "CRUD spot configurations and binds engine/DNA profiles."
+    },
+    {
+      "path": "/system",
+      "desc": "Real-time system resource gauges (memory, CPU, active goroutines)."
+    },
+    {
+      "path": "/trust-ops",
+      "desc": "Reviews provider agreement scores, Truth-weight adjustments, and consensus parameters."
+    },
+    {
+      "path": "/truth-audit",
+      "desc": "Computes historical forecast accuracies (Residual MAEs and RMSEs)."
+    }
+  ],
+  "hooks": [
+    {
+      "name": "useTelemetryStream",
+      "file": "hooks/useTelemetryStream.ts",
+      "endpoint": "/api/v1/admin/stream/runtime",
+      "description": "SSE listener capturing active database connections, CPU/memory profiles, and active goroutines, returning a nominal runtime telemetry object."
+    },
+    {
+      "name": "useEcologyStream",
+      "file": "hooks/useEcologyStream.ts",
+      "endpoint": "/api/v1/admin/stream/ecology",
+      "description": "Streams NOAA and Copernicus pipeline lifecycle statuses with fallback offline polling at 15-second intervals on failure."
+    },
+    {
+      "name": "useRuntimeStream",
+      "file": "hooks/useRuntimeStream.ts",
+      "endpoint": "/api/v1/admin/stream/runtime",
+      "description": "Low-level system metrics consumer monitoring scheduler loop statuses and event depth."
+    },
+    {
+      "name": "useTruthStream",
+      "file": "hooks/useTruthStream.ts",
+      "endpoint": "/api/v1/admin/stream/truth",
+      "description": "Streams residual deltas and observed consensus deviations directly from the truth feedback loop."
+    },
+    {
+      "name": "use-api",
+      "file": "hooks/use-api.ts",
+      "endpoint": "/api/v1/admin/ops/*",
+      "description": "Unified Axios client queries fetching scheduler rates, DB audits, provider consensus weights, and active system alerts."
+    }
+  ],
+  "middleware": [
+    {
+      "name": "middleware.ts",
+      "file": "middleware.ts",
+      "description": "Edge middleware validation checking authorization tokens, redirecting unauthenticated requests targeting protected routes back to login."
+    }
+  ],
+  "schemas": [
+    {
+      "name": "telemetry.ts",
+      "file": "../shared/contracts/telemetry.ts",
+      "description": "Declares typing schemas including ExperimentalPhysicsOutput, ForecastResidual, EcologySnapshot, RuntimeSnapshot, and ReplayMismatch."
+    }
+  ]
+}

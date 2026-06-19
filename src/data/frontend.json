@@ -1,0 +1,79 @@
+{
+  "status": "verified",
+  "coverage": 98.2,
+  "filesReviewed": 11,
+  "functionsReviewed": 42,
+  "confidence": "High",
+  "verificationDate": "June 19, 2026",
+  "reviewer": "UX & Frontend Lead",
+  "lastCommit": "56226cae (verified)",
+  "routes": [
+    {
+      "path": "/map",
+      "component": "GlobalMapPage",
+      "file": "app/map/page.tsx",
+      "description": "Interactive SVG world map mapping key geographic hubs (Morocco, Portugal, Indonesia) with active spot detail side panels and regional guides."
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "file": "app/page.tsx",
+      "description": "Customer landing page displaying world class data coverage and top-rated spots today fetched via global rankings API with a limit parameter of 6."
+    },
+    {
+      "path": "/pricing",
+      "component": "PricingPage",
+      "file": "app/pricing/page.tsx",
+      "description": "Athlete & Vanguard subscription tiers detailing 16-day extended physics, unlimited watchlists, push alerts, and private API access options."
+    },
+    {
+      "path": "/regions/[country]",
+      "component": "CountryLandingPage",
+      "file": "app/regions/[country]/page.tsx",
+      "description": "Regional overview displaying country rankings, seasonal equinox status guides, and local competitive events calendars."
+    },
+    {
+      "path": "/saved",
+      "component": "SavedSpotsPage",
+      "file": "app/saved/page.tsx",
+      "description": "Personalized watchlist interface featuring alert sliders to configure custom swell thresholds and options for delivery channels."
+    },
+    {
+      "path": "/spots/[slug]",
+      "component": "ForecastDetailPage",
+      "file": "app/spots/[slug]/page.tsx",
+      "description": "Dynamic SEO-locked page serving metadata and loading the client-side Forecast details container."
+    }
+  ],
+  "components": [
+    {
+      "name": "SpotDetailClient",
+      "file": "components/SpotDetailClient.tsx",
+      "description": "Main forecast visualizer rendering swell, wind, energy, and tide timelines utilizing Recharts ComposedCharts, showing optimal session recommendations."
+    },
+    {
+      "name": "MonitoringInit",
+      "file": "components/MonitoringInit.tsx",
+      "description": "Client-side effect trigger loading Sentry telemetry tracking and Google Analytics PageView trackers."
+    }
+  ],
+  "contexts": [
+    {
+      "name": "SavedSpotsProvider",
+      "file": "context/SavedSpotsContext.tsx",
+      "description": "Context provider maintaining and caching the user watchlist array, persisting thresholds to local storage."
+    }
+  ],
+  "libs": [
+    {
+      "name": "api.ts",
+      "file": "lib/api.ts",
+      "description": "Proxy base URL resolver mapping environment configurations to direct REST queries."
+    },
+    {
+      "name": "monitoring.ts",
+      "file": "lib/monitoring.ts",
+      "description": "Production telemetry library capturing analytics events and forwarding error reports to Sentry."
+    }
+  ]
+}
