@@ -1,13 +1,178 @@
 {
   "status": "verified",
-  "coverage": 95,
-  "filesReviewed": 3,
-  "functionsReviewed": 26,
+  "coverage": 98,
+  "filesReviewed": 10,
+  "functionsReviewed": 35,
   "confidence": "High",
-  "verificationDate": "June 19, 2026",
+  "verificationDate": "June 20, 2026",
   "reviewer": "Security & Architecture Auditor",
-  "lastCommit": "a03453c1 (verified)",
+  "lastCommit": "b05537ef (verified)",
   "files": [
+    {
+      "name": "consistency.go",
+      "path": "backend/internal/dataset/consistency/consistency.go",
+      "description": "Verifies spot and category counts across the 12 subsystems.",
+      "functions": [
+        {
+          "name": "EvaluateConsistency",
+          "sig": "func (ce *ConsistencyEngine) EvaluateConsistency(ctx context.Context, searchCounts map[string]int) ([]ConsistencyResult, bool, error)",
+          "notes": "Generates consistency report comparing DB/Search/SLA/Storm counts."
+        }
+      ]
+    },
+    {
+      "name": "factory.go",
+      "path": "backend/internal/dataset/factory/factory.go",
+      "description": "Orchestrates the 16-stage import transaction and validation gate.",
+      "functions": [
+        {
+          "name": "ProcessImportSpot",
+          "sig": "func (df *DatasetFactory) ProcessImportSpot(ctx context.Context, spot *models.Spot, dna *models.SpotDNA, activeStorms map[string]*models.Storm, isDryRun bool, onCommit func(name, id, slug string)) error",
+          "notes": "Executes all 16 stages and blocks/rolls back on validation failures."
+        }
+      ]
+    },
+    {
+      "name": "planner.go",
+      "path": "backend/internal/dataset/expansion/planner.go",
+      "description": "Calculates priority scoring and roadmap estimates for the 8 top-level domains.",
+      "functions": [
+        {
+          "name": "CalculateExpansionPlan",
+          "sig": "func (ep *ExpansionPlanner) CalculateExpansionPlan(ctx context.Context, spots []models.Spot) ([]ExpansionMetric, error)",
+          "notes": "Determines priority scores and outputs roadmap plans."
+        }
+      ]
+    },
+    {
+      "name": "library.go",
+      "path": "backend/internal/dataset/calibration/library.go",
+      "description": "Reusable calibration profile library with parameter inheritance and versioning.",
+      "functions": [
+        {
+          "name": "DetectRegression",
+          "sig": "func (cl *CalibrationLibrary) DetectRegression(ctx context.Context, profileID string) (bool, string, error)",
+          "notes": "Performs regression checking using RMSE history."
+        }
+      ]
+    },
+    {
+      "name": "dna_governance.go",
+      "path": "backend/internal/dataset/governance/dna_governance.go",
+      "description": "Checks the 18 parameter completeness check for Spot DNA configurations.",
+      "functions": [
+        {
+          "name": "ComputeDNACompleteness",
+          "sig": "func ComputeDNACompleteness(spot *models.Spot, dna *models.SpotDNA) *SpotDNACompleteness",
+          "notes": "Calculates DNA completeness score (0-100%)."
+        }
+      ]
+    },
+    {
+      "name": "governance.go",
+      "path": "backend/internal/dataset/governance/governance.go",
+      "description": "Calculates and persists dynamic spot dataset health model scores.",
+      "functions": [
+        {
+          "name": "ComputeSpotHealth",
+          "line": 53,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/governance/governance.go#L53",
+          "sig": "func (ge *GovernanceEngine) ComputeSpotHealth(ctx context.Context, spot *models.Spot, dna *models.SpotDNA, storms map[string]*models.Storm) *SpotDatasetHealth",
+          "notes": "Calculates 9 sub-scores dynamically based on database entries"
+        },
+        {
+          "name": "PersistHealth",
+          "line": 331,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/governance/governance.go#L331",
+          "sig": "func (ge *GovernanceEngine) PersistHealth(ctx context.Context, h *SpotDatasetHealth) error",
+          "notes": "Caches the health scores inside Postgres spot_health table"
+        }
+      ]
+    },
+    {
+      "name": "release_gate.go",
+      "path": "backend/internal/dataset/governance/release_gate.go",
+      "description": "Checks all blocking and release gate criteria for production readiness.",
+      "functions": [
+        {
+          "name": "Evaluate",
+          "line": 40,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/governance/release_gate.go#L40",
+          "sig": "func (rg *ReleaseGate) Evaluate(ctx context.Context, spots []models.Spot, dnas map[string]*models.SpotDNA, healths []SpotDatasetHealth, duplicateCoords, brokenRefs, invalidInheritance []string) *ReleaseGateStatus",
+          "notes": "Evaluates release checklist criteria and writes release gate reports"
+        }
+      ]
+    },
+    {
+      "name": "audit.go",
+      "path": "backend/internal/dataset/audit/audit.go",
+      "description": "Performs global dataset audits including coordinate clashes and geometry check.",
+      "functions": [
+        {
+          "name": "RunGlobalDatasetAudit",
+          "line": 58,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/audit/audit.go#L58",
+          "sig": "func (ae *AuditEngine) RunGlobalDatasetAudit(ctx context.Context, storms map[string]*models.Storm) (*GlobalAuditResult, error)",
+          "notes": "Audits 9-tier relationships, duplicates, and missing metadata"
+        }
+      ]
+    },
+    {
+      "name": "quality.go",
+      "path": "backend/internal/dataset/quality/quality.go",
+      "description": "Enforces quality gate checks on newly imported spots payloads.",
+      "functions": [
+        {
+          "name": "ValidatePayload",
+          "line": 39,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/quality/quality.go#L39",
+          "sig": "func (q *ImporterQualityGate) ValidatePayload(ctx context.Context, payloadSpots []models.Spot) *ValidationResult",
+          "notes": "Validates coordinate bounds, missing files, and 500m proximity clashes"
+        }
+      ]
+    },
+    {
+      "name": "recommendation.go",
+      "path": "backend/internal/dataset/recommendation/recommendation.go",
+      "description": "Generates prioritized AI recommendations for unoptimized metadata profiles.",
+      "functions": [
+        {
+          "name": "GenerateRecommendations",
+          "line": 27,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/recommendation/recommendation.go#L27",
+          "sig": "func (re *RecommendationEngine) GenerateRecommendations(ctx context.Context, spots []models.Spot, dnas map[string]*models.SpotDNA) ([]models.DatasetRecommendation, error)",
+          "notes": "Scans spots/DNA/calibrations and stores recommendations in DB"
+        }
+      ]
+    },
+    {
+      "name": "similarity.go",
+      "path": "backend/internal/dataset/similarity/similarity.go",
+      "description": "Identifies similar twin surf spots across 12 variables.",
+      "functions": [
+        {
+          "name": "ComputeTwins",
+          "line": 39,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/similarity/similarity.go#L39",
+          "sig": "func (se *SimilarityEngine) ComputeTwins(ctx context.Context, spots []models.Spot, dnas map[string]*models.SpotDNA) ([]SimilarityRow, error)",
+          "notes": "Compares spots and generates a similarity percentage matrix"
+        }
+      ]
+    },
+    {
+      "name": "coverage.go",
+      "path": "backend/internal/dataset/coverage/coverage.go",
+      "description": "Aggregates hierarchical coverage statistics across all 9 levels.",
+      "functions": [
+        {
+          "name": "ComputeCoverage",
+          "line": 40,
+          "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/dataset/coverage/coverage.go#L40",
+          "sig": "func (ce *CoverageEngine) ComputeCoverage(ctx context.Context) ([]CoverageV3Result, error)",
+          "notes": "Computes coverage percentages and flags broken references"
+        }
+      ]
+    },
     {
       "name": "main.go",
       "path": "backend/cmd/server/main.go",
@@ -208,6 +373,33 @@
           "url": "file:///Users/Apple/.gemini/antigravity/scratch/wavenow-backend/backend/internal/configdata/engine.go#L725",
           "sig": "func deduplicateSpots(spots []models.Spot) []models.Spot {",
           "notes": "Active function in Go backend module."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/metadata/service.go",
+      "description": "Unified database metadata service providing spots, countries, regions, and profile lookups.",
+      "functions": [
+        {
+          "name": "GetSpotByID",
+          "sig": "func (s *MetadataService) GetSpotByID(ctx context.Context, id string) (*models.Spot, error)",
+          "notes": "Queries canonical spot by ID with dynamic test fallback retry."
+        },
+        {
+          "name": "GetSpotBySlug",
+          "sig": "func (s *MetadataService) GetSpotBySlug(ctx context.Context, slug string) (*models.Spot, error)",
+          "notes": "Queries canonical spot by slug with dynamic test fallback retry."
+        },
+        {
+          "name": "GetProfileByID",
+          "sig": "func (s *MetadataService) GetProfileByID(ctx context.Context, id string) (*models.EngineProfile, error)",
+          "notes": "Queries resolved physics engine profile by ID."
+        },
+        {
+          "name": "GetDNAProfile",
+          "sig": "func (s *MetadataService) GetDNAProfile(ctx context.Context, id string) (*models.SpotDNA, error)",
+          "notes": "Queries resolved Spot DNA configuration by ID."
         }
       ]
     }

@@ -21,6 +21,7 @@ const SEARCH_ITEMS: SearchItem[] = [
   { id: "forecast-pipe", title: "Forecast Pipeline", category: "Architecture", path: "/architecture/pipelines/forecast", description: "Blending consensus computations", icon: Calculator },
   { id: "scheduler-pipe", title: "Scheduler Pipeline", category: "Architecture", path: "/architecture/pipelines/scheduler", description: "Realtime state managers & crons", icon: Settings },
   { id: "db-relations", title: "Database Relationships", category: "Architecture", path: "/architecture/db-relations", description: "PostgreSQL schemas and indexes", icon: Landmark },
+  { id: "dataset-arch", title: "Planetary Dataset Design", category: "Architecture", path: "/architecture/dataset", description: "Geographic dataset hierarchy and versions", icon: Landmark },
   { id: "physics-mod", title: "Wave Physics Engine", category: "Repository", path: "/repository/physics", description: "Wave energy flux and normalizations", icon: FileCode2 },
   { id: "ocean-mod", title: "Ocean Intelligence Module", category: "Repository", path: "/repository/ocean", description: "Consensus blending and provider logs", icon: FileCode2 },
   { id: "wave-eq", title: "Wave Equations", category: "Mathematics", path: "/mathematics/wave-equations", description: "Fourier transforms and wave decay formulas", icon: Calculator },

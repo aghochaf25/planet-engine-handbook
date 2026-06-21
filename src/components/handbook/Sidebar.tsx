@@ -37,6 +37,7 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
       { title: "Scheduler Pipeline", path: "/architecture/pipelines/scheduler" },
       { title: "Storm Engine Pipeline", path: "/architecture/pipelines/storm" },
       { title: "Database Relations", path: "/architecture/db-relations" },
+      { title: "Planetary Dataset Design", path: "/architecture/dataset" },
     ],
   },
   {
