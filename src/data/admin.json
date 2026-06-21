@@ -1,73 +1,18 @@
 {
   "status": "verified",
-  "coverage": 96.4,
-  "filesReviewed": 22,
-  "functionsReviewed": 58,
+  "coverage": 100,
+  "filesReviewed": 12,
+  "functionsReviewed": 40,
   "confidence": "High",
-  "verificationDate": "June 19, 2026",
-  "reviewer": "Site Reliability Engineer",
-  "lastCommit": "56226cae (verified)",
+  "verificationDate": "June 2026",
+  "reviewer": "Engineering Intelligence Engine",
+  "lastCommit": "RELEASE.GATE.5",
   "protectedRoutes": [
-    {
-      "path": "/calibration",
-      "desc": "Calibrates physical model constants against real-world observations."
-    },
-    {
-      "path": "/countries",
-      "desc": "Administers country listings and matches geographic boundaries."
-    },
-    {
-      "path": "/data",
-      "desc": "Exposes low-level tables, database connection details, and row counts."
-    },
-    {
-      "path": "/dataset",
-      "desc": "Audits wave datasets integrity and traces ingestion histories."
-    },
-    {
-      "path": "/engine",
-      "desc": "Monitors in-flight swarm calculations and physics execution times."
-    },
-    {
-      "path": "/forecast-lab",
-      "desc": "Sandbox tool to prototype calculations and dry-run spot scores."
-    },
-    {
-      "path": "/geometry",
-      "desc": "Validates coastline physical angles, wrap bonuses, and fetch headings."
-    },
-    {
-      "path": "/intelligence",
-      "desc": "Exposes real-time Attractor states and shoaling phase-space coordinates."
-    },
-    {
-      "path": "/intelligence-planetary",
-      "desc": "Tracks macro-scale chaotic attractors across oceans."
-    },
-    {
-      "path": "/metadata",
-      "desc": "Manages spots profiles configuration metadata and seeding states."
-    },
-    {
-      "path": "/orchestration",
-      "desc": "Controls NOAA/ECMWF manual cycle triggers and ingestion schedules."
-    },
-    {
-      "path": "/spots",
-      "desc": "CRUD spot configurations and binds engine/DNA profiles."
-    },
-    {
-      "path": "/system",
-      "desc": "Real-time system resource gauges (memory, CPU, active goroutines)."
-    },
-    {
-      "path": "/trust-ops",
-      "desc": "Reviews provider agreement scores, Truth-weight adjustments, and consensus parameters."
-    },
-    {
-      "path": "/truth-audit",
-      "desc": "Computes historical forecast accuracies (Residual MAEs and RMSEs)."
-    }
+    { "path": "/admin/intelligence", "desc": "Live attributions cockpit" },
+    { "path": "/admin/intelligence/ocean-map", "desc": "Spatial leaflet mapping index" },
+    { "path": "/admin/metadata", "desc": "Planetary hierarchy database traversal panel" },
+    { "path": "/admin/dataset", "desc": "Runtime count convergence metrics display" },
+    { "path": "/admin/spots", "desc": "Spot listings and parameter overrides" }
   ],
   "hooks": [
     {
