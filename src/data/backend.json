@@ -1,13 +1,65 @@
 {
   "status": "verified",
   "coverage": 100,
-  "filesReviewed": 139,
-  "functionsReviewed": 625,
+  "filesReviewed": 227,
+  "functionsReviewed": 1026,
   "confidence": "High",
   "verificationDate": "June 2026",
   "reviewer": "Engineering Intelligence Engine",
   "lastCommit": "RELEASE.GATE.5",
   "files": [
+    {
+      "name": "main.go",
+      "path": "backend/cmd/generate_registry/main.go",
+      "description": "Auto-generated AST parser metadata representation for main.go.",
+      "functions": [
+        {
+          "name": "Dominad_wind_regime_if_defined",
+          "sig": "func Dominad_wind_regime_if_defined()"
+        }
+      ]
+    },
+    {
+      "name": "main.go",
+      "path": "backend/cmd/generate_release_gate_16/main.go",
+      "description": "Auto-generated AST parser metadata representation for main.go.",
+      "functions": [
+        {
+          "name": "GetDB",
+          "sig": "func GetDB()"
+        },
+        {
+          "name": "IsInitialized",
+          "sig": "func IsInitialized()"
+        }
+      ]
+    },
+    {
+      "name": "main.go",
+      "path": "backend/cmd/generate_release_gate_final/main.go",
+      "description": "Auto-generated AST parser metadata representation for main.go.",
+      "functions": [
+        {
+          "name": "GetDB",
+          "sig": "func GetDB()"
+        },
+        {
+          "name": "IsInitialized",
+          "sig": "func IsInitialized()"
+        }
+      ]
+    },
+    {
+      "name": "main.go",
+      "path": "backend/cmd/generate_science/main.go",
+      "description": "Auto-generated AST parser metadata representation for main.go.",
+      "functions": [
+        {
+          "name": "GetDB",
+          "sig": "func GetDB()"
+        }
+      ]
+    },
     {
       "name": "deployment_audit.go",
       "path": "backend/deployment_audit.go",
@@ -575,6 +627,83 @@
       ]
     },
     {
+      "name": "knowledge_handlers.go",
+      "path": "backend/internal/api/knowledge_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for knowledge_handlers.go.",
+      "functions": [
+        {
+          "name": "GetKnowledgeGraphHandler",
+          "sig": "func GetKnowledgeGraphHandler()",
+          "notes": "GetKnowledgeGraphHandler returns all nodes, edges, and facts representing relationships"
+        },
+        {
+          "name": "GetKnowledgeRelationshipsHandler",
+          "sig": "func GetKnowledgeRelationshipsHandler()",
+          "notes": "GetKnowledgeRelationshipsHandler returns dynamically discovered relationships"
+        },
+        {
+          "name": "GetKnowledgeDiscoveryHandler",
+          "sig": "func GetKnowledgeDiscoveryHandler()",
+          "notes": "GetKnowledgeDiscoveryHandler returns continuous recommendations"
+        },
+        {
+          "name": "GetKnowledgeHistoryHandler",
+          "sig": "func GetKnowledgeHistoryHandler()",
+          "notes": "GetKnowledgeHistoryHandler returns time-series changes and versions"
+        },
+        {
+          "name": "GetKnowledgeExplainHandler",
+          "sig": "func GetKnowledgeExplainHandler()",
+          "notes": "GetKnowledgeExplainHandler returns AI structured reasoning explanations"
+        },
+        {
+          "name": "GetKnowledgeHealthHandler",
+          "sig": "func GetKnowledgeHealthHandler()",
+          "notes": "GetKnowledgeHealthHandler returns dynamic graph metrics and health statuses"
+        },
+        {
+          "name": "GetKnowledgeValidateHandler",
+          "sig": "func GetKnowledgeValidateHandler()",
+          "notes": "GetKnowledgeValidateHandler checks circular loops, broken links, orphans, duplicates"
+        },
+        {
+          "name": "GetKnowledgeSimulateHandler",
+          "sig": "func GetKnowledgeSimulateHandler()",
+          "notes": "GetKnowledgeSimulateHandler simulates storms propagation and alert arrivals"
+        },
+        {
+          "name": "TriggerLearningHandler",
+          "sig": "func TriggerLearningHandler()",
+          "notes": "TriggerLearningHandler executes a new learning cycle run manually"
+        },
+        {
+          "name": "GetLearningCyclesHandler",
+          "sig": "func GetLearningCyclesHandler()",
+          "notes": "GetLearningCyclesHandler returns list of learning cycle runs"
+        },
+        {
+          "name": "GetLearningPatternsHandler",
+          "sig": "func GetLearningPatternsHandler()",
+          "notes": "GetLearningPatternsHandler returns pattern history"
+        },
+        {
+          "name": "GetLearningPredictionsHandler",
+          "sig": "func GetLearningPredictionsHandler()",
+          "notes": "GetLearningPredictionsHandler returns generated predictions"
+        },
+        {
+          "name": "GetLearningDecisionsHandler",
+          "sig": "func GetLearningDecisionsHandler()",
+          "notes": "GetLearningDecisionsHandler returns operator decisions logs"
+        },
+        {
+          "name": "GetLearningMetricsHandler",
+          "sig": "func GetLearningMetricsHandler()",
+          "notes": "GetLearningMetricsHandler returns metrics"
+        }
+      ]
+    },
+    {
       "name": "math_visualization_handlers.go",
       "path": "backend/internal/api/math_visualization_handlers.go",
       "description": "Auto-generated AST parser metadata representation for math_visualization_handlers.go.",
@@ -763,6 +892,53 @@
       ]
     },
     {
+      "name": "observation_handlers.go",
+      "path": "backend/internal/api/observation_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for observation_handlers.go.",
+      "functions": [
+        {
+          "name": "IngestObservationHandler",
+          "sig": "func IngestObservationHandler()",
+          "notes": "IngestObservationHandler accepts a raw observation and pushes it into the event-driven validation pipeline."
+        },
+        {
+          "name": "ReplayObservationHandler",
+          "sig": "func ReplayObservationHandler()",
+          "notes": "ReplayObservationHandler re-publishes a historical observation to run through the validation/fusion layers."
+        },
+        {
+          "name": "GetLiveObservationsHandler",
+          "sig": "func GetLiveObservationsHandler()",
+          "notes": "GetLiveObservationsHandler returns the list of active telemetry observations."
+        },
+        {
+          "name": "GetObservationTimelineHandler",
+          "sig": "func GetObservationTimelineHandler()",
+          "notes": "GetObservationTimelineHandler returns the timeline of observations."
+        },
+        {
+          "name": "GetObservationProvidersHandler",
+          "sig": "func GetObservationProvidersHandler()",
+          "notes": "GetObservationProvidersHandler returns the provider latency and reliability table."
+        },
+        {
+          "name": "GetObservationFusionHandler",
+          "sig": "func GetObservationFusionHandler()",
+          "notes": "GetObservationFusionHandler returns details of consensus fusions."
+        },
+        {
+          "name": "GetObservationVerificationHandler",
+          "sig": "func GetObservationVerificationHandler()",
+          "notes": "GetObservationVerificationHandler returns the forecast residuals."
+        },
+        {
+          "name": "GetObservationStormsHandler",
+          "sig": "func GetObservationStormsHandler()",
+          "notes": "GetObservationStormsHandler returns details of active storm tracks verifications."
+        }
+      ]
+    },
+    {
       "name": "ops_handlers.go",
       "path": "backend/internal/api/ops_handlers.go",
       "description": "Auto-generated AST parser metadata representation for ops_handlers.go.",
@@ -822,6 +998,347 @@
         {
           "name": "AdminOrchestrationTelemetryHandler",
           "sig": "func AdminOrchestrationTelemetryHandler()"
+        }
+      ]
+    },
+    {
+      "name": "planetary_assimilation_handlers.go",
+      "path": "backend/internal/api/planetary_assimilation_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for planetary_assimilation_handlers.go.",
+      "functions": [
+        {
+          "name": "GetPlanetaryAssimilationOverviewHandler",
+          "sig": "func GetPlanetaryAssimilationOverviewHandler()"
+        },
+        {
+          "name": "GetPlanetaryAssimilationLiveHandler",
+          "sig": "func GetPlanetaryAssimilationLiveHandler()"
+        },
+        {
+          "name": "GetPlanetaryAssimilationProvidersHandler",
+          "sig": "func GetPlanetaryAssimilationProvidersHandler()"
+        },
+        {
+          "name": "GetPlanetaryAssimilationRealityAgreementHandler",
+          "sig": "func GetPlanetaryAssimilationRealityAgreementHandler()"
+        },
+        {
+          "name": "GetPlanetaryAssimilationKalmanHandler",
+          "sig": "func GetPlanetaryAssimilationKalmanHandler()"
+        },
+        {
+          "name": "GetPlanetaryAssimilationUncertaintyHandler",
+          "sig": "func GetPlanetaryAssimilationUncertaintyHandler()"
+        },
+        {
+          "name": "GetPlanetaryAssimilationSyncHandler",
+          "sig": "func GetPlanetaryAssimilationSyncHandler()"
+        },
+        {
+          "name": "GetPlanetaryAssimilationReplayHandler",
+          "sig": "func GetPlanetaryAssimilationReplayHandler()"
+        },
+        {
+          "name": "PostPlanetaryAssimilationReplayTriggerHandler",
+          "sig": "func PostPlanetaryAssimilationReplayTriggerHandler()"
+        },
+        {
+          "name": "PostPlanetaryAssimilationTriggerHandler",
+          "sig": "func PostPlanetaryAssimilationTriggerHandler()"
+        }
+      ]
+    },
+    {
+      "name": "planetary_expansion_handlers.go",
+      "path": "backend/internal/api/planetary_expansion_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for planetary_expansion_handlers.go.",
+      "functions": [
+        {
+          "name": "GetPlanetaryExpansionOverviewHandler",
+          "sig": "func GetPlanetaryExpansionOverviewHandler()",
+          "notes": "GetPlanetaryExpansionOverviewHandler returns overall counts and coverage aggregates."
+        },
+        {
+          "name": "GetPlanetaryExpansionPlannerHandler",
+          "sig": "func GetPlanetaryExpansionPlannerHandler()",
+          "notes": "GetPlanetaryExpansionPlannerHandler returns active roadmap information."
+        },
+        {
+          "name": "GetPlanetaryExpansionCoastlinesHandler",
+          "sig": "func GetPlanetaryExpansionCoastlinesHandler()",
+          "notes": "GetPlanetaryExpansionCoastlinesHandler returns candidate coastlines."
+        },
+        {
+          "name": "GetPlanetaryExpansionSpotsHandler",
+          "sig": "func GetPlanetaryExpansionSpotsHandler()",
+          "notes": "GetPlanetaryExpansionSpotsHandler returns candidate spots."
+        },
+        {
+          "name": "GetPlanetaryExpansionInheritanceHandler",
+          "sig": "func GetPlanetaryExpansionInheritanceHandler()",
+          "notes": "GetPlanetaryExpansionInheritanceHandler returns calibration inheritance entries."
+        },
+        {
+          "name": "GetPlanetaryExpansionCoverageHandler",
+          "sig": "func GetPlanetaryExpansionCoverageHandler()",
+          "notes": "GetPlanetaryExpansionCoverageHandler returns coverage intelligence list."
+        },
+        {
+          "name": "GetPlanetaryExpansionRecommendationsHandler",
+          "sig": "func GetPlanetaryExpansionRecommendationsHandler()",
+          "notes": "GetPlanetaryExpansionRecommendationsHandler returns all growth recommendations."
+        },
+        {
+          "name": "PostPlanetaryExpansionRecommendationActionHandler",
+          "sig": "func PostPlanetaryExpansionRecommendationActionHandler()",
+          "notes": "PostPlanetaryExpansionRecommendationActionHandler approves or rejects a pending recommendation."
+        },
+        {
+          "name": "PostPlanetaryExpansionTriggerHandler",
+          "sig": "func PostPlanetaryExpansionTriggerHandler()",
+          "notes": "PostPlanetaryExpansionTriggerHandler manual triggers a full scan cycle."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryOverviewHandler",
+          "sig": "func GetPlanetaryExpansionRegistryOverviewHandler()",
+          "notes": "GetPlanetaryExpansionRegistryOverviewHandler returns overview metrics of the ocean registry."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryOceansHandler",
+          "sig": "func GetPlanetaryExpansionRegistryOceansHandler()",
+          "notes": "GetPlanetaryExpansionRegistryOceansHandler returns oceans records."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryBasinsHandler",
+          "sig": "func GetPlanetaryExpansionRegistryBasinsHandler()",
+          "notes": "GetPlanetaryExpansionRegistryBasinsHandler returns basins records."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistrySeasHandler",
+          "sig": "func GetPlanetaryExpansionRegistrySeasHandler()",
+          "notes": "GetPlanetaryExpansionRegistrySeasHandler returns seas records."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryCountriesHandler",
+          "sig": "func GetPlanetaryExpansionRegistryCountriesHandler()",
+          "notes": "GetPlanetaryExpansionRegistryCountriesHandler returns countries records."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryRegionsHandler",
+          "sig": "func GetPlanetaryExpansionRegistryRegionsHandler()",
+          "notes": "GetPlanetaryExpansionRegistryRegionsHandler returns regions records."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryCountryHandler",
+          "sig": "func GetPlanetaryExpansionRegistryCountryHandler()",
+          "notes": "GetPlanetaryExpansionRegistryCountryHandler returns a specific country record by ID."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryRegionHandler",
+          "sig": "func GetPlanetaryExpansionRegistryRegionHandler()",
+          "notes": "GetPlanetaryExpansionRegistryRegionHandler returns a specific region record by ID."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryCoastlinesHandler",
+          "sig": "func GetPlanetaryExpansionRegistryCoastlinesHandler()",
+          "notes": "GetPlanetaryExpansionRegistryCoastlinesHandler returns canonical coastline records."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryCoverageHandler",
+          "sig": "func GetPlanetaryExpansionRegistryCoverageHandler()",
+          "notes": "GetPlanetaryExpansionRegistryCoverageHandler returns computed coverage percentages."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryHierarchyHandler",
+          "sig": "func GetPlanetaryExpansionRegistryHierarchyHandler()",
+          "notes": "GetPlanetaryExpansionRegistryHierarchyHandler returns structured parent linkages."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryValidationHandler",
+          "sig": "func GetPlanetaryExpansionRegistryValidationHandler()",
+          "notes": "GetPlanetaryExpansionRegistryValidationHandler executes topological validation checks."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryReadinessHandler",
+          "sig": "func GetPlanetaryExpansionRegistryReadinessHandler()",
+          "notes": "GetPlanetaryExpansionRegistryReadinessHandler verifies release gate readiness."
+        },
+        {
+          "name": "PostPlanetaryExpansionRegistryImportHandler",
+          "sig": "func PostPlanetaryExpansionRegistryImportHandler()",
+          "notes": "PostPlanetaryExpansionRegistryImportHandler imports a batch JSON catalog."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryPlanetHandler",
+          "sig": "func GetPlanetaryExpansionRegistryPlanetHandler()",
+          "notes": "GetPlanetaryExpansionRegistryPlanetHandler returns the planet record."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistrySpotsHandler",
+          "sig": "func GetPlanetaryExpansionRegistrySpotsHandler()",
+          "notes": "GetPlanetaryExpansionRegistrySpotsHandler returns the registry spots records."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryCacheStatsHandler",
+          "sig": "func GetPlanetaryExpansionRegistryCacheStatsHandler()",
+          "notes": "GetPlanetaryExpansionRegistryCacheStatsHandler returns in-memory registry cache performance metrics."
+        },
+        {
+          "name": "GetPlanetaryExpansionRegistryGraphHandler",
+          "sig": "func GetPlanetaryExpansionRegistryGraphHandler()",
+          "notes": "GetPlanetaryExpansionRegistryGraphHandler returns the registry adjacency list."
+        }
+      ]
+    },
+    {
+      "name": "planetary_intelligence_handlers.go",
+      "path": "backend/internal/api/planetary_intelligence_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for planetary_intelligence_handlers.go.",
+      "functions": [
+        {
+          "name": "GetPlanetaryOverviewHandler",
+          "sig": "func GetPlanetaryOverviewHandler()",
+          "notes": "GetPlanetaryOverviewHandler audits and returns counts and overall levels"
+        },
+        {
+          "name": "GetPlanetaryKnowledgeGraphHandler",
+          "sig": "func GetPlanetaryKnowledgeGraphHandler()",
+          "notes": "GetPlanetaryKnowledgeGraphHandler extracts database hierarchy to build relationships"
+        },
+        {
+          "name": "GetPlanetaryTraverseHandler",
+          "sig": "func GetPlanetaryTraverseHandler()",
+          "notes": "GetPlanetaryTraverseHandler traverses the planetary knowledge graph"
+        },
+        {
+          "name": "GetPlanetaryCoverageHandler",
+          "sig": "func GetPlanetaryCoverageHandler()",
+          "notes": "GetPlanetaryCoverageHandler reports Ocean coverage and verification parameters"
+        },
+        {
+          "name": "GetPlanetaryGapDiscoveryHandler",
+          "sig": "func GetPlanetaryGapDiscoveryHandler()",
+          "notes": "GetPlanetaryGapDiscoveryHandler isolates missing levels and ranks by priority"
+        },
+        {
+          "name": "GetPlanetarySpotDiscoveryHandler",
+          "sig": "func GetPlanetarySpotDiscoveryHandler()",
+          "notes": "GetPlanetarySpotDiscoveryHandler proposes new spots based on neighbor similarities"
+        },
+        {
+          "name": "GetPlanetaryRecommendationsHandler",
+          "sig": "func GetPlanetaryRecommendationsHandler()",
+          "notes": "GetPlanetaryRecommendationsHandler handles live PostgreSQL/SQLite recommendation entries"
+        },
+        {
+          "name": "GetPlanetaryCalibrationHandler",
+          "sig": "func GetPlanetaryCalibrationHandler()",
+          "notes": "GetPlanetaryCalibrationHandler returns the calibration intelligence report audit"
+        },
+        {
+          "name": "GetPlanetaryReleaseReadinessHandler",
+          "sig": "func GetPlanetaryReleaseReadinessHandler()",
+          "notes": "GetPlanetaryReleaseReadinessHandler resolves the release readiness checks"
+        },
+        {
+          "name": "GetPlanetaryDatasetQualityHandler",
+          "sig": "func GetPlanetaryDatasetQualityHandler()",
+          "notes": "GetPlanetaryDatasetQualityHandler resolves the dataset quality metrics, broken references, validation queue"
+        },
+        {
+          "name": "GetPlanetaryScientificConfidenceHandler",
+          "sig": "func GetPlanetaryScientificConfidenceHandler()",
+          "notes": "GetPlanetaryScientificConfidenceHandler returns confidence details"
+        },
+        {
+          "name": "GetPlanetaryObservationsHandler",
+          "sig": "func GetPlanetaryObservationsHandler()",
+          "notes": "GetPlanetaryObservationsHandler returns all historical observations"
+        },
+        {
+          "name": "GetPlanetaryVerificationLedgerHandler",
+          "sig": "func GetPlanetaryVerificationLedgerHandler()",
+          "notes": "GetPlanetaryVerificationLedgerHandler returns the permanent auditing ledger"
+        },
+        {
+          "name": "GetPlanetaryCandidatePromotionHandler",
+          "sig": "func GetPlanetaryCandidatePromotionHandler()",
+          "notes": "GetPlanetaryCandidatePromotionHandler returns candidate lifecycle states"
+        },
+        {
+          "name": "GetPlanetaryCoverageAnalyticsHandler",
+          "sig": "func GetPlanetaryCoverageAnalyticsHandler()",
+          "notes": "GetPlanetaryCoverageAnalyticsHandler returns coverage completeness details"
+        }
+      ]
+    },
+    {
+      "name": "planetary_intelligence_v2_handlers.go",
+      "path": "backend/internal/api/planetary_intelligence_v2_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for planetary_intelligence_v2_handlers.go.",
+      "functions": [
+        {
+          "name": "GetPlanetaryIntelligenceV2OverviewHandler",
+          "sig": "func GetPlanetaryIntelligenceV2OverviewHandler()"
+        },
+        {
+          "name": "GetPlanetaryIntelligenceV2DecisionsHandler",
+          "sig": "func GetPlanetaryIntelligenceV2DecisionsHandler()"
+        },
+        {
+          "name": "PostPlanetaryIntelligenceV2DecisionActionHandler",
+          "sig": "func PostPlanetaryIntelligenceV2DecisionActionHandler()"
+        },
+        {
+          "name": "PostPlanetaryIntelligenceV2TriggerHandler",
+          "sig": "func PostPlanetaryIntelligenceV2TriggerHandler()"
+        }
+      ]
+    },
+    {
+      "name": "planetary_reality_handlers.go",
+      "path": "backend/internal/api/planetary_reality_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for planetary_reality_handlers.go.",
+      "functions": [
+        {
+          "name": "GetPlanetaryRealityOverviewHandler",
+          "sig": "func GetPlanetaryRealityOverviewHandler()"
+        },
+        {
+          "name": "GetPlanetaryRealityTwinHandler",
+          "sig": "func GetPlanetaryRealityTwinHandler()",
+          "notes": "GetPlanetaryRealityTwinHandler maps directly to twin overview querying"
+        },
+        {
+          "name": "GetPlanetaryRealityCurrentsHandler",
+          "sig": "func GetPlanetaryRealityCurrentsHandler()"
+        },
+        {
+          "name": "GetPlanetaryRealityValidationHandler",
+          "sig": "func GetPlanetaryRealityValidationHandler()"
+        },
+        {
+          "name": "PostPlanetaryRealityTriggerHandler",
+          "sig": "func PostPlanetaryRealityTriggerHandler()"
+        }
+      ]
+    },
+    {
+      "name": "planetary_science_handlers.go",
+      "path": "backend/internal/api/planetary_science_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for planetary_science_handlers.go.",
+      "functions": [
+        {
+          "name": "GetPlanetaryScienceOverviewHandler",
+          "sig": "func GetPlanetaryScienceOverviewHandler()"
+        },
+        {
+          "name": "GetPlanetaryScienceMetricsHandler",
+          "sig": "func GetPlanetaryScienceMetricsHandler()"
+        },
+        {
+          "name": "PostPlanetaryScienceTriggerHandler",
+          "sig": "func PostPlanetaryScienceTriggerHandler()"
         }
       ]
     },
@@ -896,6 +1413,110 @@
       ]
     },
     {
+      "name": "spot_dna_handlers.go",
+      "path": "backend/internal/api/spot_dna_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for spot_dna_handlers.go.",
+      "functions": [
+        {
+          "name": "GetSpotDNAsHandler",
+          "sig": "func GetSpotDNAsHandler()",
+          "notes": "GetSpotDNAsHandler retrieves all Spot DNA profiles."
+        },
+        {
+          "name": "GetSpotDNAByIDHandler",
+          "sig": "func GetSpotDNAByIDHandler()",
+          "notes": "GetSpotDNAByIDHandler retrieves a single Spot DNA profile by ID."
+        },
+        {
+          "name": "GetSpotDNASearchHandler",
+          "sig": "func GetSpotDNASearchHandler()",
+          "notes": "GetSpotDNASearchHandler handles semantic scientific queries."
+        },
+        {
+          "name": "GetSpotDNASimilarHandler",
+          "sig": "func GetSpotDNASimilarHandler()",
+          "notes": "GetSpotDNASimilarHandler returns nearest neighbours for similarity matrix twins."
+        },
+        {
+          "name": "GetSpotDNAStatisticsHandler",
+          "sig": "func GetSpotDNAStatisticsHandler()",
+          "notes": "GetSpotDNAStatisticsHandler returns stats about the Spot DNA records."
+        },
+        {
+          "name": "GetSpotDNAValidationHandler",
+          "sig": "func GetSpotDNAValidationHandler()",
+          "notes": "GetSpotDNAValidationHandler returns a summary of validation errors."
+        },
+        {
+          "name": "PostSpotDNARegenerateHandler",
+          "sig": "func PostSpotDNARegenerateHandler()",
+          "notes": "PostSpotDNARegenerateHandler handles default profile generation or overrides."
+        }
+      ]
+    },
+    {
+      "name": "spot_registry_handlers.go",
+      "path": "backend/internal/api/spot_registry_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for spot_registry_handlers.go.",
+      "functions": [
+        {
+          "name": "GetSpotsHandler",
+          "sig": "func GetSpotsHandler()",
+          "notes": "GetSpotsHandler lists all spots from the registry database with search filtering and pagination."
+        },
+        {
+          "name": "GetSpotByIDHandler",
+          "sig": "func GetSpotByIDHandler()",
+          "notes": "GetSpotByIDHandler retrieves a spot by ID from the registry database."
+        },
+        {
+          "name": "GetSpotsSearchHandler",
+          "sig": "func GetSpotsSearchHandler()",
+          "notes": "GetSpotsSearchHandler searches spots by a string query."
+        },
+        {
+          "name": "GetSpotsNearbyHandler",
+          "sig": "func GetSpotsNearbyHandler()",
+          "notes": "GetSpotsNearbyHandler searches spots near coordinates."
+        },
+        {
+          "name": "GetSpotsStatisticsHandler",
+          "sig": "func GetSpotsStatisticsHandler()",
+          "notes": "GetSpotsStatisticsHandler returns statistical breakdown for spot registry."
+        },
+        {
+          "name": "GetSpotsValidationHandler",
+          "sig": "func GetSpotsValidationHandler()",
+          "notes": "GetSpotsValidationHandler returns validation issues for spots."
+        },
+        {
+          "name": "GetSpotsCoverageHandler",
+          "sig": "func GetSpotsCoverageHandler()",
+          "notes": "GetSpotsCoverageHandler aggregates coverage statistics for spots."
+        },
+        {
+          "name": "GetSpotsReadinessHandler",
+          "sig": "func GetSpotsReadinessHandler()",
+          "notes": "GetSpotsReadinessHandler reports readiness."
+        },
+        {
+          "name": "PostSpotsHandler",
+          "sig": "func PostSpotsHandler()",
+          "notes": "PostSpotsHandler saves a new spot and rejects it if validation fails."
+        },
+        {
+          "name": "PutSpotHandler",
+          "sig": "func PutSpotHandler()",
+          "notes": "PutSpotHandler updates a spot and rollbacks if validation fails."
+        },
+        {
+          "name": "DeleteSpotHandler",
+          "sig": "func DeleteSpotHandler()",
+          "notes": "DeleteSpotHandler deletes a spot."
+        }
+      ]
+    },
+    {
       "name": "system_handlers.go",
       "path": "backend/internal/api/system_handlers.go",
       "description": "Auto-generated AST parser metadata representation for system_handlers.go.",
@@ -934,6 +1555,53 @@
         {
           "name": "AdminGetTruthProviders",
           "sig": "func AdminGetTruthProviders()"
+        }
+      ]
+    },
+    {
+      "name": "truth_v1_handlers.go",
+      "path": "backend/internal/api/truth_v1_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for truth_v1_handlers.go.",
+      "functions": [
+        {
+          "name": "AdminGetTruthOverview",
+          "sig": "func AdminGetTruthOverview()",
+          "notes": "AdminGetTruthOverview retrieves summary dashboard statistics for truth cycles and parameters."
+        },
+        {
+          "name": "AdminGetTruthHistory",
+          "sig": "func AdminGetTruthHistory()",
+          "notes": "AdminGetTruthHistory lists historical execution runs."
+        },
+        {
+          "name": "AdminGetTruthCalibrations",
+          "sig": "func AdminGetTruthCalibrations()",
+          "notes": "AdminGetTruthCalibrations lists history of applied parameter changes."
+        },
+        {
+          "name": "AdminGetTruthRecommendations",
+          "sig": "func AdminGetTruthRecommendations()",
+          "notes": "AdminGetTruthRecommendations lists generated parameter recommendations."
+        },
+        {
+          "name": "AdminApproveRecommendation",
+          "sig": "func AdminApproveRecommendation()",
+          "notes": "AdminApproveRecommendation approves and commits a parameter update."
+        },
+        {
+          "name": "AdminRejectRecommendation",
+          "sig": "func AdminRejectRecommendation()",
+          "notes": "AdminRejectRecommendation rejects a parameter update."
+        },
+        {
+          "name": "AdminCreateCalibrationSession",
+          "sig": "func AdminCreateCalibrationSession()",
+          "notes": "AdminCreateCalibrationSession instantiates a new open governance session."
+        },
+        {
+          "name": "AdminRollbackCalibrationSession",
+          "sig": "func AdminRollbackCalibrationSession()",
+          "notes": "AdminRollbackCalibrationSession reverts parameter updates for a session."
         }
       ]
     },
@@ -983,6 +1651,101 @@
           "name": "AdminValidationSummaryHandler",
           "sig": "func AdminValidationSummaryHandler()",
           "notes": "AdminValidationSummaryHandler scans the active cache and computes an overall health summary."
+        }
+      ]
+    },
+    {
+      "name": "assimilation.go",
+      "path": "backend/internal/assimilation/assimilation.go",
+      "description": "Auto-generated AST parser metadata representation for assimilation.go.",
+      "functions": [
+        {
+          "name": "FuseObservations",
+          "sig": "func FuseObservations()",
+          "notes": "FuseObservations performs weighted averaging of raw observations based on reliability weights"
+        },
+        {
+          "name": "RejectOutliers",
+          "sig": "func RejectOutliers()",
+          "notes": "RejectOutliers filters out measurements exceeding 3 standard deviations from the historical mean"
+        }
+      ]
+    },
+    {
+      "name": "engine.go",
+      "path": "backend/internal/assimilation/engine.go",
+      "description": "Auto-generated AST parser metadata representation for engine.go.",
+      "functions": [
+        {
+          "name": "NewAssimilationEngine",
+          "sig": "func NewAssimilationEngine()",
+          "notes": "NewAssimilationEngine creates a fresh instance of the assimilation processor"
+        },
+        {
+          "name": "SaveAssimilationRun",
+          "sig": "func SaveAssimilationRun()",
+          "notes": "SaveAssimilationRun logs Kalman correction diagnostics into SQL tables"
+        },
+        {
+          "name": "SaveProviderSync",
+          "sig": "func SaveProviderSync()",
+          "notes": "SaveProviderSync updates dynamic availability and quality scores for observational databases"
+        },
+        {
+          "name": "SaveRealityAgreement",
+          "sig": "func SaveRealityAgreement()",
+          "notes": "SaveRealityAgreement commits computed model metrics differentials"
+        },
+        {
+          "name": "SavePredictionUncertainty",
+          "sig": "func SavePredictionUncertainty()",
+          "notes": "SavePredictionUncertainty logs variance envelopes and expected error intervals"
+        },
+        {
+          "name": "SaveSnapshot",
+          "sig": "func SaveSnapshot()",
+          "notes": "SaveSnapshot serializes twin state configuration JSONs into snapshots archives"
+        },
+        {
+          "name": "RetrieveSnapshot",
+          "sig": "func RetrieveSnapshot()",
+          "notes": "RetrieveSnapshot retrieves serialized snapshots state configurations"
+        }
+      ]
+    },
+    {
+      "name": "kalman.go",
+      "path": "backend/internal/assimilation/kalman.go",
+      "description": "Auto-generated AST parser metadata representation for kalman.go.",
+      "functions": [
+        {
+          "name": "FilterStep",
+          "sig": "func FilterStep()",
+          "notes": "FilterStep executes a single time-step iteration of the 1D Kalman Filter equations"
+        }
+      ]
+    },
+    {
+      "name": "quality.go",
+      "path": "backend/internal/assimilation/quality.go",
+      "description": "Auto-generated AST parser metadata representation for quality.go.",
+      "functions": [
+        {
+          "name": "CalculateProviderConfidence",
+          "sig": "func CalculateProviderConfidence()",
+          "notes": "CalculateProviderConfidence compiles provider metrics into a unified confidence indicator"
+        }
+      ]
+    },
+    {
+      "name": "uncertainty.go",
+      "path": "backend/internal/assimilation/uncertainty.go",
+      "description": "Auto-generated AST parser metadata representation for uncertainty.go.",
+      "functions": [
+        {
+          "name": "ComputeUncertainty",
+          "sig": "func ComputeUncertainty()",
+          "notes": "ComputeUncertainty calculates confidence intervals using standard statistical bounds"
         }
       ]
     },
@@ -1330,6 +2093,142 @@
       ]
     },
     {
+      "name": "calibration.go",
+      "path": "backend/internal/dataset/intelligence/calibration.go",
+      "description": "Auto-generated AST parser metadata representation for calibration.go.",
+      "functions": [
+        {
+          "name": "AuditCalibrations",
+          "sig": "func AuditCalibrations()"
+        },
+        {
+          "name": "WriteCalibrationReport",
+          "sig": "func WriteCalibrationReport()"
+        }
+      ]
+    },
+    {
+      "name": "coverage.go",
+      "path": "backend/internal/dataset/intelligence/coverage.go",
+      "description": "Auto-generated AST parser metadata representation for coverage.go.",
+      "functions": [
+        {
+          "name": "ComputeCoverage",
+          "sig": "func ComputeCoverage()"
+        },
+        {
+          "name": "WriteCoverageReport",
+          "sig": "func WriteCoverageReport()"
+        }
+      ]
+    },
+    {
+      "name": "engine.go",
+      "path": "backend/internal/dataset/intelligence/engine.go",
+      "description": "Auto-generated AST parser metadata representation for engine.go.",
+      "functions": [
+        {
+          "name": "NewIntelligenceEngine",
+          "sig": "func NewIntelligenceEngine()"
+        }
+      ]
+    },
+    {
+      "name": "expansion.go",
+      "path": "backend/internal/dataset/intelligence/expansion.go",
+      "description": "Auto-generated AST parser metadata representation for expansion.go.",
+      "functions": [
+        {
+          "name": "AssessExpansionPriorities",
+          "sig": "func AssessExpansionPriorities()"
+        },
+        {
+          "name": "CheckReleaseReadiness",
+          "sig": "func CheckReleaseReadiness()"
+        },
+        {
+          "name": "WriteExpansionReport",
+          "sig": "func WriteExpansionReport()"
+        },
+        {
+          "name": "WriteReleaseGateReport",
+          "sig": "func WriteReleaseGateReport()"
+        }
+      ]
+    },
+    {
+      "name": "gap_discovery.go",
+      "path": "backend/internal/dataset/intelligence/gap_discovery.go",
+      "description": "Auto-generated AST parser metadata representation for gap_discovery.go.",
+      "functions": [
+        {
+          "name": "DiscoverGaps",
+          "sig": "func DiscoverGaps()"
+        },
+        {
+          "name": "WriteGapDiscoveryReport",
+          "sig": "func WriteGapDiscoveryReport()"
+        }
+      ]
+    },
+    {
+      "name": "knowledge_graph.go",
+      "path": "backend/internal/dataset/intelligence/knowledge_graph.go",
+      "description": "Auto-generated AST parser metadata representation for knowledge_graph.go.",
+      "functions": [
+        {
+          "name": "BuildKnowledgeGraph",
+          "sig": "func BuildKnowledgeGraph()"
+        },
+        {
+          "name": "WriteKnowledgeGraphReport",
+          "sig": "func WriteKnowledgeGraphReport()"
+        },
+        {
+          "name": "GetNeighbors",
+          "sig": "func GetNeighbors()"
+        },
+        {
+          "name": "GetAncestors",
+          "sig": "func GetAncestors()"
+        },
+        {
+          "name": "GetDescendants",
+          "sig": "func GetDescendants()"
+        }
+      ]
+    },
+    {
+      "name": "recommendations.go",
+      "path": "backend/internal/dataset/intelligence/recommendations.go",
+      "description": "Auto-generated AST parser metadata representation for recommendations.go.",
+      "functions": [
+        {
+          "name": "GenerateRecommendations",
+          "sig": "func GenerateRecommendations()"
+        },
+        {
+          "name": "WriteRecommendationsReport",
+          "sig": "func WriteRecommendationsReport()"
+        }
+      ]
+    },
+    {
+      "name": "spot_discovery.go",
+      "path": "backend/internal/dataset/intelligence/spot_discovery.go",
+      "description": "Auto-generated AST parser metadata representation for spot_discovery.go.",
+      "functions": [
+        {
+          "name": "DiscoverSpots",
+          "sig": "func DiscoverSpots()"
+        },
+        {
+          "name": "WriteSpotDiscoveryReport",
+          "sig": "func WriteSpotDiscoveryReport()"
+        }
+      ]
+    },
+    {
       "name": "quality.go",
       "path": "backend/internal/dataset/quality/quality.go",
       "description": "Auto-generated AST parser metadata representation for quality.go.",
@@ -1366,6 +2265,100 @@
       ]
     },
     {
+      "name": "confidence.go",
+      "path": "backend/internal/dataset/scientific/confidence.go",
+      "description": "Auto-generated AST parser metadata representation for confidence.go.",
+      "functions": [
+        {
+          "name": "CalculateConfidence",
+          "sig": "func CalculateConfidence()"
+        }
+      ]
+    },
+    {
+      "name": "coverage.go",
+      "path": "backend/internal/dataset/scientific/coverage.go",
+      "description": "Auto-generated AST parser metadata representation for coverage.go.",
+      "functions": [
+        {
+          "name": "ComputeCompleteness",
+          "sig": "func ComputeCompleteness()"
+        }
+      ]
+    },
+    {
+      "name": "engine.go",
+      "path": "backend/internal/dataset/scientific/engine.go",
+      "description": "Auto-generated AST parser metadata representation for engine.go.",
+      "functions": [
+        {
+          "name": "NewScientificEngine",
+          "sig": "func NewScientificEngine()"
+        },
+        {
+          "name": "SetupTables",
+          "sig": "func SetupTables()"
+        }
+      ]
+    },
+    {
+      "name": "ledger.go",
+      "path": "backend/internal/dataset/scientific/ledger.go",
+      "description": "Auto-generated AST parser metadata representation for ledger.go.",
+      "functions": [
+        {
+          "name": "CommitLedgerEntry",
+          "sig": "func CommitLedgerEntry()"
+        },
+        {
+          "name": "GetLedger",
+          "sig": "func GetLedger()"
+        }
+      ]
+    },
+    {
+      "name": "observation.go",
+      "path": "backend/internal/dataset/scientific/observation.go",
+      "description": "Auto-generated AST parser metadata representation for observation.go.",
+      "functions": [
+        {
+          "name": "AddObservation",
+          "sig": "func AddObservation()"
+        },
+        {
+          "name": "GetObservations",
+          "sig": "func GetObservations()"
+        },
+        {
+          "name": "ListAllObservations",
+          "sig": "func ListAllObservations()"
+        }
+      ]
+    },
+    {
+      "name": "promotion.go",
+      "path": "backend/internal/dataset/scientific/promotion.go",
+      "description": "Auto-generated AST parser metadata representation for promotion.go.",
+      "functions": [
+        {
+          "name": "ProposeCandidate",
+          "sig": "func ProposeCandidate()"
+        },
+        {
+          "name": "PromoteCandidate",
+          "sig": "func PromoteCandidate()"
+        },
+        {
+          "name": "GetCandidate",
+          "sig": "func GetCandidate()"
+        },
+        {
+          "name": "ListCandidates",
+          "sig": "func ListCandidates()"
+        }
+      ]
+    },
+    {
       "name": "similarity.go",
       "path": "backend/internal/dataset/similarity/similarity.go",
       "description": "Auto-generated AST parser metadata representation for similarity.go.",
@@ -1382,6 +2375,99 @@
         {
           "name": "WriteSimilarityReport",
           "sig": "func WriteSimilarityReport()"
+        }
+      ]
+    },
+    {
+      "name": "coastline.go",
+      "path": "backend/internal/discovery/coastline.go",
+      "description": "Auto-generated AST parser metadata representation for coastline.go.",
+      "functions": [
+        {
+          "name": "ModelCurvature",
+          "sig": "func ModelCurvature()",
+          "notes": "ModelCurvature estimates curvature of a shoreline segment defined by points.\nUses average directional delta differences across shoreline coordinates."
+        },
+        {
+          "name": "DetectBayFormations",
+          "sig": "func DetectBayFormations()",
+          "notes": "DetectBayFormations identifies if a coastal segment forms a bay (concave indentation)."
+        },
+        {
+          "name": "IdentifyRiverMouths",
+          "sig": "func IdentifyRiverMouths()",
+          "notes": "IdentifyRiverMouths scans points to locate river mouths based on salinity gradients."
+        },
+        {
+          "name": "CalculateHeadlandsSheltering",
+          "sig": "func CalculateHeadlandsSheltering()",
+          "notes": "CalculateHeadlandsSheltering computes the wave energy shelter ratio (0.0 to 1.0)\nfor a location given nearby headland coordinates and swell incoming direction."
+        }
+      ]
+    },
+    {
+      "name": "geometry.go",
+      "path": "backend/internal/discovery/geometry.go",
+      "description": "Auto-generated AST parser metadata representation for geometry.go.",
+      "functions": [
+        {
+          "name": "CalculateShorelineOrientation",
+          "sig": "func CalculateShorelineOrientation()",
+          "notes": "CalculateShorelineOrientation calculates the primary facing angle (0-360) of a segment."
+        },
+        {
+          "name": "IntersectSwellWindow",
+          "sig": "func IntersectSwellWindow()",
+          "notes": "IntersectSwellWindow calculates if an incoming swell direction falls in the exposure window."
+        },
+        {
+          "name": "ParseExposureWindow",
+          "sig": "func ParseExposureWindow()",
+          "notes": "ParseExposureWindow JSON helper."
+        }
+      ]
+    },
+    {
+      "name": "ranking.go",
+      "path": "backend/internal/discovery/ranking.go",
+      "description": "Auto-generated AST parser metadata representation for ranking.go.",
+      "functions": [
+        {
+          "name": "NewExpansionPlanner",
+          "sig": "func NewExpansionPlanner()",
+          "notes": "NewExpansionPlanner creates a new instance of ExpansionPlanner."
+        },
+        {
+          "name": "Plan",
+          "sig": "func Plan()",
+          "notes": "Plan runs calculations to generate rankings, update coverage intelligence, and generate AI recommendations."
+        },
+        {
+          "name": "NewCalibrationInheritanceEngine",
+          "sig": "func NewCalibrationInheritanceEngine()",
+          "notes": "NewCalibrationInheritanceEngine creates a new instance."
+        },
+        {
+          "name": "Inherit",
+          "sig": "func Inherit()",
+          "notes": "Inherit computes and registers calibration relationships for discovered spots."
+        }
+      ]
+    },
+    {
+      "name": "scanner.go",
+      "path": "backend/internal/discovery/scanner.go",
+      "description": "Auto-generated AST parser metadata representation for scanner.go.",
+      "functions": [
+        {
+          "name": "NewGlobalCoastlineScanner",
+          "sig": "func NewGlobalCoastlineScanner()",
+          "notes": "NewGlobalCoastlineScanner creates a new instance of GlobalCoastlineScanner."
+        },
+        {
+          "name": "Scan",
+          "sig": "func Scan()",
+          "notes": "Scan performs the autonomous discovery scan over coastlines.\nIt detects candidates, generates Spot DNA attributes, and estimates cost profiles."
         }
       ]
     },
@@ -1711,6 +2797,77 @@
       ]
     },
     {
+      "name": "decision.go",
+      "path": "backend/internal/intelligence/decision.go",
+      "description": "Auto-generated AST parser metadata representation for decision.go.",
+      "functions": [
+        {
+          "name": "NewAutonomousDecisionEngine",
+          "sig": "func NewAutonomousDecisionEngine()"
+        },
+        {
+          "name": "GenerateDecisions",
+          "sig": "func GenerateDecisions()"
+        },
+        {
+          "name": "GetDecisions",
+          "sig": "func GetDecisions()"
+        },
+        {
+          "name": "ApplyAction",
+          "sig": "func ApplyAction()"
+        }
+      ]
+    },
+    {
+      "name": "engine.go",
+      "path": "backend/internal/intelligence/engine.go",
+      "description": "Auto-generated AST parser metadata representation for engine.go.",
+      "functions": [
+        {
+          "name": "NewEventBus",
+          "sig": "func NewEventBus()"
+        },
+        {
+          "name": "GetGlobalEventBus",
+          "sig": "func GetGlobalEventBus()"
+        },
+        {
+          "name": "Subscribe",
+          "sig": "func Subscribe()"
+        },
+        {
+          "name": "Publish",
+          "sig": "func Publish()"
+        },
+        {
+          "name": "GetGlobalCoordinator",
+          "sig": "func GetGlobalCoordinator()"
+        },
+        {
+          "name": "GetGlobalState",
+          "sig": "func GetGlobalState()"
+        },
+        {
+          "name": "SetSchedulerStatus",
+          "sig": "func SetSchedulerStatus()"
+        },
+        {
+          "name": "ExecuteCycle",
+          "sig": "func ExecuteCycle()"
+        },
+        {
+          "name": "GetHierarchicalHealth",
+          "sig": "func GetHierarchicalHealth()"
+        },
+        {
+          "name": "ReplayLedger",
+          "sig": "func ReplayLedger()",
+          "notes": "ReplayLedger verifies ledger integrity by replaying actions"
+        }
+      ]
+    },
+    {
       "name": "AsyncPersistenceWorker.go",
       "path": "backend/internal/jobs/AsyncPersistenceWorker.go",
       "description": "Auto-generated AST parser metadata representation for AsyncPersistenceWorker.go.",
@@ -1813,6 +2970,243 @@
         {
           "name": "GetStormLayer",
           "sig": "func GetStormLayer()"
+        }
+      ]
+    },
+    {
+      "name": "confidence.go",
+      "path": "backend/internal/knowledge/confidence.go",
+      "description": "Auto-generated AST parser metadata representation for confidence.go.",
+      "functions": [
+        {
+          "name": "CalculatePropagatedConfidence",
+          "sig": "func CalculatePropagatedConfidence()"
+        }
+      ]
+    },
+    {
+      "name": "discovery.go",
+      "path": "backend/internal/knowledge/discovery.go",
+      "description": "Auto-generated AST parser metadata representation for discovery.go.",
+      "functions": [
+        {
+          "name": "GetDiscoveries",
+          "sig": "func GetDiscoveries()"
+        },
+        {
+          "name": "RunDiscoveryAudit",
+          "sig": "func RunDiscoveryAudit()"
+        }
+      ]
+    },
+    {
+      "name": "history.go",
+      "path": "backend/internal/knowledge/history.go",
+      "description": "Auto-generated AST parser metadata representation for history.go.",
+      "functions": [
+        {
+          "name": "LogHistory",
+          "sig": "func LogHistory()"
+        },
+        {
+          "name": "GetHistory",
+          "sig": "func GetHistory()"
+        },
+        {
+          "name": "ListAllHistory",
+          "sig": "func ListAllHistory()"
+        },
+        {
+          "name": "RecordGraphVersion",
+          "sig": "func RecordGraphVersion()"
+        },
+        {
+          "name": "GetGraphVersions",
+          "sig": "func GetGraphVersions()"
+        }
+      ]
+    },
+    {
+      "name": "engine.go",
+      "path": "backend/internal/knowledge/learning/engine.go",
+      "description": "Auto-generated AST parser metadata representation for engine.go.",
+      "functions": [
+        {
+          "name": "NewLearningEngine",
+          "sig": "func NewLearningEngine()"
+        },
+        {
+          "name": "ExecuteLearningCycle",
+          "sig": "func ExecuteLearningCycle()"
+        },
+        {
+          "name": "LearnFromForecasts",
+          "sig": "func LearnFromForecasts()"
+        },
+        {
+          "name": "LearnFromObservations",
+          "sig": "func LearnFromObservations()"
+        },
+        {
+          "name": "LearnFromStorms",
+          "sig": "func LearnFromStorms()"
+        },
+        {
+          "name": "LearnFromCalibration",
+          "sig": "func LearnFromCalibration()"
+        },
+        {
+          "name": "LearnFromOperators",
+          "sig": "func LearnFromOperators()"
+        },
+        {
+          "name": "LearnFromHistory",
+          "sig": "func LearnFromHistory()"
+        },
+        {
+          "name": "DiscoverPatterns",
+          "sig": "func DiscoverPatterns()"
+        },
+        {
+          "name": "RunPredictions",
+          "sig": "func RunPredictions()"
+        }
+      ]
+    },
+    {
+      "name": "prediction.go",
+      "path": "backend/internal/knowledge/prediction.go",
+      "description": "Auto-generated AST parser metadata representation for prediction.go.",
+      "functions": [
+        {
+          "name": "GetPredictions",
+          "sig": "func GetPredictions()"
+        },
+        {
+          "name": "SavePredictions",
+          "sig": "func SavePredictions()"
+        }
+      ]
+    },
+    {
+      "name": "reasoning.go",
+      "path": "backend/internal/knowledge/reasoning.go",
+      "description": "Auto-generated AST parser metadata representation for reasoning.go.",
+      "functions": [
+        {
+          "name": "ExplainForecast",
+          "sig": "func ExplainForecast()"
+        },
+        {
+          "name": "ExplainStormImpact",
+          "sig": "func ExplainStormImpact()"
+        },
+        {
+          "name": "ExplainCalibration",
+          "sig": "func ExplainCalibration()"
+        },
+        {
+          "name": "ExplainConfidence",
+          "sig": "func ExplainConfidence()"
+        },
+        {
+          "name": "ExplainRecommendation",
+          "sig": "func ExplainRecommendation()"
+        }
+      ]
+    },
+    {
+      "name": "relationships.go",
+      "path": "backend/internal/knowledge/relationships.go",
+      "description": "Auto-generated AST parser metadata representation for relationships.go.",
+      "functions": [
+        {
+          "name": "GetRelationships",
+          "sig": "func GetRelationships()"
+        },
+        {
+          "name": "DiscoverRelationships",
+          "sig": "func DiscoverRelationships()"
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/knowledge/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewKnowledgeService",
+          "sig": "func NewKnowledgeService()"
+        },
+        {
+          "name": "SetupTables",
+          "sig": "func SetupTables()"
+        },
+        {
+          "name": "CreateNode",
+          "sig": "func CreateNode()",
+          "notes": "CreateNode inserts or replaces a node in the graph"
+        },
+        {
+          "name": "GetNode",
+          "sig": "func GetNode()"
+        },
+        {
+          "name": "CreateEdge",
+          "sig": "func CreateEdge()",
+          "notes": "CreateEdge registers a relationship in the knowledge base"
+        },
+        {
+          "name": "DeleteEdge",
+          "sig": "func DeleteEdge()"
+        },
+        {
+          "name": "GetNeighbors",
+          "sig": "func GetNeighbors()",
+          "notes": "GetNeighbors returns all adjacent nodes"
+        },
+        {
+          "name": "GetAncestors",
+          "sig": "func GetAncestors()",
+          "notes": "GetAncestors traverses upwards in spatial hierarchy (contains / inherits)"
+        },
+        {
+          "name": "GetDescendants",
+          "sig": "func GetDescendants()",
+          "notes": "GetDescendants traverses downwards in spatial hierarchy (contains / inherits reverse)"
+        },
+        {
+          "name": "FindShortestPath",
+          "sig": "func FindShortestPath()",
+          "notes": "FindShortestPath performs BFS to resolve the shortest path slice of node IDs"
+        },
+        {
+          "name": "PropagateImpact",
+          "sig": "func PropagateImpact()",
+          "notes": "PropagateImpact calculates propagated impact scores down contains/influences linkages"
+        }
+      ]
+    },
+    {
+      "name": "simulator.go",
+      "path": "backend/internal/knowledge/simulator.go",
+      "description": "Auto-generated AST parser metadata representation for simulator.go.",
+      "functions": [
+        {
+          "name": "SimulateImpact",
+          "sig": "func SimulateImpact()"
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/knowledge/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "ValidateGraph",
+          "sig": "func ValidateGraph()"
         }
       ]
     },
@@ -2642,6 +4036,179 @@
       ]
     },
     {
+      "name": "event_bus.go",
+      "path": "backend/internal/observation/event_bus.go",
+      "description": "Auto-generated AST parser metadata representation for event_bus.go.",
+      "functions": [
+        {
+          "name": "NewEventBus",
+          "sig": "func NewEventBus()"
+        },
+        {
+          "name": "GetGlobalEventBus",
+          "sig": "func GetGlobalEventBus()"
+        },
+        {
+          "name": "Subscribe",
+          "sig": "func Subscribe()"
+        },
+        {
+          "name": "Publish",
+          "sig": "func Publish()"
+        }
+      ]
+    },
+    {
+      "name": "fusion.go",
+      "path": "backend/internal/observation/fusion.go",
+      "description": "Auto-generated AST parser metadata representation for fusion.go.",
+      "functions": [
+        {
+          "name": "NewConsensusFusionEngine",
+          "sig": "func NewConsensusFusionEngine()"
+        },
+        {
+          "name": "FuseGroup",
+          "sig": "func FuseGroup()",
+          "notes": "FuseGroup takes a list of raw observations that belong to the same spatial-temporal bucket\nand fuses them into a single CanonicalObservation."
+        },
+        {
+          "name": "GroupAndFuse",
+          "sig": "func GroupAndFuse()",
+          "notes": "GroupAndFuse clusters raw observations by measurement type, space (within radiusKm),\nand time (within windowDuration), and fuses each cluster."
+        }
+      ]
+    },
+    {
+      "name": "pipeline.go",
+      "path": "backend/internal/observation/pipeline.go",
+      "description": "Auto-generated AST parser metadata representation for pipeline.go.",
+      "functions": [
+        {
+          "name": "StartPipeline",
+          "sig": "func StartPipeline()",
+          "notes": "StartPipeline initializes and spins up the event loop subscribers."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/observation/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewObservationService",
+          "sig": "func NewObservationService()"
+        },
+        {
+          "name": "RegisterRawObservation",
+          "sig": "func RegisterRawObservation()"
+        },
+        {
+          "name": "GetRawObservations",
+          "sig": "func GetRawObservations()"
+        },
+        {
+          "name": "RegisterCanonicalObservation",
+          "sig": "func RegisterCanonicalObservation()"
+        },
+        {
+          "name": "GetCanonicalObservations",
+          "sig": "func GetCanonicalObservations()"
+        },
+        {
+          "name": "GetProviders",
+          "sig": "func GetProviders()"
+        },
+        {
+          "name": "GetForecastVerifications",
+          "sig": "func GetForecastVerifications()"
+        },
+        {
+          "name": "GetStormObservations",
+          "sig": "func GetStormObservations()"
+        },
+        {
+          "name": "QueryObservationsInBoundingBox",
+          "sig": "func QueryObservationsInBoundingBox()"
+        },
+        {
+          "name": "QueryObservationsInRadius",
+          "sig": "func QueryObservationsInRadius()"
+        },
+        {
+          "name": "FindNearestObservation",
+          "sig": "func FindNearestObservation()"
+        },
+        {
+          "name": "RegisterForecastVerification",
+          "sig": "func RegisterForecastVerification()"
+        },
+        {
+          "name": "RegisterStormObservation",
+          "sig": "func RegisterStormObservation()"
+        }
+      ]
+    },
+    {
+      "name": "storm.go",
+      "path": "backend/internal/observation/storm.go",
+      "description": "Auto-generated AST parser metadata representation for storm.go.",
+      "functions": [
+        {
+          "name": "NewStormTracker",
+          "sig": "func NewStormTracker()"
+        },
+        {
+          "name": "CalculateSwellPrediction",
+          "sig": "func CalculateSwellPrediction()",
+          "notes": "CalculateSwellPrediction estimates swell height based on wind speed, pressure and fetch."
+        },
+        {
+          "name": "TrackStorm",
+          "sig": "func TrackStorm()",
+          "notes": "TrackStorm creates a StormObservation containing predicted swell height and prediction error."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/observation/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "NewObservationValidator",
+          "sig": "func NewObservationValidator()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate analyzes a raw observation along five quality dimensions and returns\na combined ScientificQualityScore between 0.0 and 1.0."
+        }
+      ]
+    },
+    {
+      "name": "verification.go",
+      "path": "backend/internal/observation/verification.go",
+      "description": "Auto-generated AST parser metadata representation for verification.go.",
+      "functions": [
+        {
+          "name": "NewForecastVerifier",
+          "sig": "func NewForecastVerifier()"
+        },
+        {
+          "name": "CalculateMetrics",
+          "sig": "func CalculateMetrics()",
+          "notes": "CalculateMetrics computes RMSE, MAE, bias, and forecast skill for a set of pairs."
+        },
+        {
+          "name": "ComputeVerification",
+          "sig": "func ComputeVerification()",
+          "notes": "ComputeVerification generates a ForecastVerification record including rolling metrics."
+        }
+      ]
+    },
+    {
       "name": "bathymetry.go",
       "path": "backend/internal/physics/bathymetry.go",
       "description": "Auto-generated AST parser metadata representation for bathymetry.go.",
@@ -3076,6 +4643,525 @@
       ]
     },
     {
+      "name": "bathymetry.go",
+      "path": "backend/internal/reality/bathymetry.go",
+      "description": "Auto-generated AST parser metadata representation for bathymetry.go.",
+      "functions": [
+        {
+          "name": "GetGlobalBathymetryCache",
+          "sig": "func GetGlobalBathymetryCache()"
+        },
+        {
+          "name": "Get",
+          "sig": "func Get()"
+        },
+        {
+          "name": "Set",
+          "sig": "func Set()"
+        },
+        {
+          "name": "InvalidateAll",
+          "sig": "func InvalidateAll()"
+        }
+      ]
+    },
+    {
+      "name": "coastlines.go",
+      "path": "backend/internal/reality/coastlines.go",
+      "description": "Auto-generated AST parser metadata representation for coastlines.go.",
+      "functions": [
+        {
+          "name": "GetGlobalCoastlineCache",
+          "sig": "func GetGlobalCoastlineCache()"
+        },
+        {
+          "name": "Get",
+          "sig": "func Get()"
+        },
+        {
+          "name": "Set",
+          "sig": "func Set()"
+        },
+        {
+          "name": "InvalidateAll",
+          "sig": "func InvalidateAll()"
+        },
+        {
+          "name": "NewCoastlineEngine",
+          "sig": "func NewCoastlineEngine()"
+        },
+        {
+          "name": "IsSwellBlocked",
+          "sig": "func IsSwellBlocked()",
+          "notes": "IsSwellBlocked checks if the swell angle falls into the coastline shadowing blocked ranges"
+        }
+      ]
+    },
+    {
+      "name": "currents.go",
+      "path": "backend/internal/reality/currents.go",
+      "description": "Auto-generated AST parser metadata representation for currents.go.",
+      "functions": [
+        {
+          "name": "NewCurrentsEngine",
+          "sig": "func NewCurrentsEngine()"
+        },
+        {
+          "name": "FuseCurrents",
+          "sig": "func FuseCurrents()",
+          "notes": "FuseCurrents blends multi-source currents telemetry (e.g. NOAA \u0026 Copernicus) to calculate the canonical currents vector"
+        },
+        {
+          "name": "CheckCurrentSwellInteraction",
+          "sig": "func CheckCurrentSwellInteraction()",
+          "notes": "CheckCurrentSwellInteraction calculates waves refraction/steepening coefficient due to currents interaction"
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/reality/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewRealityService",
+          "sig": "func NewRealityService()"
+        },
+        {
+          "name": "SaveOceanTwin",
+          "sig": "func SaveOceanTwin()"
+        },
+        {
+          "name": "SaveCurrents",
+          "sig": "func SaveCurrents()"
+        },
+        {
+          "name": "SaveBathymetry",
+          "sig": "func SaveBathymetry()"
+        },
+        {
+          "name": "SaveCoastline",
+          "sig": "func SaveCoastline()"
+        },
+        {
+          "name": "SaveTravel",
+          "sig": "func SaveTravel()"
+        },
+        {
+          "name": "SaveRealityValidation",
+          "sig": "func SaveRealityValidation()"
+        },
+        {
+          "name": "GetLatestRealityValidation",
+          "sig": "func GetLatestRealityValidation()"
+        }
+      ]
+    },
+    {
+      "name": "travel.go",
+      "path": "backend/internal/reality/travel.go",
+      "description": "Auto-generated AST parser metadata representation for travel.go.",
+      "functions": [
+        {
+          "name": "NewTravelEngine",
+          "sig": "func NewTravelEngine()"
+        },
+        {
+          "name": "ComputeTravel",
+          "sig": "func ComputeTravel()",
+          "notes": "ComputeTravel calculates dispersion velocity, distance, energy loss, and travel coordinate points"
+        },
+        {
+          "name": "HaversineDistance",
+          "sig": "func HaversineDistance()"
+        }
+      ]
+    },
+    {
+      "name": "cache.go",
+      "path": "backend/internal/registry/cache.go",
+      "description": "Auto-generated AST parser metadata representation for cache.go.",
+      "functions": [
+        {
+          "name": "NewRegistryCache",
+          "sig": "func NewRegistryCache()",
+          "notes": "NewRegistryCache creates a new cache instance."
+        },
+        {
+          "name": "GetEntity",
+          "sig": "func GetEntity()",
+          "notes": "GetEntity retrieves a cached entity if present."
+        },
+        {
+          "name": "SetEntity",
+          "sig": "func SetEntity()",
+          "notes": "SetEntity stores an entity in cache."
+        },
+        {
+          "name": "GetChildren",
+          "sig": "func GetChildren()",
+          "notes": "GetChildren retrieves cached children list if present."
+        },
+        {
+          "name": "SetChildren",
+          "sig": "func SetChildren()",
+          "notes": "SetChildren stores a children list in cache."
+        },
+        {
+          "name": "Clear",
+          "sig": "func Clear()",
+          "notes": "Clear invalidates all cache records."
+        },
+        {
+          "name": "Stats",
+          "sig": "func Stats()",
+          "notes": "Stats returns copy of the statistics."
+        }
+      ]
+    },
+    {
+      "name": "coverage.go",
+      "path": "backend/internal/registry/coverage.go",
+      "description": "Auto-generated AST parser metadata representation for coverage.go.",
+      "functions": [
+        {
+          "name": "NewCoverageAnalyzer",
+          "sig": "func NewCoverageAnalyzer()",
+          "notes": "NewCoverageAnalyzer creates a coverage calculator instance."
+        },
+        {
+          "name": "ComputeCoverageMetrics",
+          "sig": "func ComputeCoverageMetrics()",
+          "notes": "ComputeCoverageMetrics retrieves count statistics and returns coverage health ratios."
+        }
+      ]
+    },
+    {
+      "name": "inheritance.go",
+      "path": "backend/internal/registry/inheritance.go",
+      "description": "Auto-generated AST parser metadata representation for inheritance.go.",
+      "functions": [
+        {
+          "name": "ResolveInheritedDefaults",
+          "sig": "func ResolveInheritedDefaults()",
+          "notes": "ResolveInheritedDefaults traverses upwards:\nCoastline -\u003e Region -\u003e Country -\u003e Sea -\u003e Basin -\u003e Ocean -\u003e Planet"
+        },
+        {
+          "name": "ResolveSpotDNADefaults",
+          "sig": "func ResolveSpotDNADefaults()",
+          "notes": "ResolveSpotDNADefaults traverses the parent chain starting from a spot\nand resolves/merges default parameters into the Spot's DNA."
+        }
+      ]
+    },
+    {
+      "name": "registry.go",
+      "path": "backend/internal/registry/registry.go",
+      "description": "Auto-generated AST parser metadata representation for registry.go.",
+      "functions": [
+        {
+          "name": "NewOceanRegistryService",
+          "sig": "func NewOceanRegistryService()",
+          "notes": "NewOceanRegistryService creates a new service instance."
+        },
+        {
+          "name": "GetCache",
+          "sig": "func GetCache()",
+          "notes": "GetCache returns the cache instance for status inspection."
+        },
+        {
+          "name": "SavePlanet",
+          "sig": "func SavePlanet()",
+          "notes": "SavePlanet inserts or updates a planet registry record."
+        },
+        {
+          "name": "SaveOcean",
+          "sig": "func SaveOcean()",
+          "notes": "SaveOcean inserts or updates an ocean registry record."
+        },
+        {
+          "name": "SaveBasin",
+          "sig": "func SaveBasin()",
+          "notes": "SaveBasin inserts or updates a basin registry record."
+        },
+        {
+          "name": "SaveSea",
+          "sig": "func SaveSea()",
+          "notes": "SaveSea inserts or updates a sea registry record."
+        },
+        {
+          "name": "SaveCoastline",
+          "sig": "func SaveCoastline()",
+          "notes": "SaveCoastline inserts or updates a coastline registry record."
+        },
+        {
+          "name": "SaveCountry",
+          "sig": "func SaveCountry()",
+          "notes": "SaveCountry inserts or updates a country registry record."
+        },
+        {
+          "name": "SaveRegion",
+          "sig": "func SaveRegion()",
+          "notes": "SaveRegion inserts or updates a region registry record."
+        }
+      ]
+    },
+    {
+      "name": "spot_registry.go",
+      "path": "backend/internal/registry/spot_registry.go",
+      "description": "Auto-generated AST parser metadata representation for spot_registry.go.",
+      "functions": [
+        {
+          "name": "MigrateSpotsTable",
+          "sig": "func MigrateSpotsTable()",
+          "notes": "MigrateSpotsTable runs a non-destructive spots migration."
+        },
+        {
+          "name": "SaveSpot",
+          "sig": "func SaveSpot()",
+          "notes": "SaveSpot inserts or replaces a spot record."
+        },
+        {
+          "name": "UpdateSpot",
+          "sig": "func UpdateSpot()",
+          "notes": "UpdateSpot updates selected properties of a spot."
+        },
+        {
+          "name": "DeleteSpot",
+          "sig": "func DeleteSpot()",
+          "notes": "DeleteSpot removes a spot by ID."
+        },
+        {
+          "name": "FindSpot",
+          "sig": "func FindSpot()",
+          "notes": "FindSpot retrieves a single spot by ID."
+        },
+        {
+          "name": "FindNearbySpots",
+          "sig": "func FindNearbySpots()",
+          "notes": "FindNearbySpots locates all spots within a Haversine radius (KM)."
+        },
+        {
+          "name": "SearchSpot",
+          "sig": "func SearchSpot()",
+          "notes": "SearchSpot searches registry spots by name, slug, country, region, coastline, type, bottom type, difficulty, and status."
+        },
+        {
+          "name": "ListByCoastline",
+          "sig": "func ListByCoastline()",
+          "notes": "ListByCoastline returns spots linked to a specific coastline segment."
+        },
+        {
+          "name": "ListByCountry",
+          "sig": "func ListByCountry()",
+          "notes": "ListByCountry returns spots belonging to a country."
+        },
+        {
+          "name": "ListByOcean",
+          "sig": "func ListByOcean()",
+          "notes": "ListByOcean returns spots in an ocean."
+        },
+        {
+          "name": "GetSpotStatistics",
+          "sig": "func GetSpotStatistics()",
+          "notes": "GetSpotStatistics returns aggregated metrics for the Spot Registry."
+        }
+      ]
+    },
+    {
+      "name": "traversal.go",
+      "path": "backend/internal/registry/traversal.go",
+      "description": "Auto-generated AST parser metadata representation for traversal.go.",
+      "functions": [
+        {
+          "name": "GetEntityInfo",
+          "sig": "func GetEntityInfo()",
+          "notes": "GetEntityInfo fetches metadata for a specific entity type and ID."
+        },
+        {
+          "name": "GetParent",
+          "sig": "func GetParent()",
+          "notes": "GetParent retrieves the immediate parent of an entity."
+        },
+        {
+          "name": "GetChildren",
+          "sig": "func GetChildren()",
+          "notes": "GetChildren retrieves all immediate child nodes of an entity."
+        },
+        {
+          "name": "GetAncestors",
+          "sig": "func GetAncestors()",
+          "notes": "GetAncestors recursively climbs the tree up to Planet level."
+        },
+        {
+          "name": "GetDescendants",
+          "sig": "func GetDescendants()",
+          "notes": "GetDescendants recursively fetches all child and sub-child nodes down to leaves."
+        },
+        {
+          "name": "GetPath",
+          "sig": "func GetPath()",
+          "notes": "GetPath reconstructs the canonical slash-separated path (e.g. \"earth/pacific-ocean/north-pacific-basin/hawaii-region/hawaii/spots/...\")"
+        },
+        {
+          "name": "GetHierarchyDepth",
+          "sig": "func GetHierarchyDepth()",
+          "notes": "GetHierarchyDepth returns the height level in the tree structure."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/registry/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "NewRegistryValidator",
+          "sig": "func NewRegistryValidator()",
+          "notes": "NewRegistryValidator creates a validator instance."
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate checks circular loops, orphans, depth levels, and constraint violations."
+        }
+      ]
+    },
+    {
+      "name": "energy_validator.go",
+      "path": "backend/internal/science/energy_validator.go",
+      "description": "Auto-generated AST parser metadata representation for energy_validator.go.",
+      "functions": [
+        {
+          "name": "NewEnergyValidator",
+          "sig": "func NewEnergyValidator()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate Wave Energy and Energy Loss"
+        }
+      ]
+    },
+    {
+      "name": "physics_validator.go",
+      "path": "backend/internal/science/physics_validator.go",
+      "description": "Auto-generated AST parser metadata representation for physics_validator.go.",
+      "functions": [
+        {
+          "name": "NewPhysicsValidator",
+          "sig": "func NewPhysicsValidator()"
+        },
+        {
+          "name": "RunValidation",
+          "sig": "func RunValidation()",
+          "notes": "Compile all metrics to get a unified scientific score"
+        },
+        {
+          "name": "ComputeScientificRating",
+          "sig": "func ComputeScientificRating()",
+          "notes": "ComputeScientificRating generates the multi-dimensional Spot DNA rating scores"
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/science/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewScienceService",
+          "sig": "func NewScienceService()"
+        },
+        {
+          "name": "SaveValidation",
+          "sig": "func SaveValidation()"
+        },
+        {
+          "name": "SaveAccuracy",
+          "sig": "func SaveAccuracy()",
+          "notes": "SaveAccuracy persists direct forecast comparison errors"
+        },
+        {
+          "name": "GetLatestValidationSummary",
+          "sig": "func GetLatestValidationSummary()"
+        }
+      ]
+    },
+    {
+      "name": "storm_validator.go",
+      "path": "backend/internal/science/storm_validator.go",
+      "description": "Auto-generated AST parser metadata representation for storm_validator.go.",
+      "functions": [
+        {
+          "name": "NewStormValidator",
+          "sig": "func NewStormValidator()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate swell propagation from storms\ntravelTimeHours is actual time, distanceKM is great circle distance from storm fetch to target spot."
+        },
+        {
+          "name": "HaversineDistance",
+          "sig": "func HaversineDistance()",
+          "notes": "Helper: Haversine distance in KM"
+        }
+      ]
+    },
+    {
+      "name": "tide_validator.go",
+      "path": "backend/internal/science/tide_validator.go",
+      "description": "Auto-generated AST parser metadata representation for tide_validator.go.",
+      "functions": [
+        {
+          "name": "NewTideValidator",
+          "sig": "func NewTideValidator()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate Tide Levels"
+        }
+      ]
+    },
+    {
+      "name": "wave_validator.go",
+      "path": "backend/internal/science/wave_validator.go",
+      "description": "Auto-generated AST parser metadata representation for wave_validator.go.",
+      "functions": [
+        {
+          "name": "NewWaveValidator",
+          "sig": "func NewWaveValidator()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate Wave Heights/Periods/Directions, Shoaling, Refraction, and Breaking Index"
+        },
+        {
+          "name": "C50",
+          "sig": "func C50()",
+          "notes": "C50 returns val, placeholder utility for complex n factor calculations"
+        }
+      ]
+    },
+    {
+      "name": "wind_validator.go",
+      "path": "backend/internal/science/wind_validator.go",
+      "description": "Auto-generated AST parser metadata representation for wind_validator.go.",
+      "functions": [
+        {
+          "name": "NewWindValidator",
+          "sig": "func NewWindValidator()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate Wind/Swell direction alignment"
+        }
+      ]
+    },
+    {
       "name": "SLAEvaluator.go",
       "path": "backend/internal/sla/SLAEvaluator.go",
       "description": "Auto-generated AST parser metadata representation for SLAEvaluator.go.",
@@ -3094,6 +5180,165 @@
           "name": "Evaluate",
           "sig": "func Evaluate()",
           "notes": "Evaluate runs a comprehensive audit over the active subsystems and compiles an SLA report."
+        }
+      ]
+    },
+    {
+      "name": "generator.go",
+      "path": "backend/internal/spotdna/generator.go",
+      "description": "Auto-generated AST parser metadata representation for generator.go.",
+      "functions": [
+        {
+          "name": "ComputeChecksum",
+          "sig": "func ComputeChecksum()",
+          "notes": "ComputeChecksum calculates a deterministic SHA256 hash of a SpotDNA record's attributes."
+        },
+        {
+          "name": "GenerateDefaults",
+          "sig": "func GenerateDefaults()",
+          "notes": "GenerateDefaults generates a default SpotDNA profile for a spot."
+        }
+      ]
+    },
+    {
+      "name": "inheritance.go",
+      "path": "backend/internal/spotdna/inheritance.go",
+      "description": "Auto-generated AST parser metadata representation for inheritance.go.",
+      "functions": [
+        {
+          "name": "NewInheritanceResolver",
+          "sig": "func NewInheritanceResolver()"
+        },
+        {
+          "name": "InheritFromParent",
+          "sig": "func InheritFromParent()",
+          "notes": "InheritFromParent resolves country and region level defaults and merges them into the SpotDNA profile."
+        }
+      ]
+    },
+    {
+      "name": "scoring.go",
+      "path": "backend/internal/spotdna/scoring.go",
+      "description": "Auto-generated AST parser metadata representation for scoring.go.",
+      "functions": [
+        {
+          "name": "CalculateScientificScore",
+          "sig": "func CalculateScientificScore()",
+          "notes": "CalculateScientificScore computes the global scientific score of a SpotDNA profile."
+        }
+      ]
+    },
+    {
+      "name": "search.go",
+      "path": "backend/internal/spotdna/search.go",
+      "description": "Auto-generated AST parser metadata representation for search.go.",
+      "functions": [
+        {
+          "name": "NewSearchEngine",
+          "sig": "func NewSearchEngine()"
+        },
+        {
+          "name": "ComputeSimilarity",
+          "sig": "func ComputeSimilarity()",
+          "notes": "ComputeSimilarity evaluates similarity score (0-100) between two Spot DNA records."
+        },
+        {
+          "name": "FindNearestNeighbours",
+          "sig": "func FindNearestNeighbours()",
+          "notes": "FindNearestNeighbours returns the top 3 nearest neighbours scientifically."
+        },
+        {
+          "name": "ScientificSearch",
+          "sig": "func ScientificSearch()",
+          "notes": "ScientificSearch parses semantic queries and executes search targeting indexed dimensions."
+        },
+        {
+          "name": "HaversineDistance",
+          "sig": "func HaversineDistance()",
+          "notes": "HaversineDistance computes distance between two GPS coordinates in km."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/spotdna/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewService",
+          "sig": "func NewService()"
+        },
+        {
+          "name": "MigrateSpotDNATable",
+          "sig": "func MigrateSpotDNATable()",
+          "notes": "MigrateSpotDNATable drops the legacy spot_dna table and recreates the extended one."
+        },
+        {
+          "name": "GetSpotDNA",
+          "sig": "func GetSpotDNA()",
+          "notes": "GetSpotDNA reads the active SpotDNA record."
+        },
+        {
+          "name": "GetSpotDNAByVersion",
+          "sig": "func GetSpotDNAByVersion()",
+          "notes": "GetSpotDNAByVersion retrieves a specific version of a SpotDNA record."
+        },
+        {
+          "name": "SaveSpotDNA",
+          "sig": "func SaveSpotDNA()",
+          "notes": "SaveSpotDNA writes a new SpotDNA record."
+        },
+        {
+          "name": "UpdateSpotDNA",
+          "sig": "func UpdateSpotDNA()",
+          "notes": "UpdateSpotDNA updates an existing SpotDNA record in-place ONLY if bypass is active (e.g. for seeders),\notherwise it respects immutable versioning rules."
+        },
+        {
+          "name": "UpdateSpotDNAWithBypass",
+          "sig": "func UpdateSpotDNAWithBypass()",
+          "notes": "UpdateSpotDNAWithBypass updates a SpotDNA record in-place."
+        },
+        {
+          "name": "DeleteSpotDNA",
+          "sig": "func DeleteSpotDNA()",
+          "notes": "DeleteSpotDNA deletes a SpotDNA record."
+        },
+        {
+          "name": "ListAll",
+          "sig": "func ListAll()",
+          "notes": "ListAll returns all active SpotDNA records in the registry."
+        },
+        {
+          "name": "GetStatistics",
+          "sig": "func GetStatistics()",
+          "notes": "GetStatistics returns statistics about the Spot DNA database table."
+        },
+        {
+          "name": "GetValidationSummary",
+          "sig": "func GetValidationSummary()",
+          "notes": "GetValidationSummary counts the spots that pass validation versus fail."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/spotdna/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "ValidateSpotDNA",
+          "sig": "func ValidateSpotDNA()",
+          "notes": "ValidateSpotDNA validates a SpotDNA record against the scientific quality gates."
+        },
+        {
+          "name": "CalculateCompleteness",
+          "sig": "func CalculateCompleteness()",
+          "notes": "CalculateCompleteness evaluates the percentage of filled scientific attributes."
+        },
+        {
+          "name": "NormalizeDirectionNormalizer",
+          "sig": "func NormalizeDirectionNormalizer()",
+          "notes": "NormalizeDirectionNormalizer validates swell / wind direction ranges or strings"
         }
       ]
     },
@@ -3515,6 +5760,111 @@
         {
           "name": "GetDatabaseVerificationStats",
           "sig": "func GetDatabaseVerificationStats()"
+        },
+        {
+          "name": "WriteTruthCycle",
+          "sig": "func WriteTruthCycle()",
+          "notes": "WriteTruthCycle persists a truth execution cycle metadata record."
+        },
+        {
+          "name": "GetLatestTruthCycle",
+          "sig": "func GetLatestTruthCycle()",
+          "notes": "GetLatestTruthCycle retrieves the most recently completed truth cycle."
+        },
+        {
+          "name": "GetTruthCycles",
+          "sig": "func GetTruthCycles()",
+          "notes": "GetTruthCycles lists historical truth execution cycles."
+        },
+        {
+          "name": "WriteAccuracyHistory",
+          "sig": "func WriteAccuracyHistory()",
+          "notes": "WriteAccuracyHistory inserts a spot error tracking snapshot."
+        },
+        {
+          "name": "GetAccuracyHistory",
+          "sig": "func GetAccuracyHistory()",
+          "notes": "GetAccuracyHistory reads historical error metrics logs for a spot."
+        },
+        {
+          "name": "WriteSpotTruthScore",
+          "sig": "func WriteSpotTruthScore()",
+          "notes": "WriteSpotTruthScore records Live Truth Score components."
+        },
+        {
+          "name": "GetSpotTruthScore",
+          "sig": "func GetSpotTruthScore()",
+          "notes": "GetSpotTruthScore retrieves live scores for a spot."
+        },
+        {
+          "name": "GetAllSpotTruthScores",
+          "sig": "func GetAllSpotTruthScores()",
+          "notes": "GetAllSpotTruthScores lists scores across spots."
+        },
+        {
+          "name": "WriteTruthRecommendation",
+          "sig": "func WriteTruthRecommendation()",
+          "notes": "WriteTruthRecommendation writes/saves a proposed update to database."
+        },
+        {
+          "name": "GetTruthRecommendation",
+          "sig": "func GetTruthRecommendation()",
+          "notes": "GetTruthRecommendation retrieves a single recommendation."
+        },
+        {
+          "name": "GetTruthRecommendations",
+          "sig": "func GetTruthRecommendations()",
+          "notes": "GetTruthRecommendations lists generated recommendations."
+        },
+        {
+          "name": "GetTruthRecommendationsBySpot",
+          "sig": "func GetTruthRecommendationsBySpot()",
+          "notes": "GetTruthRecommendationsBySpot lists recommendations for a specific spot."
+        },
+        {
+          "name": "UpdateTruthRecommendationStatus",
+          "sig": "func UpdateTruthRecommendationStatus()",
+          "notes": "UpdateTruthRecommendationStatus changes a proposal's status."
+        },
+        {
+          "name": "UpdateTruthRecommendationOutcome",
+          "sig": "func UpdateTruthRecommendationOutcome()",
+          "notes": "UpdateTruthRecommendationOutcome records evaluation metrics."
+        },
+        {
+          "name": "WriteCalibrationSession",
+          "sig": "func WriteCalibrationSession()",
+          "notes": "WriteCalibrationSession records a calibration session."
+        },
+        {
+          "name": "GetCalibrationSession",
+          "sig": "func GetCalibrationSession()",
+          "notes": "GetCalibrationSession retrieves a session by ID."
+        },
+        {
+          "name": "GetCalibrationSessions",
+          "sig": "func GetCalibrationSessions()",
+          "notes": "GetCalibrationSessions lists calibration sessions."
+        },
+        {
+          "name": "UpdateCalibrationSessionStatus",
+          "sig": "func UpdateCalibrationSessionStatus()",
+          "notes": "UpdateCalibrationSessionStatus updates completion info on session."
+        },
+        {
+          "name": "WriteCalibrationHistoryRecord",
+          "sig": "func WriteCalibrationHistoryRecord()",
+          "notes": "WriteCalibrationHistoryRecord writes history of approved recommendations."
+        },
+        {
+          "name": "GetCalibrationHistoryRecords",
+          "sig": "func GetCalibrationHistoryRecords()",
+          "notes": "GetCalibrationHistoryRecords lists historical logs."
+        },
+        {
+          "name": "GetCalibrationHistoryRecordsBySpot",
+          "sig": "func GetCalibrationHistoryRecordsBySpot()",
+          "notes": "GetCalibrationHistoryRecordsBySpot lists logs for spot."
         }
       ]
     },
@@ -3675,6 +6025,18 @@
       ]
     },
     {
+      "name": "calibration.go",
+      "path": "backend/internal/truth/calibration.go",
+      "description": "Auto-generated AST parser metadata representation for calibration.go.",
+      "functions": [
+        {
+          "name": "GenerateCalibrationProposals",
+          "sig": "func GenerateCalibrationProposals()",
+          "notes": "GenerateCalibrationProposals inspects residuals and generates SpotDNA parameter update recommendations."
+        }
+      ]
+    },
+    {
       "name": "copernicus.go",
       "path": "backend/internal/truth/copernicus.go",
       "description": "Auto-generated AST parser metadata representation for copernicus.go.",
@@ -3687,6 +6049,22 @@
           "name": "FetchRawSatellite",
           "sig": "func FetchRawSatellite()",
           "notes": "FetchRawSatellite fetches sea-state measurements from the Copernicus altimeter or marine models.\nIt returns a comprehensive simulated payload with latitude/longitude spatial adjustments, quality flags,\nand orbital pass timestamps."
+        }
+      ]
+    },
+    {
+      "name": "history.go",
+      "path": "backend/internal/truth/history.go",
+      "description": "Auto-generated AST parser metadata representation for history.go.",
+      "functions": [
+        {
+          "name": "NewHistoryRecorder",
+          "sig": "func NewHistoryRecorder()"
+        },
+        {
+          "name": "LogAccuracyRecord",
+          "sig": "func LogAccuracyRecord()",
+          "notes": "LogAccuracyRecord writes a new historical score entry."
         }
       ]
     },
@@ -3708,6 +6086,18 @@
           "name": "IngestSpotObservations",
           "sig": "func IngestSpotObservations()",
           "notes": "IngestSpotObservations gathers and normalizes observations for a single spot from all active providers.\nIf useMock is true, it forces both providers to return synthetic datasets."
+        }
+      ]
+    },
+    {
+      "name": "metrics.go",
+      "path": "backend/internal/truth/metrics.go",
+      "description": "Auto-generated AST parser metadata representation for metrics.go.",
+      "functions": [
+        {
+          "name": "ComputeMetrics",
+          "sig": "func ComputeMetrics()",
+          "notes": "ComputeMetrics computes RMSE, MAE, Bias, and Skill Score over a set of residuals."
         }
       ]
     },
@@ -3752,6 +6142,59 @@
       ]
     },
     {
+      "name": "scoring.go",
+      "path": "backend/internal/truth/scoring.go",
+      "description": "Auto-generated AST parser metadata representation for scoring.go.",
+      "functions": [
+        {
+          "name": "CalculateSpotTruthScore",
+          "sig": "func CalculateSpotTruthScore()",
+          "notes": "CalculateSpotTruthScore computes a weighted index of forecasting fidelity (0-100)."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/truth/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewService",
+          "sig": "func NewService()"
+        },
+        {
+          "name": "MigrateTruthTables",
+          "sig": "func MigrateTruthTables()",
+          "notes": "MigrateTruthTables applies migrations for SQLite local databases"
+        },
+        {
+          "name": "RunValidationCycle",
+          "sig": "func RunValidationCycle()",
+          "notes": "RunValidationCycle executes the metrics calculations and proposal generation for all active spots"
+        },
+        {
+          "name": "ApproveRecommendation",
+          "sig": "func ApproveRecommendation()",
+          "notes": "ApproveRecommendation implements scientific governance logic to approve a parameter update"
+        },
+        {
+          "name": "RejectRecommendation",
+          "sig": "func RejectRecommendation()",
+          "notes": "RejectRecommendation updates a recommendation status to REJECTED"
+        },
+        {
+          "name": "CreateCalibrationSession",
+          "sig": "func CreateCalibrationSession()",
+          "notes": "CreateCalibrationSession instantiates a new open governance session"
+        },
+        {
+          "name": "RollbackCalibrationSession",
+          "sig": "func RollbackCalibrationSession()",
+          "notes": "RollbackCalibrationSession reverts all approved recommendations under a session to parent DNA version"
+        }
+      ]
+    },
+    {
       "name": "truth_scheduler.go",
       "path": "backend/internal/truth/truth_scheduler.go",
       "description": "Auto-generated AST parser metadata representation for truth_scheduler.go.",
@@ -3774,6 +6217,22 @@
           "name": "RunCycle",
           "sig": "func RunCycle()",
           "notes": "RunCycle forces an immediate manual run of the validation cycle (useful for admin/testing)."
+        }
+      ]
+    },
+    {
+      "name": "verifier.go",
+      "path": "backend/internal/truth/verifier.go",
+      "description": "Auto-generated AST parser metadata representation for verifier.go.",
+      "functions": [
+        {
+          "name": "NewTelemetryVerifier",
+          "sig": "func NewTelemetryVerifier()"
+        },
+        {
+          "name": "VerifyObservation",
+          "sig": "func VerifyObservation()",
+          "notes": "VerifyObservation checks for telemetry anomalies and physical boundary violations."
         }
       ]
     },
