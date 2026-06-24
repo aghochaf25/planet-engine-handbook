@@ -1,8 +1,8 @@
 {
   "status": "verified",
   "coverage": 100,
-  "filesReviewed": 227,
-  "functionsReviewed": 1026,
+  "filesReviewed": 236,
+  "functionsReviewed": 1106,
   "confidence": "High",
   "verificationDate": "June 2026",
   "reviewer": "Engineering Intelligence Engine",
@@ -935,6 +935,29 @@
           "name": "GetObservationStormsHandler",
           "sig": "func GetObservationStormsHandler()",
           "notes": "GetObservationStormsHandler returns details of active storm tracks verifications."
+        }
+      ]
+    },
+    {
+      "name": "ocean_science_handlers.go",
+      "path": "backend/internal/api/ocean_science_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for ocean_science_handlers.go.",
+      "functions": [
+        {
+          "name": "GetOceanScienceOverviewHandler",
+          "sig": "func GetOceanScienceOverviewHandler()"
+        },
+        {
+          "name": "GetOceanScienceRunsHandler",
+          "sig": "func GetOceanScienceRunsHandler()"
+        },
+        {
+          "name": "TriggerOceanScienceIngestionHandler",
+          "sig": "func TriggerOceanScienceIngestionHandler()"
+        },
+        {
+          "name": "GetOceanScienceObservationsHandler",
+          "sig": "func GetOceanScienceObservationsHandler()"
         }
       ]
     },
@@ -5865,6 +5888,42 @@
           "name": "GetCalibrationHistoryRecordsBySpot",
           "sig": "func GetCalibrationHistoryRecordsBySpot()",
           "notes": "GetCalibrationHistoryRecordsBySpot lists logs for spot."
+        },
+        {
+          "name": "WriteOceanConditions",
+          "sig": "func WriteOceanConditions()"
+        },
+        {
+          "name": "GetLatestOceanConditions",
+          "sig": "func GetLatestOceanConditions()"
+        },
+        {
+          "name": "WriteBathymetry",
+          "sig": "func WriteBathymetry()"
+        },
+        {
+          "name": "GetBathymetry",
+          "sig": "func GetBathymetry()"
+        },
+        {
+          "name": "WriteObservationStation",
+          "sig": "func WriteObservationStation()"
+        },
+        {
+          "name": "GetAllObservationStations",
+          "sig": "func GetAllObservationStations()"
+        },
+        {
+          "name": "WriteProviderIngestionRun",
+          "sig": "func WriteProviderIngestionRun()"
+        },
+        {
+          "name": "GetLatestProviderIngestionRuns",
+          "sig": "func GetLatestProviderIngestionRuns()"
+        },
+        {
+          "name": "GetLatestProviderIngestionRun",
+          "sig": "func GetLatestProviderIngestionRun()"
         }
       ]
     },
@@ -6025,6 +6084,22 @@
       ]
     },
     {
+      "name": "assimilation.go",
+      "path": "backend/internal/truth/assimilation.go",
+      "description": "Auto-generated AST parser metadata representation for assimilation.go.",
+      "functions": [
+        {
+          "name": "NewAssimilationEngine",
+          "sig": "func NewAssimilationEngine()"
+        },
+        {
+          "name": "AssimilateProviderData",
+          "sig": "func AssimilateProviderData()",
+          "notes": "AssimilateProviderData converts a raw provider payload into canonical ocean conditions and bathymetry,\nruns telemetry validation, computes scores, and writes standard observations."
+        }
+      ]
+    },
+    {
       "name": "calibration.go",
       "path": "backend/internal/truth/calibration.go",
       "description": "Auto-generated AST parser metadata representation for calibration.go.",
@@ -6078,14 +6153,23 @@
           "sig": "func NewIngestionCoordinator()"
         },
         {
+          "name": "NewIngestionCoordinatorWithStore",
+          "sig": "func NewIngestionCoordinatorWithStore()"
+        },
+        {
           "name": "MapSpotToNOAAStation",
           "sig": "func MapSpotToNOAAStation()",
-          "notes": "MapSpotToNOAAStation returns the closest or most appropriate NOAA NDBC buoy station ID for a spot.\nIt maps major world-class spots to actual real-world stations, and falls back to a deterministic station ID for other spots."
+          "notes": "MapSpotToNOAAStation returns the closest or most appropriate NOAA NDBC buoy station ID for a spot."
         },
         {
           "name": "IngestSpotObservations",
           "sig": "func IngestSpotObservations()",
-          "notes": "IngestSpotObservations gathers and normalizes observations for a single spot from all active providers.\nIf useMock is true, it forces both providers to return synthetic datasets."
+          "notes": "IngestSpotObservations gathers and normalizes observations for a single spot from all active providers."
+        },
+        {
+          "name": "IngestProviderData",
+          "sig": "func IngestProviderData()",
+          "notes": "IngestProviderData executes a complete download-parse-validate-assimilate pipeline for a given provider and spot."
         }
       ]
     },
@@ -6126,6 +6210,307 @@
           "name": "NormalizeObservation",
           "sig": "func NormalizeObservation()",
           "notes": "NormalizeObservation parses raw provider payloads and standardizes them into models.ObservationalTruth.\nIt handles unit conversion (e.g. feet to meters, m/s to knots) and executes strict telemetry range validation."
+        }
+      ]
+    },
+    {
+      "name": "provider_buoy.go",
+      "path": "backend/internal/truth/provider_buoy.go",
+      "description": "Auto-generated AST parser metadata representation for provider_buoy.go.",
+      "functions": [
+        {
+          "name": "NewNOAABuoyProvider",
+          "sig": "func NewNOAABuoyProvider()"
+        },
+        {
+          "name": "Authenticate",
+          "sig": "func Authenticate()"
+        },
+        {
+          "name": "GetSchedule",
+          "sig": "func GetSchedule()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "Parse",
+          "sig": "func Parse()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()"
+        },
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        },
+        {
+          "name": "GetProvenance",
+          "sig": "func GetProvenance()"
+        },
+        {
+          "name": "GetQualityScore",
+          "sig": "func GetQualityScore()"
+        }
+      ]
+    },
+    {
+      "name": "provider_copernicus.go",
+      "path": "backend/internal/truth/provider_copernicus.go",
+      "description": "Auto-generated AST parser metadata representation for provider_copernicus.go.",
+      "functions": [
+        {
+          "name": "NewCopernicusMarineProvider",
+          "sig": "func NewCopernicusMarineProvider()"
+        },
+        {
+          "name": "Authenticate",
+          "sig": "func Authenticate()"
+        },
+        {
+          "name": "GetSchedule",
+          "sig": "func GetSchedule()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "Parse",
+          "sig": "func Parse()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()"
+        },
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        },
+        {
+          "name": "GetProvenance",
+          "sig": "func GetProvenance()"
+        },
+        {
+          "name": "GetQualityScore",
+          "sig": "func GetQualityScore()"
+        }
+      ]
+    },
+    {
+      "name": "provider_ecmwf.go",
+      "path": "backend/internal/truth/provider_ecmwf.go",
+      "description": "Auto-generated AST parser metadata representation for provider_ecmwf.go.",
+      "functions": [
+        {
+          "name": "NewECMWFProvider",
+          "sig": "func NewECMWFProvider()"
+        },
+        {
+          "name": "Authenticate",
+          "sig": "func Authenticate()"
+        },
+        {
+          "name": "GetSchedule",
+          "sig": "func GetSchedule()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "Parse",
+          "sig": "func Parse()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()"
+        },
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        },
+        {
+          "name": "GetProvenance",
+          "sig": "func GetProvenance()"
+        },
+        {
+          "name": "GetQualityScore",
+          "sig": "func GetQualityScore()"
+        }
+      ]
+    },
+    {
+      "name": "provider_gebco.go",
+      "path": "backend/internal/truth/provider_gebco.go",
+      "description": "Auto-generated AST parser metadata representation for provider_gebco.go.",
+      "functions": [
+        {
+          "name": "NewGEBCOProvider",
+          "sig": "func NewGEBCOProvider()"
+        },
+        {
+          "name": "Authenticate",
+          "sig": "func Authenticate()"
+        },
+        {
+          "name": "GetSchedule",
+          "sig": "func GetSchedule()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "Parse",
+          "sig": "func Parse()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()"
+        },
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        },
+        {
+          "name": "GetProvenance",
+          "sig": "func GetProvenance()"
+        },
+        {
+          "name": "GetQualityScore",
+          "sig": "func GetQualityScore()"
+        }
+      ]
+    },
+    {
+      "name": "provider_noaa_weather.go",
+      "path": "backend/internal/truth/provider_noaa_weather.go",
+      "description": "Auto-generated AST parser metadata representation for provider_noaa_weather.go.",
+      "functions": [
+        {
+          "name": "NewNOAAWeatherProvider",
+          "sig": "func NewNOAAWeatherProvider()"
+        },
+        {
+          "name": "Authenticate",
+          "sig": "func Authenticate()"
+        },
+        {
+          "name": "GetSchedule",
+          "sig": "func GetSchedule()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "Parse",
+          "sig": "func Parse()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()"
+        },
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        },
+        {
+          "name": "GetProvenance",
+          "sig": "func GetProvenance()"
+        },
+        {
+          "name": "GetQualityScore",
+          "sig": "func GetQualityScore()"
+        }
+      ]
+    },
+    {
+      "name": "provider_satellite.go",
+      "path": "backend/internal/truth/provider_satellite.go",
+      "description": "Auto-generated AST parser metadata representation for provider_satellite.go.",
+      "functions": [
+        {
+          "name": "NewCopernicusSatelliteProvider",
+          "sig": "func NewCopernicusSatelliteProvider()"
+        },
+        {
+          "name": "Authenticate",
+          "sig": "func Authenticate()"
+        },
+        {
+          "name": "GetSchedule",
+          "sig": "func GetSchedule()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "Parse",
+          "sig": "func Parse()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()"
+        },
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        },
+        {
+          "name": "GetProvenance",
+          "sig": "func GetProvenance()"
+        },
+        {
+          "name": "GetQualityScore",
+          "sig": "func GetQualityScore()"
+        }
+      ]
+    },
+    {
+      "name": "provider_tide.go",
+      "path": "backend/internal/truth/provider_tide.go",
+      "description": "Auto-generated AST parser metadata representation for provider_tide.go.",
+      "functions": [
+        {
+          "name": "NewTideProvider",
+          "sig": "func NewTideProvider()"
+        },
+        {
+          "name": "Authenticate",
+          "sig": "func Authenticate()"
+        },
+        {
+          "name": "GetSchedule",
+          "sig": "func GetSchedule()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "Parse",
+          "sig": "func Parse()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()"
+        },
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        },
+        {
+          "name": "GetProvenance",
+          "sig": "func GetProvenance()"
+        },
+        {
+          "name": "GetQualityScore",
+          "sig": "func GetQualityScore()"
         }
       ]
     },
