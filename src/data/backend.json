@@ -1,8 +1,8 @@
 {
   "status": "verified",
   "coverage": 100,
-  "filesReviewed": 236,
-  "functionsReviewed": 1106,
+  "filesReviewed": 330,
+  "functionsReviewed": 1365,
   "confidence": "High",
   "verificationDate": "June 2026",
   "reviewer": "Engineering Intelligence Engine",
@@ -418,6 +418,78 @@
           "name": "MathGlobalInfoGeometryHandler",
           "sig": "func MathGlobalInfoGeometryHandler()",
           "notes": "MathGlobalInfoGeometryHandler GET /api/v1/math/information-geometry/:slug"
+        }
+      ]
+    },
+    {
+      "name": "global_registry_handlers.go",
+      "path": "backend/internal/api/global_registry_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for global_registry_handlers.go.",
+      "functions": [
+        {
+          "name": "GetGlobalRegistryStatsHandler",
+          "sig": "func GetGlobalRegistryStatsHandler()",
+          "notes": "GetGlobalRegistryStatsHandler returns the summary statistics by completeness levels L0-L7"
+        },
+        {
+          "name": "GetGlobalRegistryTreeHandler",
+          "sig": "func GetGlobalRegistryTreeHandler()",
+          "notes": "GetGlobalRegistryTreeHandler returns the full hierarchical list"
+        },
+        {
+          "name": "GetGlobalRegistryDuplicatesHandler",
+          "sig": "func GetGlobalRegistryDuplicatesHandler()",
+          "notes": "GetGlobalRegistryDuplicatesHandler returns a list of coordinate duplicates (under 100 meters)"
+        },
+        {
+          "name": "GetGlobalRegistryProposalsHandler",
+          "sig": "func GetGlobalRegistryProposalsHandler()",
+          "notes": "GetGlobalRegistryProposalsHandler lists all proposed coastlines and spots waiting in the queues"
+        },
+        {
+          "name": "PostGlobalRegistryApproveProposalHandler",
+          "sig": "func PostGlobalRegistryApproveProposalHandler()",
+          "notes": "PostGlobalRegistryApproveProposalHandler moves a candidate spot or coastline into the production registry"
+        },
+        {
+          "name": "PostGlobalRegistryRejectProposalHandler",
+          "sig": "func PostGlobalRegistryRejectProposalHandler()",
+          "notes": "PostGlobalRegistryRejectProposalHandler rejects and deletes a proposal from candidate queue"
+        },
+        {
+          "name": "PostGlobalRegistryImportHandler",
+          "sig": "func PostGlobalRegistryImportHandler()",
+          "notes": "PostGlobalRegistryImportHandler runs the ETL pipeline from file uploads"
+        },
+        {
+          "name": "GetGlobalRegistryHistoryHandler",
+          "sig": "func GetGlobalRegistryHistoryHandler()",
+          "notes": "GetGlobalRegistryHistoryHandler returns the versions history log list"
+        },
+        {
+          "name": "GetGlobalRegistryCalibrationStatsHandler",
+          "sig": "func GetGlobalRegistryCalibrationStatsHandler()",
+          "notes": "GetGlobalRegistryCalibrationStatsHandler returns scientific completeness and coverage aggregates"
+        },
+        {
+          "name": "GetGlobalRegistryCalibrationQueueHandler",
+          "sig": "func GetGlobalRegistryCalibrationQueueHandler()",
+          "notes": "GetGlobalRegistryCalibrationQueueHandler returns the list of spots prioritized by calibration urgency"
+        },
+        {
+          "name": "PostGlobalRegistrySpotCalibrateHandler",
+          "sig": "func PostGlobalRegistrySpotCalibrateHandler()",
+          "notes": "PostGlobalRegistrySpotCalibrateHandler triggers scientific enrichment and logs updates"
+        },
+        {
+          "name": "PostGlobalRegistrySpotCertifyHandler",
+          "sig": "func PostGlobalRegistrySpotCertifyHandler()",
+          "notes": "PostGlobalRegistrySpotCertifyHandler signs off the spot to CERTIFIED status"
+        },
+        {
+          "name": "GetGlobalRegistrySpotHistoryHandler",
+          "sig": "func GetGlobalRegistrySpotHistoryHandler()",
+          "notes": "GetGlobalRegistrySpotHistoryHandler resolves versioned history audit log"
         }
       ]
     },
@@ -939,6 +1011,33 @@
       ]
     },
     {
+      "name": "ocean_grid_handlers.go",
+      "path": "backend/internal/api/ocean_grid_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for ocean_grid_handlers.go.",
+      "functions": [
+        {
+          "name": "GetOceanGridHandler",
+          "sig": "func GetOceanGridHandler()",
+          "notes": "GetOceanGridHandler retrieves computational grid definitions.\nIf an 'id' query parameter is specified, returns that grid. Otherwise lists all."
+        },
+        {
+          "name": "GetOceanGridCellsHandler",
+          "sig": "func GetOceanGridCellsHandler()",
+          "notes": "GetOceanGridCellsHandler retrieves all spatial cells associated with a grid definition."
+        },
+        {
+          "name": "GetOceanGridQualityHandler",
+          "sig": "func GetOceanGridQualityHandler()",
+          "notes": "GetOceanGridQualityHandler fetches the latest geometry/safety quality report."
+        },
+        {
+          "name": "GetBoundaryHandler",
+          "sig": "func GetBoundaryHandler()",
+          "notes": "GetBoundaryHandler fetches interpolated boundary conditions.\nTriggers generation if not cached and parameters are complete."
+        }
+      ]
+    },
+    {
       "name": "ocean_science_handlers.go",
       "path": "backend/internal/api/ocean_science_handlers.go",
       "description": "Auto-generated AST parser metadata representation for ocean_science_handlers.go.",
@@ -958,6 +1057,70 @@
         {
           "name": "GetOceanScienceObservationsHandler",
           "sig": "func GetOceanScienceObservationsHandler()"
+        }
+      ]
+    },
+    {
+      "name": "ocean_spectrum_handlers.go",
+      "path": "backend/internal/api/ocean_spectrum_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for ocean_spectrum_handlers.go.",
+      "functions": [
+        {
+          "name": "GetOceanSpectrumHandler",
+          "sig": "func GetOceanSpectrumHandler()",
+          "notes": "GetOceanSpectrumHandler handles general queries like getting versions of a grid."
+        },
+        {
+          "name": "GetOceanSpectrumByCellHandler",
+          "sig": "func GetOceanSpectrumByCellHandler()",
+          "notes": "GetOceanSpectrumByCellHandler handles retrieving the latest spectrum for a specific cell."
+        },
+        {
+          "name": "GetOceanSpectrumHistoryHandler",
+          "sig": "func GetOceanSpectrumHistoryHandler()",
+          "notes": "GetOceanSpectrumHistoryHandler retrieves the history of spectral states for a cell."
+        },
+        {
+          "name": "GetOceanSpectrumDiagnosticsHandler",
+          "sig": "func GetOceanSpectrumDiagnosticsHandler()",
+          "notes": "GetOceanSpectrumDiagnosticsHandler retrieves diagnostics for a cell."
+        },
+        {
+          "name": "GetOceanSpectrumPartitionsHandler",
+          "sig": "func GetOceanSpectrumPartitionsHandler()",
+          "notes": "GetOceanSpectrumPartitionsHandler retrieves the partitions for a given state ID."
+        }
+      ]
+    },
+    {
+      "name": "ocean_state_handlers.go",
+      "path": "backend/internal/api/ocean_state_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for ocean_state_handlers.go.",
+      "functions": [
+        {
+          "name": "GetOceanStateListHandler",
+          "sig": "func GetOceanStateListHandler()",
+          "notes": "GetOceanStateListHandler retrieves latest states for all indexed spots"
+        },
+        {
+          "name": "GetOceanStateHandler",
+          "sig": "func GetOceanStateHandler()",
+          "notes": "GetOceanStateHandler retrieves the latest OceanState for a spot, resolving progressive inheritance"
+        },
+        {
+          "name": "GetOceanStateHistoryHandler",
+          "sig": "func GetOceanStateHistoryHandler()",
+          "notes": "GetOceanStateHistoryHandler returns chronological historic versions for an entity"
+        },
+        {
+          "name": "GetOceanStateProvenanceHandler",
+          "sig": "func GetOceanStateProvenanceHandler()",
+          "notes": "GetOceanStateProvenanceHandler returns provider contributions weights composition"
+        },
+        {
+          "name": "GetOceanStateQualityHandler",
+          "sig": "func GetOceanStateQualityHandler()",
+          "notes": "GetOceanStateQualityHandler returns variable uncertainties and checks validation status"
         }
       ]
     },
@@ -1773,6 +1936,136 @@
       ]
     },
     {
+      "name": "bathymetry.go",
+      "path": "backend/internal/boundary/bathymetry.go",
+      "description": "Auto-generated AST parser metadata representation for bathymetry.go.",
+      "functions": [
+        {
+          "name": "InterpolateBathymetry",
+          "sig": "func InterpolateBathymetry()",
+          "notes": "InterpolateBathymetry calculates depth and slope at target coordinates using nearby bathymetry observations."
+        }
+      ]
+    },
+    {
+      "name": "coastline_mask.go",
+      "path": "backend/internal/boundary/coastline_mask.go",
+      "description": "Auto-generated AST parser metadata representation for coastline_mask.go.",
+      "functions": [
+        {
+          "name": "CalculateShorelineDistance",
+          "sig": "func CalculateShorelineDistance()",
+          "notes": "CalculateShorelineDistance calculates the geodesic distance (in kilometers) to the nearest land cell or coastline.\nReturns the distance in kilometers and a boolean indicating if the target coordinate is considered land."
+        }
+      ]
+    },
+    {
+      "name": "current_grid.go",
+      "path": "backend/internal/boundary/current_grid.go",
+      "description": "Auto-generated AST parser metadata representation for current_grid.go.",
+      "functions": [
+        {
+          "name": "InterpolateCurrents",
+          "sig": "func InterpolateCurrents()",
+          "notes": "InterpolateCurrents calculates current speed and direction at coordinates (lat, lon) using vector averaging."
+        }
+      ]
+    },
+    {
+      "name": "domain.go",
+      "path": "backend/internal/boundary/domain.go",
+      "description": "Auto-generated AST parser metadata representation for domain.go.",
+      "functions": [
+        {
+          "name": "CalculateMaxTimeStep",
+          "sig": "func CalculateMaxTimeStep()",
+          "notes": "CalculateMaxTimeStep computes the maximum numerical solver time step (in seconds)\nto satisfy the Courant-Friedrichs-Lewy (CFL) stability criteria.\ndt \u003c= dx / sqrt(g * d) * CFLMaxLimit"
+        },
+        {
+          "name": "GenerateNumericalDomain",
+          "sig": "func GenerateNumericalDomain()",
+          "notes": "GenerateNumericalDomain constructs a numerical domain for a grid definition."
+        }
+      ]
+    },
+    {
+      "name": "interpolation.go",
+      "path": "backend/internal/boundary/interpolation.go",
+      "description": "Auto-generated AST parser metadata representation for interpolation.go.",
+      "functions": [
+        {
+          "name": "IDW",
+          "sig": "func IDW()",
+          "notes": "IDW performs Inverse Distance Weighting interpolation at a target coordinate.\np is the power parameter (typically 2.0)."
+        }
+      ]
+    },
+    {
+      "name": "reef_mask.go",
+      "path": "backend/internal/boundary/reef_mask.go",
+      "description": "Auto-generated AST parser metadata representation for reef_mask.go.",
+      "functions": [
+        {
+          "name": "DetermineReefFlag",
+          "sig": "func DetermineReefFlag()",
+          "notes": "DetermineReefFlag determines if a cell should be classified as reef/rock substrate\nbased on depth, gradient profiles, and regional substrate definitions."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/boundary/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewService",
+          "sig": "func NewService()",
+          "notes": "NewService instantiates a boundary conditions service."
+        },
+        {
+          "name": "GenerateBoundaryConditions",
+          "sig": "func GenerateBoundaryConditions()",
+          "notes": "GenerateBoundaryConditions builds, validates, and stores a boundary condition state for a grid at a given timestamp."
+        }
+      ]
+    },
+    {
+      "name": "tide_grid.go",
+      "path": "backend/internal/boundary/tide_grid.go",
+      "description": "Auto-generated AST parser metadata representation for tide_grid.go.",
+      "functions": [
+        {
+          "name": "InterpolateTideHeight",
+          "sig": "func InterpolateTideHeight()",
+          "notes": "InterpolateTideHeight calculates the tide height at coordinates (lat, lon) from station inputs."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/boundary/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "ValidateBoundaryConditions",
+          "sig": "func ValidateBoundaryConditions()",
+          "notes": "ValidateBoundaryConditions audits generated boundary conditions to ensure they fall within realistic physical thresholds."
+        }
+      ]
+    },
+    {
+      "name": "wind_grid.go",
+      "path": "backend/internal/boundary/wind_grid.go",
+      "description": "Auto-generated AST parser metadata representation for wind_grid.go.",
+      "functions": [
+        {
+          "name": "InterpolateWind",
+          "sig": "func InterpolateWind()",
+          "notes": "InterpolateWind calculates wind speed and direction at coordinates (lat, lon) using vector averaging."
+        }
+      ]
+    },
+    {
       "name": "memory.go",
       "path": "backend/internal/cache/memory.go",
       "description": "Auto-generated AST parser metadata representation for memory.go.",
@@ -2429,6 +2722,37 @@
       ]
     },
     {
+      "name": "discovery_extensions.go",
+      "path": "backend/internal/discovery/discovery_extensions.go",
+      "description": "Auto-generated AST parser metadata representation for discovery_extensions.go.",
+      "functions": [
+        {
+          "name": "NewExtensionEngine",
+          "sig": "func NewExtensionEngine()"
+        },
+        {
+          "name": "ProposeMissingCoastlines",
+          "sig": "func ProposeMissingCoastlines()",
+          "notes": "ProposeMissingCoastlines identifies regions with high coastal potential but no coastlines mapped, queuing proposals."
+        },
+        {
+          "name": "ProposeMissingSpots",
+          "sig": "func ProposeMissingSpots()",
+          "notes": "ProposeMissingSpots scans coastline segments and proposes spots where spatial gaps are larger than 20km."
+        },
+        {
+          "name": "SuggestSpotDNAInheritance",
+          "sig": "func SuggestSpotDNAInheritance()",
+          "notes": "SuggestSpotDNAInheritance estimates optimal swell, wind, and tide properties from neighboring spots"
+        },
+        {
+          "name": "IdentifyIncompleteRegions",
+          "sig": "func IdentifyIncompleteRegions()",
+          "notes": "IdentifyIncompleteRegions returns region IDs having high launch priority but \u003c 80% completeness score"
+        }
+      ]
+    },
+    {
       "name": "geometry.go",
       "path": "backend/internal/discovery/geometry.go",
       "description": "Auto-generated AST parser metadata representation for geometry.go.",
@@ -2490,7 +2814,12 @@
         {
           "name": "Scan",
           "sig": "func Scan()",
-          "notes": "Scan performs the autonomous discovery scan over coastlines.\nIt detects candidates, generates Spot DNA attributes, and estimates cost profiles."
+          "notes": "Scan performs the autonomous discovery scan.\nIt detects candidates if the registry is empty, otherwise recommends missing scientific parameters."
+        },
+        {
+          "name": "RecommendMissingScientificDetails",
+          "sig": "func RecommendMissingScientificDetails()",
+          "notes": "RecommendMissingScientificDetails scans existing spot registry profiles for gaps and records recommendations."
         }
       ]
     },
@@ -2784,6 +3113,446 @@
           "name": "CalculateRegime",
           "sig": "func CalculateRegime()",
           "notes": "CalculateRegime determines the primary semantic ocean state based on current hour, previous hour (if available), and conditions."
+        }
+      ]
+    },
+    {
+      "name": "csv.go",
+      "path": "backend/internal/globalregistry/adapters/csv.go",
+      "description": "Auto-generated AST parser metadata representation for csv.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "geojson.go",
+      "path": "backend/internal/globalregistry/adapters/geojson.go",
+      "description": "Auto-generated AST parser metadata representation for geojson.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "json.go",
+      "path": "backend/internal/globalregistry/adapters/json.go",
+      "description": "Auto-generated AST parser metadata representation for json.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "manual.go",
+      "path": "backend/internal/globalregistry/adapters/manual.go",
+      "description": "Auto-generated AST parser metadata representation for manual.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "marineregions.go",
+      "path": "backend/internal/globalregistry/adapters/marineregions.go",
+      "description": "Auto-generated AST parser metadata representation for marineregions.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "naturalearth.go",
+      "path": "backend/internal/globalregistry/adapters/naturalearth.go",
+      "description": "Auto-generated AST parser metadata representation for naturalearth.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "osm.go",
+      "path": "backend/internal/globalregistry/adapters/osm.go",
+      "description": "Auto-generated AST parser metadata representation for osm.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "scientific.go",
+      "path": "backend/internal/globalregistry/adapters/scientific.go",
+      "description": "Auto-generated AST parser metadata representation for scientific.go.",
+      "functions": [
+        {
+          "name": "Name",
+          "sig": "func Name()"
+        },
+        {
+          "name": "Extract",
+          "sig": "func Extract()"
+        }
+      ]
+    },
+    {
+      "name": "compiler.go",
+      "path": "backend/internal/globalregistry/compiler.go",
+      "description": "Auto-generated AST parser metadata representation for compiler.go.",
+      "functions": [
+        {
+          "name": "NewRegistryCompiler",
+          "sig": "func NewRegistryCompiler()"
+        },
+        {
+          "name": "CompileRegistry",
+          "sig": "func CompileRegistry()",
+          "notes": "CompileRegistry runs the canonical global surf registry ETL compile pipeline"
+        }
+      ]
+    },
+    {
+      "name": "deduplication.go",
+      "path": "backend/internal/globalregistry/deduplication.go",
+      "description": "Auto-generated AST parser metadata representation for deduplication.go.",
+      "functions": [
+        {
+          "name": "CleanString",
+          "sig": "func CleanString()",
+          "notes": "CleanString normalizes a name to simplify similarity matching"
+        },
+        {
+          "name": "LevenshteinDistance",
+          "sig": "func LevenshteinDistance()",
+          "notes": "LevenshteinDistance calculates the edit distance between two strings"
+        },
+        {
+          "name": "NameSimilarity",
+          "sig": "func NameSimilarity()",
+          "notes": "NameSimilarity returns a score between 0.0 and 1.0 indicating similarity"
+        },
+        {
+          "name": "FindDuplicates",
+          "sig": "func FindDuplicates()",
+          "notes": "FindDuplicates compares a spot with other spots to find candidates"
+        }
+      ]
+    },
+    {
+      "name": "bathymetry.go",
+      "path": "backend/internal/globalregistry/enrichment/bathymetry.go",
+      "description": "Auto-generated AST parser metadata representation for bathymetry.go.",
+      "functions": [
+        {
+          "name": "DeriveBathymetry",
+          "sig": "func DeriveBathymetry()",
+          "notes": "DeriveBathymetry extracts seabed class, reef slope, and complexity from grid_cells or uses defaults."
+        }
+      ]
+    },
+    {
+      "name": "confidence.go",
+      "path": "backend/internal/globalregistry/enrichment/confidence.go",
+      "description": "Auto-generated AST parser metadata representation for confidence.go.",
+      "functions": [
+        {
+          "name": "CalculateConfidence",
+          "sig": "func CalculateConfidence()",
+          "notes": "CalculateConfidence evaluates derived parameters and computes overall scientific confidence."
+        }
+      ]
+    },
+    {
+      "name": "exposure.go",
+      "path": "backend/internal/globalregistry/enrichment/exposure.go",
+      "description": "Auto-generated AST parser metadata representation for exposure.go.",
+      "functions": [
+        {
+          "name": "DeriveExposure",
+          "sig": "func DeriveExposure()",
+          "notes": "DeriveExposure determines swell window boundaries and orientations by intersecting spot coordinates with coastline metadata."
+        }
+      ]
+    },
+    {
+      "name": "hazards.go",
+      "path": "backend/internal/globalregistry/enrichment/hazards.go",
+      "description": "Auto-generated AST parser metadata representation for hazards.go.",
+      "functions": [
+        {
+          "name": "DeriveHazards",
+          "sig": "func DeriveHazards()",
+          "notes": "DeriveHazards catalogues local hazards and sets difficulty levels based on physical wave and bottom types."
+        }
+      ]
+    },
+    {
+      "name": "provider_mapping.go",
+      "path": "backend/internal/globalregistry/enrichment/provider_mapping.go",
+      "description": "Auto-generated AST parser metadata representation for provider_mapping.go.",
+      "functions": [
+        {
+          "name": "CheckProviderCoverage",
+          "sig": "func CheckProviderCoverage()",
+          "notes": "CheckProviderCoverage scans active database grids and station mappings to determine provider linkages."
+        }
+      ]
+    },
+    {
+      "name": "seasonality.go",
+      "path": "backend/internal/globalregistry/enrichment/seasonality.go",
+      "description": "Auto-generated AST parser metadata representation for seasonality.go.",
+      "functions": [
+        {
+          "name": "DeriveSeasonality",
+          "sig": "func DeriveSeasonality()",
+          "notes": "DeriveSeasonality calculates peak swell seasonality based on coordinates and hemispherical properties."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/globalregistry/enrichment/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "LoadSpotAndLatestDNA",
+          "sig": "func LoadSpotAndLatestDNA()",
+          "notes": "LoadSpotAndLatestDNA loads spot and its highest version (active) DNA profile."
+        },
+        {
+          "name": "EnrichSpot",
+          "sig": "func EnrichSpot()",
+          "notes": "EnrichSpot runs the scientific derivation pipeline on a spot and commits a versioned update."
+        }
+      ]
+    },
+    {
+      "name": "tides.go",
+      "path": "backend/internal/globalregistry/enrichment/tides.go",
+      "description": "Auto-generated AST parser metadata representation for tides.go.",
+      "functions": [
+        {
+          "name": "DeriveTides",
+          "sig": "func DeriveTides()",
+          "notes": "DeriveTides calculates optimal tide preference and height bounds from wave type and bathymetric slopes."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/globalregistry/enrichment/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "ValidateStage",
+          "sig": "func ValidateStage()",
+          "notes": "ValidateStage verifies if the spot DNA satisfies criteria for a target lifecycle state."
+        }
+      ]
+    },
+    {
+      "name": "winds.go",
+      "path": "backend/internal/globalregistry/enrichment/winds.go",
+      "description": "Auto-generated AST parser metadata representation for winds.go.",
+      "functions": [
+        {
+          "name": "DeriveWinds",
+          "sig": "func DeriveWinds()",
+          "notes": "DeriveWinds calculates optimal wind directions and protection angles based on spot shoreline orientation."
+        }
+      ]
+    },
+    {
+      "name": "hierarchy.go",
+      "path": "backend/internal/globalregistry/hierarchy.go",
+      "description": "Auto-generated AST parser metadata representation for hierarchy.go.",
+      "functions": [
+        {
+          "name": "NewHierarchyResolver",
+          "sig": "func NewHierarchyResolver()"
+        },
+        {
+          "name": "GetParentType",
+          "sig": "func GetParentType()",
+          "notes": "GetParentType returns the expected parent type in the canonical hierarchy"
+        },
+        {
+          "name": "ResolvePath",
+          "sig": "func ResolvePath()",
+          "notes": "ResolvePath builds the full hierarchical path string for a node (e.g. earth/atlantic/MA/MA-TAG/anchors)"
+        },
+        {
+          "name": "GetChildren",
+          "sig": "func GetChildren()",
+          "notes": "GetChildren returns the immediate children IDs of a node in the database"
+        }
+      ]
+    },
+    {
+      "name": "importer.go",
+      "path": "backend/internal/globalregistry/importer.go",
+      "description": "Auto-generated AST parser metadata representation for importer.go.",
+      "functions": [
+        {
+          "name": "ComputeChecksum",
+          "sig": "func ComputeChecksum()",
+          "notes": "ComputeChecksum calculates the SHA256 checksum of raw byte contents"
+        },
+        {
+          "name": "Serialize",
+          "sig": "func Serialize()",
+          "notes": "Serialize serializes the RecordProvenance to a string for DB storage"
+        },
+        {
+          "name": "ParseProvenance",
+          "sig": "func ParseProvenance()",
+          "notes": "ParseProvenance parses the serialized provenance metadata"
+        },
+        {
+          "name": "ValidateManifest",
+          "sig": "func ValidateManifest()",
+          "notes": "ValidateManifest checks if all required fields are present in a DatasetManifest"
+        }
+      ]
+    },
+    {
+      "name": "provenance.go",
+      "path": "backend/internal/globalregistry/provenance.go",
+      "description": "Auto-generated AST parser metadata representation for provenance.go.",
+      "functions": [
+        {
+          "name": "NewProvenanceStore",
+          "sig": "func NewProvenanceStore()"
+        },
+        {
+          "name": "SaveManifest",
+          "sig": "func SaveManifest()",
+          "notes": "SaveManifest writes a DatasetManifest entry to the database"
+        },
+        {
+          "name": "GetManifest",
+          "sig": "func GetManifest()",
+          "notes": "GetManifest retrieves a manifest by its version tag"
+        },
+        {
+          "name": "GetManifests",
+          "sig": "func GetManifests()",
+          "notes": "GetManifests lists all manifests in reverse chronological order"
+        }
+      ]
+    },
+    {
+      "name": "statistics.go",
+      "path": "backend/internal/globalregistry/statistics.go",
+      "description": "Auto-generated AST parser metadata representation for statistics.go.",
+      "functions": [
+        {
+          "name": "AssessCompletenessLevel",
+          "sig": "func AssessCompletenessLevel()",
+          "notes": "AssessCompletenessLevel evaluates a spot's staged completeness level (0 to 7)"
+        },
+        {
+          "name": "CalculateSpotReadiness",
+          "sig": "func CalculateSpotReadiness()",
+          "notes": "CalculateSpotReadiness evaluates a spot and extracts the multi-dimensional completeness details"
+        },
+        {
+          "name": "NewStatsCalculator",
+          "sig": "func NewStatsCalculator()"
+        },
+        {
+          "name": "ComputeRegistryStats",
+          "sig": "func ComputeRegistryStats()",
+          "notes": "ComputeRegistryStats scans the database and compiles comprehensive stats"
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/globalregistry/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "NewRegistryValidator",
+          "sig": "func NewRegistryValidator()"
+        },
+        {
+          "name": "ValidateSpot",
+          "sig": "func ValidateSpot()",
+          "notes": "ValidateSpot checks a single spot entity for strict quality requirements"
+        },
+        {
+          "name": "Haversine",
+          "sig": "func Haversine()",
+          "notes": "Haversine calculates distance between two points in kilometers"
+        },
+        {
+          "name": "ValidateHierarchy",
+          "sig": "func ValidateHierarchy()",
+          "notes": "ValidateHierarchy checks that parents exist in the database for all levels"
+        },
+        {
+          "name": "CheckCoastlineContinuity",
+          "sig": "func CheckCoastlineContinuity()",
+          "notes": "CheckCoastlineContinuity performs a proximity test ensuring spot is near parent coastline"
+        }
+      ]
+    },
+    {
+      "name": "versioning.go",
+      "path": "backend/internal/globalregistry/versioning.go",
+      "description": "Auto-generated AST parser metadata representation for versioning.go.",
+      "functions": [
+        {
+          "name": "NewVersionManager",
+          "sig": "func NewVersionManager()"
+        },
+        {
+          "name": "ExecuteInTransaction",
+          "sig": "func ExecuteInTransaction()",
+          "notes": "ExecuteInTransaction wraps database operations in a transaction.\nIf dryRun is true, the transaction is ALWAYS rolled back at the end."
         }
       ]
     },
@@ -4232,6 +5001,854 @@
       ]
     },
     {
+      "name": "cell.go",
+      "path": "backend/internal/oceangrid/cell.go",
+      "description": "Auto-generated AST parser metadata representation for cell.go.",
+      "functions": [
+        {
+          "name": "GenerateCellID",
+          "sig": "func GenerateCellID()",
+          "notes": "GenerateCellID creates a deterministic unique identifier for a grid cell based on its grid and coordinates."
+        },
+        {
+          "name": "DistanceKM",
+          "sig": "func DistanceKM()",
+          "notes": "DistanceKM calculates the great circle distance between two points in kilometers.\nUses EarthRadius constant = 6371000.0 m (from science constants, 6371.0 km)"
+        }
+      ]
+    },
+    {
+      "name": "grid.go",
+      "path": "backend/internal/oceangrid/grid.go",
+      "description": "Auto-generated AST parser metadata representation for grid.go.",
+      "functions": [
+        {
+          "name": "CalculateGridChecksum",
+          "sig": "func CalculateGridChecksum()",
+          "notes": "CalculateGridChecksum generates a deterministic SHA256 checksum for a grid and its cells."
+        }
+      ]
+    },
+    {
+      "name": "hierarchy.go",
+      "path": "backend/internal/oceangrid/hierarchy.go",
+      "description": "Auto-generated AST parser metadata representation for hierarchy.go.",
+      "functions": [
+        {
+          "name": "MapCellInheritance",
+          "sig": "func MapCellInheritance()",
+          "notes": "MapCellInheritance maps property inheritance from a parent cell to a child cell.\nLower hierarchy levels inherit from higher levels while progressively overriding values."
+        },
+        {
+          "name": "MapBoundaryInheritance",
+          "sig": "func MapBoundaryInheritance()",
+          "notes": "MapBoundaryInheritance copies wave, wind, current, and tide boundary states from a parent cell's\nboundary conditions record to a child cell's boundary conditions record."
+        }
+      ]
+    },
+    {
+      "name": "indexing.go",
+      "path": "backend/internal/oceangrid/indexing.go",
+      "description": "Auto-generated AST parser metadata representation for indexing.go.",
+      "functions": [
+        {
+          "name": "BuildKDTree",
+          "sig": "func BuildKDTree()",
+          "notes": "BuildKDTree builds a balanced 2D KD-Tree from a slice of GridCells."
+        },
+        {
+          "name": "FindNearest",
+          "sig": "func FindNearest()",
+          "notes": "FindNearest searches the KD-Tree and returns the closest GridCell.\nPerformance is optimized to execute in under 2ms."
+        }
+      ]
+    },
+    {
+      "name": "quality.go",
+      "path": "backend/internal/oceangrid/quality.go",
+      "description": "Auto-generated AST parser metadata representation for quality.go.",
+      "functions": [
+        {
+          "name": "EvaluateGridQuality",
+          "sig": "func EvaluateGridQuality()",
+          "notes": "EvaluateGridQuality evaluates the geometrical and metadata consistency of a grid."
+        },
+        {
+          "name": "VerifyGridBounds",
+          "sig": "func VerifyGridBounds()",
+          "notes": "VerifyGridBounds checks if all cells fall within the declared grid bounding box."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/oceangrid/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewService",
+          "sig": "func NewService()",
+          "notes": "NewService instantiates a new oceangrid service."
+        },
+        {
+          "name": "RegisterGrid",
+          "sig": "func RegisterGrid()",
+          "notes": "RegisterGrid performs structural checks, computes quality score, hashes deterministic checksum,\nsaves everything transactionally to database store, writes initial version, and registers the in-memory spatial index."
+        },
+        {
+          "name": "LoadGridIndex",
+          "sig": "func LoadGridIndex()",
+          "notes": "LoadGridIndex loads cells for a given grid from the database store and builds its KDTree index in-memory."
+        },
+        {
+          "name": "FindNearestCell",
+          "sig": "func FindNearestCell()",
+          "notes": "FindNearestCell retrieves the closest grid cell to a given coordinate.\nPerformance will consistently execute in \u003c 2ms thanks to the KDTree lookup cache."
+        },
+        {
+          "name": "GetComputationalGrid",
+          "sig": "func GetComputationalGrid()",
+          "notes": "GetComputationalGrid fetches a grid definition."
+        },
+        {
+          "name": "GetAllComputationalGrids",
+          "sig": "func GetAllComputationalGrids()",
+          "notes": "GetAllComputationalGrids fetches all grids."
+        },
+        {
+          "name": "GetGridCells",
+          "sig": "func GetGridCells()",
+          "notes": "GetGridCells fetches cells of a grid."
+        },
+        {
+          "name": "GetLatestGridQuality",
+          "sig": "func GetLatestGridQuality()",
+          "notes": "GetLatestGridQuality fetches latest quality validation check."
+        },
+        {
+          "name": "GetGridVersions",
+          "sig": "func GetGridVersions()",
+          "notes": "GetGridVersions fetches version history ledger records."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/oceangrid/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "ValidateGrid",
+          "sig": "func ValidateGrid()",
+          "notes": "ValidateGrid performs structural and oceanographic validation on the grid.\nAn active grid must have quality score \u003e= 95%, 0 orphan ocean cells, and 0 invalid land-shoreline intersections."
+        }
+      ]
+    },
+    {
+      "name": "versioning.go",
+      "path": "backend/internal/oceangrid/versioning.go",
+      "description": "Auto-generated AST parser metadata representation for versioning.go.",
+      "functions": [
+        {
+          "name": "CreateNextVersion",
+          "sig": "func CreateNextVersion()",
+          "notes": "CreateNextVersion generates a new monotonically incremented grid version record."
+        },
+        {
+          "name": "IsValidTransition",
+          "sig": "func IsValidTransition()",
+          "notes": "IsValidTransition checks if transition between grid states is valid.\nGrids are strictly immutable. Grids must never be overwritten, and should increment version counters monotonically."
+        }
+      ]
+    },
+    {
+      "name": "benchmark.go",
+      "path": "backend/internal/oceanphysics/benchmark.go",
+      "description": "Auto-generated AST parser metadata representation for benchmark.go.",
+      "functions": [
+        {
+          "name": "GetBenchmarkSuite",
+          "sig": "func GetBenchmarkSuite()",
+          "notes": "GetBenchmarkSuite returns canonical benchmark cases from published Airy wave tables."
+        },
+        {
+          "name": "RunBenchmarks",
+          "sig": "func RunBenchmarks()",
+          "notes": "RunBenchmarks executes the benchmark suite and returns a summary log of deviances."
+        }
+      ]
+    },
+    {
+      "name": "bottom_friction.go",
+      "path": "backend/internal/oceanphysics/bottom_friction.go",
+      "description": "Auto-generated AST parser metadata representation for bottom_friction.go.",
+      "functions": [
+        {
+          "name": "BottomFrictionDissipation",
+          "sig": "func BottomFrictionDissipation()",
+          "notes": "BottomFrictionDissipation calculates the wave energy dissipation rate due to bottom friction (Watts/m^2).\nFormula: S_bf = (f_w / (3 * pi * g)) * (omega / sinh(k * d))^3 * H^3\nWhere:\n\n\tfw is the bottom friction factor (typical value ~ 0.015).\n\tomega is the angular wave frequency.\n\tk is the wavenumber.\n\tdepth is water depth.\n\theight is wave height."
+        }
+      ]
+    },
+    {
+      "name": "breaking.go",
+      "path": "backend/internal/oceanphysics/breaking.go",
+      "description": "Auto-generated AST parser metadata representation for breaking.go.",
+      "functions": [
+        {
+          "name": "IsBreaking",
+          "sig": "func IsBreaking()",
+          "notes": "IsBreaking checks if a wave at a given height and water depth exceeds the McCowan breaking limit (H \u003e= 0.78 * d)."
+        },
+        {
+          "name": "BreakingHeightLimit",
+          "sig": "func BreakingHeightLimit()",
+          "notes": "BreakingHeightLimit returns the maximum possible non-breaking wave height at a given depth."
+        },
+        {
+          "name": "ClassifyBreakerType",
+          "sig": "func ClassifyBreakerType()",
+          "notes": "ClassifyBreakerType determines the breaking wave type based on beach slope, height, and wavelength\nusing the Iribarren (surf similarity) parameter: xi = tan(beta) / sqrt(H / L0).\nClassification thresholds:\n\n\txi \u003c 0.5           -\u003e SPILLING\n\t0.5 \u003c= xi \u003c 3.3    -\u003e PLUNGING\n\t3.3 \u003c= xi \u003c 3.8    -\u003e COLLAPSING\n\txi \u003e= 3.8          -\u003e SURGING"
+        }
+      ]
+    },
+    {
+      "name": "current_interaction.go",
+      "path": "backend/internal/oceanphysics/current_interaction.go",
+      "description": "Auto-generated AST parser metadata representation for current_interaction.go.",
+      "functions": [
+        {
+          "name": "ObservedFrequency",
+          "sig": "func ObservedFrequency()",
+          "notes": "ObservedFrequency calculates the absolute (observed) wave frequency (omega) in the presence of a current.\nFormula: omega = sigma + k * U * cos(theta_wave - theta_current)\nwhere sigma is the intrinsic (relative) wave frequency."
+        },
+        {
+          "name": "IntrinsicFrequency",
+          "sig": "func IntrinsicFrequency()",
+          "notes": "IntrinsicFrequency calculates the relative (intrinsic) wave frequency (sigma) in the moving current frame.\nFormula: sigma = omega - k * U * cos(theta_wave - theta_current)\nwhere omega is the absolute wave frequency."
+        }
+      ]
+    },
+    {
+      "name": "diffraction.go",
+      "path": "backend/internal/oceanphysics/diffraction.go",
+      "description": "Auto-generated AST parser metadata representation for diffraction.go.",
+      "functions": [
+        {
+          "name": "DiffractionCoefficient",
+          "sig": "func DiffractionCoefficient()",
+          "notes": "DiffractionCoefficient calculates a stable approximation of the diffraction coefficient (Kd)\nnear a headland or breakwater tip using a simplified Sommerfeld diffraction model.\nParameters:\n\n\tr: radial distance from the tip/point of diffraction (meters).\n\ttheta: angle from the shadow boundary (radians). Negative values represent the shadow zone.\n\tk: wavenumber of the wave (1/meters)."
+        }
+      ]
+    },
+    {
+      "name": "dispersion.go",
+      "path": "backend/internal/oceanphysics/dispersion.go",
+      "description": "Auto-generated AST parser metadata representation for dispersion.go.",
+      "functions": [
+        {
+          "name": "SolveDispersion",
+          "sig": "func SolveDispersion()",
+          "notes": "SolveDispersion solves the linear wave dispersion relation: omega^2 = g * k * tanh(k * d)\nfor wavenumber k given the angular wave frequency omega and water depth d."
+        }
+      ]
+    },
+    {
+      "name": "energy_flux.go",
+      "path": "backend/internal/oceanphysics/energy_flux.go",
+      "description": "Auto-generated AST parser metadata representation for energy_flux.go.",
+      "functions": [
+        {
+          "name": "EnergyFlux",
+          "sig": "func EnergyFlux()",
+          "notes": "EnergyFlux calculates the energy transport flux (wave power per unit crest length): P = E * Cg\nreturns wave power in Watts/meter (W/m)."
+        }
+      ]
+    },
+    {
+      "name": "group_velocity.go",
+      "path": "backend/internal/oceanphysics/group_velocity.go",
+      "description": "Auto-generated AST parser metadata representation for group_velocity.go.",
+      "functions": [
+        {
+          "name": "GroupVelocity",
+          "sig": "func GroupVelocity()",
+          "notes": "GroupVelocity calculates the wave group velocity Cg = n * C.\nCg represents the speed at which wave energy propagates."
+        }
+      ]
+    },
+    {
+      "name": "interfaces.go",
+      "path": "backend/internal/oceanphysics/interfaces.go",
+      "description": "Auto-generated AST parser metadata representation for interfaces.go.",
+      "functions": [
+        {
+          "name": "NewDefaultEngine",
+          "sig": "func NewDefaultEngine()"
+        },
+        {
+          "name": "ComputeDispersion",
+          "sig": "func ComputeDispersion()"
+        },
+        {
+          "name": "ComputeGroupVelocity",
+          "sig": "func ComputeGroupVelocity()"
+        },
+        {
+          "name": "ComputePhaseVelocity",
+          "sig": "func ComputePhaseVelocity()"
+        },
+        {
+          "name": "ComputeWaveEnergy",
+          "sig": "func ComputeWaveEnergy()"
+        },
+        {
+          "name": "ComputeEnergyFlux",
+          "sig": "func ComputeEnergyFlux()"
+        },
+        {
+          "name": "ComputeShoaling",
+          "sig": "func ComputeShoaling()"
+        },
+        {
+          "name": "ComputeRefraction",
+          "sig": "func ComputeRefraction()"
+        },
+        {
+          "name": "ComputeRefractionCoefficient",
+          "sig": "func ComputeRefractionCoefficient()"
+        },
+        {
+          "name": "ComputeBreaking",
+          "sig": "func ComputeBreaking()"
+        },
+        {
+          "name": "ComputeSpectralDensity",
+          "sig": "func ComputeSpectralDensity()"
+        }
+      ]
+    },
+    {
+      "name": "nonlinear.go",
+      "path": "backend/internal/oceanphysics/nonlinear.go",
+      "description": "Auto-generated AST parser metadata representation for nonlinear.go.",
+      "functions": [
+        {
+          "name": "UrsellNumber",
+          "sig": "func UrsellNumber()",
+          "notes": "UrsellNumber calculates the Ursell number Ur = (L^2 * H) / d^3.\nIt quantifies the nonlinearity of waves in shallow water.\nUr \u003c 10: Linear (Airy) waves or Stokes theory applies.\nUr \u003e= 10: Highly nonlinear shallow water waves (Cnoidal/Boussinesq)."
+        },
+        {
+          "name": "StokesLimitExceeded",
+          "sig": "func StokesLimitExceeded()",
+          "notes": "StokesLimitExceeded checks if wave steepness exceeds the deep water breaking limit (H / L \u003e 0.142)."
+        },
+        {
+          "name": "WaveSlope",
+          "sig": "func WaveSlope()",
+          "notes": "WaveSlope computes the wave slope parameter: ak = pi * H / L."
+        }
+      ]
+    },
+    {
+      "name": "orbital_velocity.go",
+      "path": "backend/internal/oceanphysics/orbital_velocity.go",
+      "description": "Auto-generated AST parser metadata representation for orbital_velocity.go.",
+      "functions": [
+        {
+          "name": "HorizontalOrbitalVelocityAmplitude",
+          "sig": "func HorizontalOrbitalVelocityAmplitude()",
+          "notes": "HorizontalOrbitalVelocityAmplitude computes the maximum horizontal orbital velocity amplitude (u_max)\nat elevation z (where z = 0 is mean sea level, z = -depth is the seabed).\nFormula: u = (H/2) * omega * cosh(k*(z + d)) / sinh(k*d)"
+        },
+        {
+          "name": "VerticalOrbitalVelocityAmplitude",
+          "sig": "func VerticalOrbitalVelocityAmplitude()",
+          "notes": "VerticalOrbitalVelocityAmplitude computes the maximum vertical orbital velocity amplitude (w_max)\nat elevation z (where z = 0 is mean sea level, z = -depth is the seabed).\nFormula: w = (H/2) * omega * sinh(k*(z + d)) / sinh(k*d)"
+        }
+      ]
+    },
+    {
+      "name": "phase_velocity.go",
+      "path": "backend/internal/oceanphysics/phase_velocity.go",
+      "description": "Auto-generated AST parser metadata representation for phase_velocity.go.",
+      "functions": [
+        {
+          "name": "PhaseVelocity",
+          "sig": "func PhaseVelocity()",
+          "notes": "PhaseVelocity calculates the wave phase velocity C = omega / k (speed of a single wave crest)."
+        }
+      ]
+    },
+    {
+      "name": "reflection.go",
+      "path": "backend/internal/oceanphysics/reflection.go",
+      "description": "Auto-generated AST parser metadata representation for reflection.go.",
+      "functions": [
+        {
+          "name": "ReflectionCoefficient",
+          "sig": "func ReflectionCoefficient()",
+          "notes": "ReflectionCoefficient computes the wave reflection coefficient (R) from a sloping beach or structure.\nUses the surf similarity (Iribarren) parameter: xi = tan(beta) / sqrt(H / L0).\nReflection coefficient is modeled using a bounded rational formulation: R = 0.1 * xi^2 / (1 + 0.1 * xi^2)."
+        }
+      ]
+    },
+    {
+      "name": "refraction.go",
+      "path": "backend/internal/oceanphysics/refraction.go",
+      "description": "Auto-generated AST parser metadata representation for refraction.go.",
+      "functions": [
+        {
+          "name": "WaveRefraction",
+          "sig": "func WaveRefraction()",
+          "notes": "WaveRefraction calculates the refracted wave angle theta (in radians) at a shallower depth\ngiven the deep water wave angle theta0 (in radians) and their respective phase speeds C0 and C.\nFormula (Snell's Law): sin(theta) = (C / C0) * sin(theta0)"
+        },
+        {
+          "name": "RefractionCoefficient",
+          "sig": "func RefractionCoefficient()",
+          "notes": "RefractionCoefficient computes the wave amplitude refraction coefficient: Kr = sqrt(cos(theta0) / cos(theta)).\nKr represents wave height alteration due to convergence or divergence of wave rays."
+        }
+      ]
+    },
+    {
+      "name": "shoaling.go",
+      "path": "backend/internal/oceanphysics/shoaling.go",
+      "description": "Auto-generated AST parser metadata representation for shoaling.go.",
+      "functions": [
+        {
+          "name": "ShoalingCoefficient",
+          "sig": "func ShoalingCoefficient()",
+          "notes": "ShoalingCoefficient computes the linear shoaling coefficient Ks = sqrt(Cg0 / Cg).\nIt represents the amplification of wave height due to wave group slowing in shallower water."
+        }
+      ]
+    },
+    {
+      "name": "solver.go",
+      "path": "backend/internal/oceanphysics/solver.go",
+      "description": "Auto-generated AST parser metadata representation for solver.go.",
+      "functions": [
+        {
+          "name": "SolveNewtonRaphson",
+          "sig": "func SolveNewtonRaphson()",
+          "notes": "SolveNewtonRaphson solves f(x) = 0 using the Newton-Raphson method."
+        },
+        {
+          "name": "SolveBisection",
+          "sig": "func SolveBisection()",
+          "notes": "SolveBisection solves f(x) = 0 on [minVal, maxVal] using the Bisection method."
+        },
+        {
+          "name": "SolveFixedPoint",
+          "sig": "func SolveFixedPoint()",
+          "notes": "SolveFixedPoint solves x = g(x) using fixed-point iteration."
+        }
+      ]
+    },
+    {
+      "name": "spectral_density.go",
+      "path": "backend/internal/oceanphysics/spectral_density.go",
+      "description": "Auto-generated AST parser metadata representation for spectral_density.go.",
+      "functions": [
+        {
+          "name": "BretschneiderSpectrum",
+          "sig": "func BretschneiderSpectrum()",
+          "notes": "BretschneiderSpectrum computes the 1D wave energy spectral density S(f) for a given frequency.\nFormula: S(f) = (5/16) * (Hs^2 * fp^4) / f^5 * exp(-1.25 * (fp/f)^4)\nhs: significant wave height (meters).\ntp: peak wave period (seconds).\nf: frequency at which to evaluate (Hz)."
+        },
+        {
+          "name": "JONSWAPSpectrum",
+          "sig": "func JONSWAPSpectrum()",
+          "notes": "JONSWAPSpectrum computes the 1D JONSWAP wave energy spectral density S(f).\nIt applies a peak enhancement factor (gamma) to the base Bretschneider spectrum.\ngamma: peak enhancement factor (typically 3.3 for standard North Sea, 1.0 reduces to Bretschneider)."
+        },
+        {
+          "name": "DirectionalSpreading",
+          "sig": "func DirectionalSpreading()",
+          "notes": "DirectionalSpreading computes the directional spreading function G(theta) using the cos-2s formulation.\nNormalizes the spreading such that the integral over [-pi, pi] equals 1.0.\ntheta: wave direction angle to evaluate (radians).\ntheta0: mean propagation direction (radians).\ns: directional spreading parameter (larger values mean narrower spreading, typical range 10-50 for swells)."
+        }
+      ]
+    },
+    {
+      "name": "spectral_partition.go",
+      "path": "backend/internal/oceanphysics/spectral_partition.go",
+      "description": "Auto-generated AST parser metadata representation for spectral_partition.go.",
+      "functions": [
+        {
+          "name": "PartitionSpectrum",
+          "sig": "func PartitionSpectrum()",
+          "notes": "PartitionSpectrum identifies local energy peaks in a 2D frequency-direction energy grid\nand partitions them into separate wave systems.\nParameters:\n\n\tfrequencies: slice of frequencies evaluated (Hz)\n\tdirections: slice of directions evaluated (radians)\n\tenergyGrid: 2D grid where energyGrid[f][d] is energy density (J/m^2/Hz/rad)"
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/oceanphysics/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "ValidatePhysicsValue",
+          "sig": "func ValidatePhysicsValue()",
+          "notes": "ValidatePhysicsValue checks a single float value for NaN, Infinity, or unphysical values."
+        },
+        {
+          "name": "ValidateConservationOfEnergy",
+          "sig": "func ValidateConservationOfEnergy()",
+          "notes": "ValidateConservationOfEnergy checks that wave energy flux P is conserved between deep water P0\nand shallower shoaling water P, within a certain numerical or physical tolerance.\n(Allows for dissipation mechanisms like bottom friction and breaking)."
+        }
+      ]
+    },
+    {
+      "name": "wave_energy.go",
+      "path": "backend/internal/oceanphysics/wave_energy.go",
+      "description": "Auto-generated AST parser metadata representation for wave_energy.go.",
+      "functions": [
+        {
+          "name": "WaveEnergy",
+          "sig": "func WaveEnergy()",
+          "notes": "WaveEnergy calculates the total wave energy density per unit sea surface area: E = 1/8 * rho * g * H^2\nreturns energy in Joules/m^2 (J/m^2) or equivalent units depending on inputs."
+        }
+      ]
+    },
+    {
+      "name": "whitecapping.go",
+      "path": "backend/internal/oceanphysics/whitecapping.go",
+      "description": "Auto-generated AST parser metadata representation for whitecapping.go.",
+      "functions": [
+        {
+          "name": "WhitecappingDissipation",
+          "sig": "func WhitecappingDissipation()",
+          "notes": "WhitecappingDissipation calculates wave energy dissipation due to whitecapping (deep water wave breaking).\nStandard steepness-based model: Swc = -C_wc * omega * s^4 * E\nwhere s = height * k is wave steepness and C_wc is an empirical dissipation coefficient."
+        }
+      ]
+    },
+    {
+      "name": "wind_input.go",
+      "path": "backend/internal/oceanphysics/wind_input.go",
+      "description": "Auto-generated AST parser metadata representation for wind_input.go.",
+      "functions": [
+        {
+          "name": "WindEnergyInput",
+          "sig": "func WindEnergyInput()",
+          "notes": "WindEnergyInput calculates the wave energy input rate from wind (Watts/m^2).\nParameterized Miles' exponential growth: Sin = beta * E\nwhere beta depends on (U_aligned / C) ratio.\nParameters:\n\n\twindSpeedKts: wind speed in knots.\n\twindDirRad: wind direction in radians.\n\twaveDirRad: wave propagation direction in radians.\n\theight: wave height.\n\tomega: angular wave frequency.\n\tk: wavenumber."
+        }
+      ]
+    },
+    {
+      "name": "bandwidth.go",
+      "path": "backend/internal/oceanspectrum/bandwidth.go",
+      "description": "Auto-generated AST parser metadata representation for bandwidth.go.",
+      "functions": [
+        {
+          "name": "CalculateBandwidth",
+          "sig": "func CalculateBandwidth()",
+          "notes": "CalculateBandwidth computes the broadness parameter (epsilon) and narrowness parameter (nu)\nof the spectrum based on spectral moments.\nepsilon = sqrt(1 - m2^2 / (m0 * m4))\nnu = sqrt((m0 * m2) / m1^2 - 1)"
+        }
+      ]
+    },
+    {
+      "name": "diagnostics.go",
+      "path": "backend/internal/oceanspectrum/diagnostics.go",
+      "description": "Auto-generated AST parser metadata representation for diagnostics.go.",
+      "functions": [
+        {
+          "name": "CalculateDiagnostics",
+          "sig": "func CalculateDiagnostics()",
+          "notes": "CalculateDiagnostics computes spectral diagnostics including moments, spread, bandwidth, age,\nand nonlinear indicators."
+        }
+      ]
+    },
+    {
+      "name": "direction.go",
+      "path": "backend/internal/oceanspectrum/direction.go",
+      "description": "Auto-generated AST parser metadata representation for direction.go.",
+      "functions": [
+        {
+          "name": "GetDirectionBins",
+          "sig": "func GetDirectionBins()",
+          "notes": "GetDirectionBins generates 24 directional bins of 15-degree spacing\nranging from 0.0 to 345.0 degrees."
+        }
+      ]
+    },
+    {
+      "name": "frequency.go",
+      "path": "backend/internal/oceanspectrum/frequency.go",
+      "description": "Auto-generated AST parser metadata representation for frequency.go.",
+      "functions": [
+        {
+          "name": "GetFrequencyBins",
+          "sig": "func GetFrequencyBins()",
+          "notes": "GetFrequencyBins generates 32 logarithmically spaced frequency bins\nranging from 0.04 Hz (long swell period of 25s) to 0.4 Hz (wind-sea period of 2.5s)."
+        }
+      ]
+    },
+    {
+      "name": "moments.go",
+      "path": "backend/internal/oceanspectrum/moments.go",
+      "description": "Auto-generated AST parser metadata representation for moments.go.",
+      "functions": [
+        {
+          "name": "CalculateMoments",
+          "sig": "func CalculateMoments()",
+          "notes": "CalculateMoments computes the spectral moments m0, m1, m2, and m4 for the 2D spectrum."
+        },
+        {
+          "name": "DeriveBulkParameters",
+          "sig": "func DeriveBulkParameters()",
+          "notes": "DeriveBulkParameters calculates Hs, Tm02, Tp, Mean Direction, and Directional Spread\nfrom the 2D energy spectrum."
+        }
+      ]
+    },
+    {
+      "name": "partitions.go",
+      "path": "backend/internal/oceanspectrum/partitions.go",
+      "description": "Auto-generated AST parser metadata representation for partitions.go.",
+      "functions": [
+        {
+          "name": "PartitionSpectrum",
+          "sig": "func PartitionSpectrum()",
+          "notes": "PartitionSpectrum performs watershed partitioning on the 2D spectral density matrix of the state.\nIt populates the PrimaryPartition, SecondaryPartitions, and WindSeaPartition fields in state.\nReturns a re-indexed flat slice of all active partitions."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/oceanspectrum/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewOceanSpectralService",
+          "sig": "func NewOceanSpectralService()",
+          "notes": "NewOceanSpectralService creates a new OceanSpectralService."
+        },
+        {
+          "name": "InitializeSpectralState",
+          "sig": "func InitializeSpectralState()",
+          "notes": "InitializeSpectralState generates a 2D spectral state from wave partitions and wind speed,\nvalidates the generated state, and stores it in the database."
+        }
+      ]
+    },
+    {
+      "name": "spectrum.go",
+      "path": "backend/internal/oceanspectrum/spectrum.go",
+      "description": "Auto-generated AST parser metadata representation for spectrum.go.",
+      "functions": [
+        {
+          "name": "Bretschneider1D",
+          "sig": "func Bretschneider1D()",
+          "notes": "Bretschneider1D computes the 1D wave spectrum S(f) for a given frequency f,\nsignificant wave height hs, and peak period tp."
+        },
+        {
+          "name": "Jonswap1D",
+          "sig": "func Jonswap1D()",
+          "notes": "Jonswap1D computes the 1D wave spectrum S(f) using the JONSWAP formulation\nwith peak enhancement factor gamma."
+        },
+        {
+          "name": "PiersonMoskowitz1D",
+          "sig": "func PiersonMoskowitz1D()",
+          "notes": "PiersonMoskowitz1D is a parameterized PM spectrum (equivalent to Jonswap with gamma = 1.0)"
+        },
+        {
+          "name": "Generate2DSpectrum",
+          "sig": "func Generate2DSpectrum()",
+          "notes": "Generate2DSpectrum creates a 2D spectral energy density matrix E(f, theta)\nusing frequency and direction bins, given a set of partitions."
+        }
+      ]
+    },
+    {
+      "name": "spreading.go",
+      "path": "backend/internal/oceanspectrum/spreading.go",
+      "description": "Auto-generated AST parser metadata representation for spreading.go.",
+      "functions": [
+        {
+          "name": "Cos2sSpreading",
+          "sig": "func Cos2sSpreading()",
+          "notes": "Cos2sSpreading computes the directional spreading function G(theta) for a given\nangle theta (in radians), peak direction thetaP (in radians), and spreading parameter s.\nIt returns the normalized spreading density."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/oceanspectrum/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "ValidateSpectrum",
+          "sig": "func ValidateSpectrum()",
+          "notes": "ValidateSpectrum performs safety checks on the spectral density matrix and bulk parameters.\nIt returns a quality score (0 to 100) and a list of validation errors/warnings."
+        }
+      ]
+    },
+    {
+      "name": "versioning.go",
+      "path": "backend/internal/oceanspectrum/versioning.go",
+      "description": "Auto-generated AST parser metadata representation for versioning.go.",
+      "functions": [
+        {
+          "name": "GenerateNewVersion",
+          "sig": "func GenerateNewVersion()",
+          "notes": "GenerateNewVersion logs a new spectral version for a grid, incrementing the previous version."
+        }
+      ]
+    },
+    {
+      "name": "fusion.go",
+      "path": "backend/internal/oceanstate/fusion.go",
+      "description": "Auto-generated AST parser metadata representation for fusion.go.",
+      "functions": [
+        {
+          "name": "NewScientificFusionEngine",
+          "sig": "func NewScientificFusionEngine()"
+        },
+        {
+          "name": "Fuse",
+          "sig": "func Fuse()",
+          "notes": "Fuse merges the observations using weighted averaging, priority guidelines, and outlier rejection."
+        }
+      ]
+    },
+    {
+      "name": "interpolation.go",
+      "path": "backend/internal/oceanstate/interpolation.go",
+      "description": "Auto-generated AST parser metadata representation for interpolation.go.",
+      "functions": [
+        {
+          "name": "NewInterpolator",
+          "sig": "func NewInterpolator()"
+        },
+        {
+          "name": "InterpolateTemporal",
+          "sig": "func InterpolateTemporal()",
+          "notes": "InterpolateTemporal linear-interpolates a variable between two observations.\nIf target is closer to one observation, we weight them appropriately.\nIf only one observation exists (e.g. before or after) within FreshnessLimit, we use it directly\nbut decay its weight/confidence based on age."
+        },
+        {
+          "name": "ApplySpatialDecay",
+          "sig": "func ApplySpatialDecay()",
+          "notes": "ApplySpatialDecay computes buoy weight decay based on distance from the spot."
+        }
+      ]
+    },
+    {
+      "name": "provenance.go",
+      "path": "backend/internal/oceanstate/provenance.go",
+      "description": "Auto-generated AST parser metadata representation for provenance.go.",
+      "functions": [
+        {
+          "name": "NewProvenanceEngine",
+          "sig": "func NewProvenanceEngine()"
+        },
+        {
+          "name": "ComposeWeight",
+          "sig": "func ComposeWeight()",
+          "notes": "ComposeWeight computes the final composite provider weight from all five components."
+        }
+      ]
+    },
+    {
+      "name": "scoring.go",
+      "path": "backend/internal/oceanstate/scoring.go",
+      "description": "Auto-generated AST parser metadata representation for scoring.go.",
+      "functions": [
+        {
+          "name": "NewScoringEngine",
+          "sig": "func NewScoringEngine()"
+        },
+        {
+          "name": "ComputeVariableConfidence",
+          "sig": "func ComputeVariableConfidence()",
+          "notes": "ComputeVariableConfidence calculates the confidence of a variable based on contributing sources."
+        },
+        {
+          "name": "ComputeOverallFreshness",
+          "sig": "func ComputeOverallFreshness()",
+          "notes": "ComputeOverallFreshness calculates exponential freshness index based on age."
+        },
+        {
+          "name": "CalculateOverallConfidence",
+          "sig": "func CalculateOverallConfidence()",
+          "notes": "CalculateOverallConfidence averages all independent variable confidences."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "backend/internal/oceanstate/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewOceanStateService",
+          "sig": "func NewOceanStateService()"
+        },
+        {
+          "name": "GenerateOceanState",
+          "sig": "func GenerateOceanState()",
+          "notes": "GenerateOceanState gathers raw observations for a Spot and fuses them to create a new immutable OceanState."
+        },
+        {
+          "name": "GetLatestOceanState",
+          "sig": "func GetLatestOceanState()",
+          "notes": "GetLatestOceanState returns state for an entity type and ID, resolving progressive inheritance."
+        },
+        {
+          "name": "GenerateHierarchyOceanStates",
+          "sig": "func GenerateHierarchyOceanStates()",
+          "notes": "GenerateHierarchyOceanStates triggers bottom-up aggregation for all higher hierarchy levels."
+        },
+        {
+          "name": "Scan",
+          "sig": "func Scan()"
+        }
+      ]
+    },
+    {
+      "name": "uncertainty.go",
+      "path": "backend/internal/oceanstate/uncertainty.go",
+      "description": "Auto-generated AST parser metadata representation for uncertainty.go.",
+      "functions": [
+        {
+          "name": "NewUncertaintyPropagator",
+          "sig": "func NewUncertaintyPropagator()"
+        },
+        {
+          "name": "GetBaseUncertainty",
+          "sig": "func GetBaseUncertainty()",
+          "notes": "GetBaseUncertainty returns the expected uncertainty (as fraction of value) for a provider and variable."
+        },
+        {
+          "name": "Propagate",
+          "sig": "func Propagate()",
+          "notes": "Propagate propagates uncertainties of weighted inputs."
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "backend/internal/oceanstate/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "NewScientificValidator",
+          "sig": "func NewScientificValidator()"
+        },
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate checks limits, provider conflicts, and anomalies."
+        }
+      ]
+    },
+    {
+      "name": "versioning.go",
+      "path": "backend/internal/oceanstate/versioning.go",
+      "description": "Auto-generated AST parser metadata representation for versioning.go.",
+      "functions": [
+        {
+          "name": "NewVersionLedger",
+          "sig": "func NewVersionLedger()"
+        },
+        {
+          "name": "NextVersion",
+          "sig": "func NextVersion()",
+          "notes": "NextVersion queries the database for the current latest version of an entity and increments it."
+        }
+      ]
+    },
+    {
       "name": "bathymetry.go",
       "path": "backend/internal/physics/bathymetry.go",
       "description": "Auto-generated AST parser metadata representation for bathymetry.go.",
@@ -5050,6 +6667,53 @@
       ]
     },
     {
+      "name": "cache.go",
+      "path": "backend/internal/science/cache/cache.go",
+      "description": "Auto-generated AST parser metadata representation for cache.go.",
+      "functions": [
+        {
+          "name": "NewScientificCache",
+          "sig": "func NewScientificCache()",
+          "notes": "NewScientificCache initializes a new cache."
+        },
+        {
+          "name": "GetCell",
+          "sig": "func GetCell()",
+          "notes": "GetCell retrieves a cached GridCell."
+        },
+        {
+          "name": "SetCell",
+          "sig": "func SetCell()",
+          "notes": "SetCell stores a GridCell in cache."
+        },
+        {
+          "name": "GetBathymetry",
+          "sig": "func GetBathymetry()",
+          "notes": "GetBathymetry retrieves a cached bathymetry value."
+        },
+        {
+          "name": "SetBathymetry",
+          "sig": "func SetBathymetry()",
+          "notes": "SetBathymetry stores a bathymetry value in cache."
+        },
+        {
+          "name": "GetSpectralState",
+          "sig": "func GetSpectralState()",
+          "notes": "GetSpectralState retrieves a cached spectral state."
+        },
+        {
+          "name": "SetSpectralState",
+          "sig": "func SetSpectralState()",
+          "notes": "SetSpectralState stores a spectral state in cache."
+        },
+        {
+          "name": "Clear",
+          "sig": "func Clear()",
+          "notes": "Clear flushes all cached values."
+        }
+      ]
+    },
+    {
       "name": "energy_validator.go",
       "path": "backend/internal/science/energy_validator.go",
       "description": "Auto-generated AST parser metadata representation for energy_validator.go.",
@@ -5062,6 +6726,58 @@
           "name": "Validate",
           "sig": "func Validate()",
           "notes": "Validate Wave Energy and Energy Loss"
+        }
+      ]
+    },
+    {
+      "name": "numerics.go",
+      "path": "backend/internal/science/numerics/numerics.go",
+      "description": "Auto-generated AST parser metadata representation for numerics.go.",
+      "functions": [
+        {
+          "name": "Multiply",
+          "sig": "func Multiply()",
+          "notes": "Multiply computes matrix-vector multiplication: y = A * x"
+        },
+        {
+          "name": "RK4Step",
+          "sig": "func RK4Step()",
+          "notes": "RK4Step performs a single time-step integration of an ODE using the classical Runge-Kutta 4th-order scheme."
+        },
+        {
+          "name": "DotProduct",
+          "sig": "func DotProduct()",
+          "notes": "DotProduct calculates the dot product of two slices."
+        },
+        {
+          "name": "L2Norm",
+          "sig": "func L2Norm()",
+          "notes": "L2Norm calculates the L2 norm of a vector."
+        },
+        {
+          "name": "ConjugateGradient",
+          "sig": "func ConjugateGradient()",
+          "notes": "ConjugateGradient solves A * x = b iteratively for symmetric, positive-definite linear systems."
+        },
+        {
+          "name": "GMRES",
+          "sig": "func GMRES()",
+          "notes": "GMRES solves the non-symmetric linear system A * x = b using the Generalized Minimal Residual method with restarts."
+        },
+        {
+          "name": "FFT",
+          "sig": "func FFT()",
+          "notes": "FFT computes the 1D Radix-2 Cooley-Tukey Fast Fourier Transform of a complex slice.\nLength of x must be a power of 2."
+        },
+        {
+          "name": "DFT",
+          "sig": "func DFT()",
+          "notes": "DFT computes the Discrete Fourier Transform for fallback situations (O(N^2))."
+        },
+        {
+          "name": "BilinearInterpolate",
+          "sig": "func BilinearInterpolate()",
+          "notes": "BilinearInterpolate performs spatial bilinear interpolation for grid cell properties."
         }
       ]
     },
@@ -5083,6 +6799,50 @@
           "name": "ComputeScientificRating",
           "sig": "func ComputeScientificRating()",
           "notes": "ComputeScientificRating generates the multi-dimensional Spot DNA rating scores"
+        }
+      ]
+    },
+    {
+      "name": "pipeline.go",
+      "path": "backend/internal/science/physicspipeline/pipeline.go",
+      "description": "Auto-generated AST parser metadata representation for pipeline.go.",
+      "functions": [
+        {
+          "name": "NewPipeline",
+          "sig": "func NewPipeline()",
+          "notes": "NewPipeline creates a new physics orchestration pipeline."
+        },
+        {
+          "name": "Execute",
+          "sig": "func Execute()",
+          "notes": "Execute runs all physical operators in the configured sequence."
+        }
+      ]
+    },
+    {
+      "name": "registry.go",
+      "path": "backend/internal/science/physicspipeline/registry.go",
+      "description": "Auto-generated AST parser metadata representation for registry.go.",
+      "functions": [
+        {
+          "name": "NewRegistry",
+          "sig": "func NewRegistry()",
+          "notes": "NewRegistry creates a new scientific operators registry."
+        },
+        {
+          "name": "Register",
+          "sig": "func Register()",
+          "notes": "Register adds a physics operator to the registry."
+        },
+        {
+          "name": "Get",
+          "sig": "func Get()",
+          "notes": "Get retrieves a physics operator by name."
+        },
+        {
+          "name": "List",
+          "sig": "func List()",
+          "notes": "List returns the names of all registered operators."
         }
       ]
     },
@@ -5924,6 +7684,156 @@
         {
           "name": "GetLatestProviderIngestionRun",
           "sig": "func GetLatestProviderIngestionRun()"
+        },
+        {
+          "name": "WriteOceanState",
+          "sig": "func WriteOceanState()",
+          "notes": "WriteOceanState writes the OceanState and its related provenance/quality records to the database."
+        },
+        {
+          "name": "GetLatestOceanState",
+          "sig": "func GetLatestOceanState()",
+          "notes": "GetLatestOceanState retrieves the latest OceanState for the given entity."
+        },
+        {
+          "name": "GetOceanStateHistory",
+          "sig": "func GetOceanStateHistory()",
+          "notes": "GetOceanStateHistory retrieves versions history."
+        },
+        {
+          "name": "WriteOceanStateProvenance",
+          "sig": "func WriteOceanStateProvenance()",
+          "notes": "WriteOceanStateProvenance inserts provenance logs."
+        },
+        {
+          "name": "GetOceanStateProvenance",
+          "sig": "func GetOceanStateProvenance()",
+          "notes": "GetOceanStateProvenance retrieves weight composition details."
+        },
+        {
+          "name": "WriteOceanStateQuality",
+          "sig": "func WriteOceanStateQuality()",
+          "notes": "WriteOceanStateQuality writes variable uncertainties."
+        },
+        {
+          "name": "GetOceanStateQuality",
+          "sig": "func GetOceanStateQuality()",
+          "notes": "GetOceanStateQuality retrieves quality checks."
+        },
+        {
+          "name": "GetProviderWeights",
+          "sig": "func GetProviderWeights()",
+          "notes": "GetProviderWeights gets base weights."
+        },
+        {
+          "name": "WriteProviderWeights",
+          "sig": "func WriteProviderWeights()",
+          "notes": "WriteProviderWeights updates database weights."
+        },
+        {
+          "name": "WriteComputationalGrid",
+          "sig": "func WriteComputationalGrid()",
+          "notes": "WriteComputationalGrid inserts or updates a grid definition and its cells transactionally."
+        },
+        {
+          "name": "GetComputationalGrid",
+          "sig": "func GetComputationalGrid()",
+          "notes": "GetComputationalGrid retrieves a computational grid definition."
+        },
+        {
+          "name": "GetAllComputationalGrids",
+          "sig": "func GetAllComputationalGrids()",
+          "notes": "GetAllComputationalGrids retrieves all computational grid definitions."
+        },
+        {
+          "name": "GetGridCells",
+          "sig": "func GetGridCells()",
+          "notes": "GetGridCells retrieves all cells associated with a grid definition."
+        },
+        {
+          "name": "WriteNumericalDomain",
+          "sig": "func WriteNumericalDomain()",
+          "notes": "WriteNumericalDomain inserts or updates a numerical domain configuration."
+        },
+        {
+          "name": "GetNumericalDomain",
+          "sig": "func GetNumericalDomain()",
+          "notes": "GetNumericalDomain retrieves a numerical domain configuration by grid ID."
+        },
+        {
+          "name": "WriteBoundaryConditions",
+          "sig": "func WriteBoundaryConditions()",
+          "notes": "WriteBoundaryConditions inserts or updates boundary conditions."
+        },
+        {
+          "name": "GetBoundaryConditions",
+          "sig": "func GetBoundaryConditions()",
+          "notes": "GetBoundaryConditions retrieves boundary conditions for a given grid, timestamp, and version."
+        },
+        {
+          "name": "GetLatestBoundaryConditions",
+          "sig": "func GetLatestBoundaryConditions()",
+          "notes": "GetLatestBoundaryConditions retrieves the latest boundary conditions snapshot for a grid."
+        },
+        {
+          "name": "WriteGridVersion",
+          "sig": "func WriteGridVersion()",
+          "notes": "WriteGridVersion logs a grid version."
+        },
+        {
+          "name": "GetGridVersions",
+          "sig": "func GetGridVersions()",
+          "notes": "GetGridVersions retrieves version history for a grid."
+        },
+        {
+          "name": "WriteGridQuality",
+          "sig": "func WriteGridQuality()",
+          "notes": "WriteGridQuality writes a validation quality report."
+        },
+        {
+          "name": "GetLatestGridQuality",
+          "sig": "func GetLatestGridQuality()",
+          "notes": "GetLatestGridQuality retrieves the latest quality report for a grid."
+        },
+        {
+          "name": "WriteOceanSpectralState",
+          "sig": "func WriteOceanSpectralState()",
+          "notes": "WriteOceanSpectralState stores dynamic 2D directional wave spectrum density matrix and its derivatives."
+        },
+        {
+          "name": "GetLatestOceanSpectralState",
+          "sig": "func GetLatestOceanSpectralState()",
+          "notes": "GetLatestOceanSpectralState retrieves the latest spectral state for a cell."
+        },
+        {
+          "name": "GetOceanSpectralState",
+          "sig": "func GetOceanSpectralState()",
+          "notes": "GetOceanSpectralState retrieves a specific spectral state record."
+        },
+        {
+          "name": "GetOceanSpectralHistory",
+          "sig": "func GetOceanSpectralHistory()",
+          "notes": "GetOceanSpectralHistory retrieves historic spectra configurations."
+        },
+        {
+          "name": "GetSpectralPartitions",
+          "sig": "func GetSpectralPartitions()",
+          "notes": "GetSpectralPartitions retrieves all active swell systems and wind sea components."
+        },
+        {
+          "name": "GetLatestSpectralDiagnostics",
+          "sig": "func GetLatestSpectralDiagnostics()",
+          "notes": "GetLatestSpectralDiagnostics retrieves dynamic diagnostics stats."
+        },
+        {
+          "name": "WriteSpectralVersion",
+          "sig": "func WriteSpectralVersion()",
+          "notes": "WriteSpectralVersion registers a new spectral version log."
+        },
+        {
+          "name": "GetSpectralVersions",
+          "sig": "func GetSpectralVersions()",
+          "notes": "GetSpectralVersions lists active spectral history."
         }
       ]
     },
