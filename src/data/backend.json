@@ -1,8 +1,8 @@
 {
   "status": "verified",
   "coverage": 100,
-  "filesReviewed": 330,
-  "functionsReviewed": 1365,
+  "filesReviewed": 331,
+  "functionsReviewed": 1366,
   "confidence": "High",
   "verificationDate": "June 2026",
   "reviewer": "Engineering Intelligence Engine",
@@ -162,6 +162,18 @@
         {
           "name": "GetCountryHistoryHandler",
           "sig": "func GetCountryHistoryHandler()"
+        }
+      ]
+    },
+    {
+      "name": "dataset_factory_handlers.go",
+      "path": "backend/internal/api/dataset_factory_handlers.go",
+      "description": "Auto-generated AST parser metadata representation for dataset_factory_handlers.go.",
+      "functions": [
+        {
+          "name": "GetDatasetFactoryStatusHandler",
+          "sig": "func GetDatasetFactoryStatusHandler()",
+          "notes": "GetDatasetFactoryStatusHandler returns the raw storage stats, manifests history, and registry items."
         }
       ]
     },
