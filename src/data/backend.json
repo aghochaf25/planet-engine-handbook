@@ -2,7 +2,7 @@
   "status": "verified",
   "coverage": 100,
   "filesReviewed": 331,
-  "functionsReviewed": 1366,
+  "functionsReviewed": 1370,
   "confidence": "High",
   "verificationDate": "June 2026",
   "reviewer": "Engineering Intelligence Engine",
@@ -173,7 +173,22 @@
         {
           "name": "GetDatasetFactoryStatusHandler",
           "sig": "func GetDatasetFactoryStatusHandler()",
-          "notes": "GetDatasetFactoryStatusHandler returns the raw storage stats, manifests history, and registry items."
+          "notes": "GetDatasetFactoryStatusHandler returns the raw storage stats, manifests history, pipeline queues, and quality metrics."
+        },
+        {
+          "name": "PostDatasetFactoryApproveHandler",
+          "sig": "func PostDatasetFactoryApproveHandler()",
+          "notes": "PostDatasetFactoryApproveHandler handles operator approval of spots or full countries"
+        },
+        {
+          "name": "PostDatasetFactoryActionHandler",
+          "sig": "func PostDatasetFactoryActionHandler()",
+          "notes": "PostDatasetFactoryActionHandler handles general operator review console actions"
+        },
+        {
+          "name": "GetDatasetFactoryDiffHandler",
+          "sig": "func GetDatasetFactoryDiffHandler()",
+          "notes": "GetDatasetFactoryDiffHandler handles dataset schema diff comparisons"
         }
       ]
     },
@@ -3466,6 +3481,11 @@
           "name": "ValidateManifest",
           "sig": "func ValidateManifest()",
           "notes": "ValidateManifest checks if all required fields are present in a DatasetManifest"
+        },
+        {
+          "name": "VerifyDatasetImport",
+          "sig": "func VerifyDatasetImport()",
+          "notes": "VerifyDatasetImport checks manifest existence, checksum matching, schema validation, and versions"
         }
       ]
     },
