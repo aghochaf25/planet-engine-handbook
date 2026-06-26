@@ -1,8 +1,8 @@
 {
   "status": "verified",
   "coverage": 100,
-  "filesReviewed": 331,
-  "functionsReviewed": 1370,
+  "filesReviewed": 367,
+  "functionsReviewed": 1476,
   "confidence": "High",
   "verificationDate": "June 2026",
   "reviewer": "Engineering Intelligence Engine",
@@ -178,17 +178,32 @@
         {
           "name": "PostDatasetFactoryApproveHandler",
           "sig": "func PostDatasetFactoryApproveHandler()",
-          "notes": "PostDatasetFactoryApproveHandler handles operator approval of spots or full countries"
+          "notes": "PostDatasetFactoryApproveHandler handles operator approval of spots"
+        },
+        {
+          "name": "PostDatasetFactoryRejectHandler",
+          "sig": "func PostDatasetFactoryRejectHandler()",
+          "notes": "PostDatasetFactoryRejectHandler handles operator rejection of spots"
         },
         {
           "name": "PostDatasetFactoryActionHandler",
           "sig": "func PostDatasetFactoryActionHandler()",
-          "notes": "PostDatasetFactoryActionHandler handles general operator review console actions"
+          "notes": "PostDatasetFactoryActionHandler handles general operator actions like updating checklist"
         },
         {
           "name": "GetDatasetFactoryDiffHandler",
           "sig": "func GetDatasetFactoryDiffHandler()",
           "notes": "GetDatasetFactoryDiffHandler handles dataset schema diff comparisons"
+        },
+        {
+          "name": "GetDatasetFactoryReferenceHandler",
+          "sig": "func GetDatasetFactoryReferenceHandler()",
+          "notes": "GetDatasetFactoryReferenceHandler compares current exports vs Golden references and returns diff"
+        },
+        {
+          "name": "GetDatasetFactorySpotDetailHandler",
+          "sig": "func GetDatasetFactorySpotDetailHandler()",
+          "notes": "GetDatasetFactorySpotDetailHandler returns detailed raw, merged, derived, reference, and checklist state"
         }
       ]
     },
@@ -8588,6 +8603,682 @@
         {
           "name": "InitLogger",
           "sig": "func InitLogger()"
+        }
+      ]
+    },
+    {
+      "name": "acquisition.go",
+      "path": "dataset-factory/acquisition/acquisition.go",
+      "description": "Auto-generated AST parser metadata representation for acquisition.go.",
+      "functions": [
+        {
+          "name": "NewRegistry",
+          "sig": "func NewRegistry()"
+        }
+      ]
+    },
+    {
+      "name": "connectors.go",
+      "path": "dataset-factory/acquisition/connectors.go",
+      "description": "Auto-generated AST parser metadata representation for connectors.go.",
+      "functions": [
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        },
+        {
+          "name": "Download",
+          "sig": "func Download()"
+        },
+        {
+          "name": "HasUpdates",
+          "sig": "func HasUpdates()"
+        },
+        {
+          "name": "Metadata",
+          "sig": "func Metadata()"
+        }
+      ]
+    },
+    {
+      "name": "diff.go",
+      "path": "dataset-factory/diff/diff.go",
+      "description": "Auto-generated AST parser metadata representation for diff.go.",
+      "functions": [
+        {
+          "name": "NewDiffEngine",
+          "sig": "func NewDiffEngine()"
+        },
+        {
+          "name": "CompareDatasets",
+          "sig": "func CompareDatasets()"
+        },
+        {
+          "name": "GetDistanceDelta",
+          "sig": "func GetDistanceDelta()"
+        }
+      ]
+    },
+    {
+      "name": "field_diff.go",
+      "path": "dataset-factory/diff/field_diff.go",
+      "description": "Auto-generated AST parser metadata representation for field_diff.go.",
+      "functions": [
+        {
+          "name": "NewFieldDiffEngine",
+          "sig": "func NewFieldDiffEngine()"
+        },
+        {
+          "name": "CompareAliases",
+          "sig": "func CompareAliases()"
+        }
+      ]
+    },
+    {
+      "name": "geometry_diff.go",
+      "path": "dataset-factory/diff/geometry_diff.go",
+      "description": "Auto-generated AST parser metadata representation for geometry_diff.go.",
+      "functions": [
+        {
+          "name": "NewGeometryDiffEngine",
+          "sig": "func NewGeometryDiffEngine()"
+        },
+        {
+          "name": "CompareCoordinates",
+          "sig": "func CompareCoordinates()"
+        }
+      ]
+    },
+    {
+      "name": "provenance_diff.go",
+      "path": "dataset-factory/diff/provenance_diff.go",
+      "description": "Auto-generated AST parser metadata representation for provenance_diff.go.",
+      "functions": [
+        {
+          "name": "NewProvenanceDiffEngine",
+          "sig": "func NewProvenanceDiffEngine()"
+        },
+        {
+          "name": "CompareProvenance",
+          "sig": "func CompareProvenance()"
+        }
+      ]
+    },
+    {
+      "name": "report.go",
+      "path": "dataset-factory/diff/report.go",
+      "description": "Auto-generated AST parser metadata representation for report.go.",
+      "functions": [
+        {
+          "name": "GenerateMarkdownReport",
+          "sig": "func GenerateMarkdownReport()"
+        }
+      ]
+    },
+    {
+      "name": "cache.go",
+      "path": "dataset-factory/downloader/cache.go",
+      "description": "Auto-generated AST parser metadata representation for cache.go.",
+      "functions": [
+        {
+          "name": "CheckCache",
+          "sig": "func CheckCache()",
+          "notes": "CheckCache returns true if the file exists and is valid."
+        }
+      ]
+    },
+    {
+      "name": "checksum.go",
+      "path": "dataset-factory/downloader/checksum.go",
+      "description": "Auto-generated AST parser metadata representation for checksum.go.",
+      "functions": [
+        {
+          "name": "VerifyChecksum",
+          "sig": "func VerifyChecksum()",
+          "notes": "VerifyChecksum calculates the SHA256 of the file and compares it with expected."
+        }
+      ]
+    },
+    {
+      "name": "download.go",
+      "path": "dataset-factory/downloader/download.go",
+      "description": "Auto-generated AST parser metadata representation for download.go.",
+      "functions": [
+        {
+          "name": "DownloadSource",
+          "sig": "func DownloadSource()",
+          "notes": "DownloadSource downloads the source file using mirror fallbacks, resume support, and checksum verification."
+        }
+      ]
+    },
+    {
+      "name": "history.go",
+      "path": "dataset-factory/downloader/history.go",
+      "description": "Auto-generated AST parser metadata representation for history.go.",
+      "functions": [
+        {
+          "name": "LogHistory",
+          "sig": "func LogHistory()",
+          "notes": "LogHistory appends a new download run to history.json."
+        },
+        {
+          "name": "LoadHistory",
+          "sig": "func LoadHistory()",
+          "notes": "LoadHistory reads all history logs."
+        }
+      ]
+    },
+    {
+      "name": "http.go",
+      "path": "dataset-factory/downloader/http.go",
+      "description": "Auto-generated AST parser metadata representation for http.go.",
+      "functions": [
+        {
+          "name": "NewHTTPClient",
+          "sig": "func NewHTTPClient()",
+          "notes": "NewHTTPClient creates a secure, configured HTTP client for downloads."
+        }
+      ]
+    },
+    {
+      "name": "mirror.go",
+      "path": "dataset-factory/downloader/mirror.go",
+      "description": "Auto-generated AST parser metadata representation for mirror.go.",
+      "functions": [
+        {
+          "name": "GetDownloadURLs",
+          "sig": "func GetDownloadURLs()",
+          "notes": "GetDownloadURLs returns primary and mirror URLs for robust fetching."
+        }
+      ]
+    },
+    {
+      "name": "resume.go",
+      "path": "dataset-factory/downloader/resume.go",
+      "description": "Auto-generated AST parser metadata representation for resume.go.",
+      "functions": [
+        {
+          "name": "SetupResumeRequest",
+          "sig": "func SetupResumeRequest()",
+          "notes": "SetupResumeRequest modifies request headers for range queries if file is partially downloaded."
+        },
+        {
+          "name": "AppendResponseStream",
+          "sig": "func AppendResponseStream()",
+          "notes": "AppendResponseStream copies bytes from response to output file (appending if resume, overwriting if fresh)."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "dataset-factory/downloader/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewService",
+          "sig": "func NewService()"
+        },
+        {
+          "name": "SetStatus",
+          "sig": "func SetStatus()"
+        },
+        {
+          "name": "GetStatus",
+          "sig": "func GetStatus()"
+        },
+        {
+          "name": "GetAllStatuses",
+          "sig": "func GetAllStatuses()"
+        }
+      ]
+    },
+    {
+      "name": "collector.go",
+      "path": "dataset-factory/evidence/collector.go",
+      "description": "Auto-generated AST parser metadata representation for collector.go.",
+      "functions": [
+        {
+          "name": "NewEvidenceCollector",
+          "sig": "func NewEvidenceCollector()"
+        },
+        {
+          "name": "GetOrientationEvidence",
+          "sig": "func GetOrientationEvidence()"
+        },
+        {
+          "name": "GetWaveTypeEvidence",
+          "sig": "func GetWaveTypeEvidence()"
+        },
+        {
+          "name": "GetBottomTypeEvidence",
+          "sig": "func GetBottomTypeEvidence()"
+        },
+        {
+          "name": "GetGenericEvidence",
+          "sig": "func GetGenericEvidence()"
+        }
+      ]
+    },
+    {
+      "name": "evidence.go",
+      "path": "dataset-factory/evidence/evidence.go",
+      "description": "Auto-generated AST parser metadata representation for evidence.go.",
+      "functions": [
+        {
+          "name": "NewEvidence",
+          "sig": "func NewEvidence()",
+          "notes": "NewEvidence creates a standard field evidence instance"
+        }
+      ]
+    },
+    {
+      "name": "resolver.go",
+      "path": "dataset-factory/evidence/resolver.go",
+      "description": "Auto-generated AST parser metadata representation for resolver.go.",
+      "functions": [
+        {
+          "name": "NewEvidenceResolver",
+          "sig": "func NewEvidenceResolver()"
+        },
+        {
+          "name": "MergeEvidence",
+          "sig": "func MergeEvidence()"
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "dataset-factory/evidence/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewEvidenceService",
+          "sig": "func NewEvidenceService()"
+        },
+        {
+          "name": "EnrichSpotEvidence",
+          "sig": "func EnrichSpotEvidence()"
+        }
+      ]
+    },
+    {
+      "name": "validator.go",
+      "path": "dataset-factory/evidence/validator.go",
+      "description": "Auto-generated AST parser metadata representation for validator.go.",
+      "functions": [
+        {
+          "name": "NewEvidenceValidator",
+          "sig": "func NewEvidenceValidator()"
+        },
+        {
+          "name": "ValidateEvidence",
+          "sig": "func ValidateEvidence()"
+        },
+        {
+          "name": "CalculateCompleteness",
+          "sig": "func CalculateCompleteness()"
+        }
+      ]
+    },
+    {
+      "name": "versioning.go",
+      "path": "dataset-factory/exporter/versioning.go",
+      "description": "Auto-generated AST parser metadata representation for versioning.go.",
+      "functions": [
+        {
+          "name": "NewVersionManager",
+          "sig": "func NewVersionManager()"
+        },
+        {
+          "name": "Rollback",
+          "sig": "func Rollback()"
+        },
+        {
+          "name": "Compare",
+          "sig": "func Compare()"
+        },
+        {
+          "name": "SaveBackup",
+          "sig": "func SaveBackup()"
+        }
+      ]
+    },
+    {
+      "name": "acquire.go",
+      "path": "dataset-factory/pipeline/acquire.go",
+      "description": "Auto-generated AST parser metadata representation for acquire.go.",
+      "functions": [
+        {
+          "name": "Acquire",
+          "sig": "func Acquire()"
+        }
+      ]
+    },
+    {
+      "name": "certify.go",
+      "path": "dataset-factory/pipeline/certify.go",
+      "description": "Auto-generated AST parser metadata representation for certify.go.",
+      "functions": [
+        {
+          "name": "Certify",
+          "sig": "func Certify()"
+        }
+      ]
+    },
+    {
+      "name": "derive.go",
+      "path": "dataset-factory/pipeline/derive.go",
+      "description": "Auto-generated AST parser metadata representation for derive.go.",
+      "functions": [
+        {
+          "name": "Derive",
+          "sig": "func Derive()"
+        }
+      ]
+    },
+    {
+      "name": "enrich.go",
+      "path": "dataset-factory/pipeline/enrich.go",
+      "description": "Auto-generated AST parser metadata representation for enrich.go.",
+      "functions": [
+        {
+          "name": "Enrich",
+          "sig": "func Enrich()"
+        }
+      ]
+    },
+    {
+      "name": "export.go",
+      "path": "dataset-factory/pipeline/export.go",
+      "description": "Auto-generated AST parser metadata representation for export.go.",
+      "functions": [
+        {
+          "name": "Export",
+          "sig": "func Export()"
+        }
+      ]
+    },
+    {
+      "name": "merge.go",
+      "path": "dataset-factory/pipeline/merge.go",
+      "description": "Auto-generated AST parser metadata representation for merge.go.",
+      "functions": [
+        {
+          "name": "Merge",
+          "sig": "func Merge()"
+        }
+      ]
+    },
+    {
+      "name": "normalize.go",
+      "path": "dataset-factory/pipeline/normalize.go",
+      "description": "Auto-generated AST parser metadata representation for normalize.go.",
+      "functions": [
+        {
+          "name": "Normalize",
+          "sig": "func Normalize()"
+        }
+      ]
+    },
+    {
+      "name": "pipeline.go",
+      "path": "dataset-factory/pipeline/pipeline.go",
+      "description": "Auto-generated AST parser metadata representation for pipeline.go.",
+      "functions": [
+        {
+          "name": "NewPipeline",
+          "sig": "func NewPipeline()"
+        },
+        {
+          "name": "Run",
+          "sig": "func Run()"
+        }
+      ]
+    },
+    {
+      "name": "scoring.go",
+      "path": "dataset-factory/pipeline/scoring.go",
+      "description": "Auto-generated AST parser metadata representation for scoring.go.",
+      "functions": [
+        {
+          "name": "CalculateQualityScores",
+          "sig": "func CalculateQualityScores()"
+        }
+      ]
+    },
+    {
+      "name": "ranking.go",
+      "path": "dataset-factory/priority/ranking.go",
+      "description": "Auto-generated AST parser metadata representation for ranking.go.",
+      "functions": [
+        {
+          "name": "NewPriorityRanker",
+          "sig": "func NewPriorityRanker()"
+        },
+        {
+          "name": "Classify",
+          "sig": "func Classify()"
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "dataset-factory/priority/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewPriorityService",
+          "sig": "func NewPriorityService()"
+        },
+        {
+          "name": "RankSpot",
+          "sig": "func RankSpot()"
+        }
+      ]
+    },
+    {
+      "name": "checklist.go",
+      "path": "dataset-factory/review/checklist.go",
+      "description": "Auto-generated AST parser metadata representation for checklist.go.",
+      "functions": [
+        {
+          "name": "IsComplete",
+          "sig": "func IsComplete()",
+          "notes": "IsComplete returns true if all 20 checklist validation items are verified."
+        }
+      ]
+    },
+    {
+      "name": "service.go",
+      "path": "dataset-factory/review/service.go",
+      "description": "Auto-generated AST parser metadata representation for service.go.",
+      "functions": [
+        {
+          "name": "NewReviewService",
+          "sig": "func NewReviewService()"
+        },
+        {
+          "name": "LoadTasks",
+          "sig": "func LoadTasks()"
+        },
+        {
+          "name": "SaveTasks",
+          "sig": "func SaveTasks()"
+        },
+        {
+          "name": "GetTask",
+          "sig": "func GetTask()"
+        },
+        {
+          "name": "SaveTask",
+          "sig": "func SaveTask()"
+        },
+        {
+          "name": "LoadHistory",
+          "sig": "func LoadHistory()"
+        },
+        {
+          "name": "SaveHistory",
+          "sig": "func SaveHistory()"
+        },
+        {
+          "name": "LoadVersionRegistry",
+          "sig": "func LoadVersionRegistry()"
+        },
+        {
+          "name": "SaveVersionRegistry",
+          "sig": "func SaveVersionRegistry()"
+        },
+        {
+          "name": "ApproveSpot",
+          "sig": "func ApproveSpot()"
+        },
+        {
+          "name": "RejectSpot",
+          "sig": "func RejectSpot()"
+        }
+      ]
+    },
+    {
+      "name": "schema.go",
+      "path": "dataset-factory/schema/schema.go",
+      "description": "Auto-generated AST parser metadata representation for schema.go.",
+      "functions": [
+        {
+          "name": "Validate",
+          "sig": "func Validate()",
+          "notes": "Validate performs structural checks on the Spot entity"
+        }
+      ]
+    },
+    {
+      "name": "priority.go",
+      "path": "dataset-factory/sourcepriority/priority.go",
+      "description": "Auto-generated AST parser metadata representation for priority.go.",
+      "functions": [
+        {
+          "name": "NewDefaultPriorityEngine",
+          "sig": "func NewDefaultPriorityEngine()"
+        },
+        {
+          "name": "ResolveField",
+          "sig": "func ResolveField()"
         }
       ]
     }
